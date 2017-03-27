@@ -5,118 +5,62 @@ window.Vue.use(Vuex);
 import resource from 'vue-resource';
 window.Vue.use(resource);
 
-// window.Vue.http.headers.common['X-CSRF-TOKEN'] = document.getElementsByName('csrf-token')[0].content;
-
 window.Events = new Vue();
 
-// import shoppingcart from "../../vues/cart/cart.vue";
-// import itemCount from "../../vues/cart/item-count.vue";
-// import branches from "../../vues/branches/branch.vue";
-// import notifications from "../../vues/notifications/notifications.vue";
-//
-// window.Store = new Vuex.Store({
-//     state: {
-//         cartActive: false,
-//         itemCount: 0,
-//         group_id: 71,
-//         items: [],
-//         imageURL: "/assets/images/menu/",
-//         currency: "$"
-//     },
-//     mutations: {
-//         setGroupId: function (state, group_id) {
-//             state.group_id = group_id;
-//         },
-//         setItems: function (state, items) {
-//             state.items = items;
-//         },
-//         addItem: function (state, item) {
-//             var len = state.items.length;
-//             state.items.splice(len, 0, item);
-//         },
-//         setCartActive: function (state, cartActive) {
-//             state.cartActive = cartActive;
-//         },
-//         clearItems: function (state) {
-//             state.items = [];
-//         },
-//         removeItem: function (state, idx) {
-//             state.items.splice(idx, 1);
-//         },
-//         removeExtra: function (state, idx, extras_idx) {
-//             state.items[idx]['extras'].splice(extras_idx, 1);
-//         },
-//         setItemCount: function (state, itemCount) {
-//             state.itemCount = itemCount;
-//         },
-//         toggleCartActive: function (state) {
-//             state.cartActive = !state.cartActive;
-//         }
-//     },
-//     getters: {}
-// });
-//
-//
-// //Cart instance
-// new Vue({
-//     el: "#cart-container",
-//     http: {
-//         emulateJSON: true,
-//         emulateHTTP: true
-//     },
-//     components: {
-//         shoppingcart
-//     }
-// });
-//
-// //Cart icon instance
-// new Vue({
-//     el: "#itemCount",
-//     methods: {
-//         openCart: function () {
-//             Store.commit('toggleCartActive');
-//         }
-//     },
-//     components: {
-//         itemCount
-//     }
-// });
-//
-// new Vue({
-//     el: "#branches-container",
-//     http: {
-//         emulateJSON: true,
-//         emulateHTTP: true
-//     },
-//     components: {
-//         branches
-//     }
-// });
-//
-// new Vue({
-//     el: "#app",
-//     components: {
-//         notifications
-//     }
-// });
-//
-// new Vue({
-//     el: '#popup-branches',
-//     methods: {
-//         Popup: function () {
-//             Events.$emit('showAside-ev');
-//         }
-//     }
-// });
-//
-// new Vue({
-//     el: '#dropdown-container',
-//     data: {
-//         open: false
-//     },
-//     methods: {
-//         ToggleOpen: function () {
-//             this.open = !this.open;
-//         }
-//     }
-// });
+import shoppingcart from "../vues/cart/cart.vue";
+
+window.Store = new Vuex.Store({
+    state: {
+        cartActive: false,
+        itemCount: 0,
+        group_id: 71,
+        items: [],
+        imageURL: "https://sprypizza.com/assets/images/menu/",
+        currency: "$"
+    },
+    mutations: {
+        setGroupId: function (state, group_id) {
+            state.group_id = group_id;
+        },
+        setItems: function (state, items) {
+            state.items = items;
+        },
+        addItem: function (state, item) {
+            var len = state.items.length;
+            state.items.splice(len, 0, item);
+        },
+        setCartActive: function (state, cartActive) {
+            state.cartActive = cartActive;
+        },
+        clearItems: function (state) {
+            state.items = [];
+        },
+        removeItem: function (state, idx) {
+            state.items.splice(idx, 1);
+        },
+        removeExtra: function (state, idx, extras_idx) {
+            state.items[idx]['extras'].splice(extras_idx, 1);
+        },
+        setItemCount: function (state, itemCount) {
+            state.itemCount = itemCount;
+        },
+        toggleCartActive: function (state) {
+            state.cartActive = !state.cartActive;
+        }
+    },
+    getters: {}
+});
+
+
+//Cart instance
+new Vue({
+    el: "#cart-container",
+    http: {
+        emulateJSON: true,
+        emulateHTTP: true
+    },
+    components: {
+        shoppingcart
+    }
+});
+

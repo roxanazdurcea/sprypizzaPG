@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         'commons': './src/js/commons.js',
         'login': './src/js/login.js',
+        'menu': './src/js/menu.js',
         'vendor': ['vue', 'vuex', 'vue-resource', 'underscore']
     },
     output: {

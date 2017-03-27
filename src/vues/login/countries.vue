@@ -1,6 +1,6 @@
 <template>
-    <div class="input-group-btn" style="padding-right:4px;">
-        <select name="country_id" class="form-control" style="width: 150px;" v-model="country_id" v-on:change="SetCountry()">
+    <div class="item-input">
+        <select name="country_id"  v-model="country_id" v-on:change="SetCountry()">
             <option v-for="country in countries" v-bind:value="country.phonecode">
                 {{ country.nicename }}
             </option>

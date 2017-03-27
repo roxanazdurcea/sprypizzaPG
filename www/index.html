@@ -22,81 +22,309 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+
     <link rel="stylesheet" href="css/custom.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <title>Hello World</title>
 </head>
 
 <body>
-    <div class="app">
-        <section>
-            <div class="container" style="background: #f5f5f5;">
-                <div class="row" style="margin-left: 0px; margin-right: 0px; min-height: 70%;">
-                    <h1 style="margin-bottom: 0px; color:#f9a153;">Welcome Back!</h1>
-                    <h2 style="margin-top: 0px;">Sign In To Your Account to See What’s Cooking.</h2>
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <form class="form-horizontal" id="login_Form" method="post" url="https://sprypizza.com/api/login">
-                                    <div class="form-group">
-                                        <div class="col-xs-12" style="padding:0; margin-top: 20px;">
-                                            <div class="input-group">
-                                                <countries-listing :country_id="country_id"></countries-listing>
-                                                <input name="mobile_number" class="form-control input-lg" placeholder="Mobile Number" v-model="mobile" autocomplete="off" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button" name="sendSMS" class="btn flat-orange-btn col-xs-12" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled">Get pin</button>
-                                        <login-errors :error="error" :pin="pin"></login-errors>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-xs-12" style="padding:0;">
-                                            <input name="pin_number" class="form-control input-lg" placeholder="PIN" autocomplete="off" />
-                                        </div>
-                                    </div>
-                                    <div class="checkbox row" style="margin-left: 10px; margin-right: 0;">
-                                        <div class="pull-left" style="padding-left: 0px;">
-                                            <label name="rememberMe">Remember me</label>
-                                        </div>
-                                        <div class="pull-left" style="margin-left: 40px;">
-                                            <input type="checkbox" name="rememberMe" checked="checked" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn flat-orange-btn col-xs-12">Login</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <p>Left panel content goes here</p>
+    </div>
+</div>
+<!-- Right panel with cover effect-->
+<div class="panel panel-right panel-cover">
+    <div class="content-block">
+        <p>Right panel content goes here</p>
+    </div>
+</div>
+
+<div class="views tabs toolbar-through">
+    <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+    <div id="view-1" class="view view-main tab active">
+        <!-- Pages-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center sliding">Sprypizza</div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index-1" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <div class="content-block-title">
+                        <h1 style="margin-bottom: 0px; color:#f9a153;">Welcome Back!</h1>
+                        <p style="margin-top: 0px;">Sign In To Your Account to See What’s Cooking.</p>
                     </div>
-                    <div class="col-sm-6 col-xs-12">
+                    <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label" style="color: #4d4d4d !important; padding-left:0;">Country</div>
+                                        <countries-listing :country_id="country_id"></countries-listing>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="item-content">
+                                <!--<div class="item-content">-->
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input name="mobile_number" class="form-control input-lg" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                <!--</div>-->
+                            </li>
+                            <br>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="button" name="sendSMS" class="button button-fill button-big color-yellow" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">Get pin</button>
+                                            <login-errors :error="error" :pin="pin"></login-errors>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input name="pin_number" class="form-control input-lg" placeholder="PIN" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <label style="padding-left: 0px; float: left;" name="rememberMe">Remember me</label>
+                                            <input style="margin-left: 40px; float:left;" type="checkbox" name="rememberMe" checked="checked"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="submit" class="button button-fill button-big" style="width: 100%;">Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+
+                    <div>
                         <img src="img/pizza-mascot.svg" class="img-responsive" alt=""/>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/commons.min.js"></script>
-    <script src="js/login.min.js"></script>
+    <div id="view-2" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center sliding">Second View</div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-2" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
+                    </div>
+                    <section id="menu-container">
+                        <groupscontainer></groupscontainer>
+                        <itemscontainer></itemscontainer>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="view-3" class="view tab">
+        <div class="pages">
+            <div data-page="index-3" class="page">
+                <div class="page-content">
+                    <div class="content-block-title">Another plain static view</div>
+                    <div class="content-block">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor. </p>
+                        <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor. </p>
+                    </div>
+                    <section id="cart-container">
+                        <div class="container">
+                            <shoppingcart></shoppingcart>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="view-4" class="view tab">
+        <div class="pages navbar-fixed">
+            <div data-page="index-4" class="page">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Settings</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Name</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-email"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">E-mail</div>
+                                        <div class="item-input">
+                                            <input type="email" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-url"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">URL</div>
+                                        <div class="item-input">
+                                            <input type="url" placeholder="URL">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Password</div>
+                                        <div class="item-input">
+                                            <input type="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-tel"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Phone</div>
+                                        <div class="item-input">
+                                            <input type="tel" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Gender</div>
+                                        <div class="item-input">
+                                            <select>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Birth date</div>
+                                        <div class="item-input">
+                                            <input type="date" placeholder="Birth day" value="2014-04-30">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Switch</div>
+                                        <div class="item-input">
+                                            <label class="label-switch">
+                                                <input type="checkbox">
+                                                <div class="checkbox"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-settings"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title label">Slider</div>
+                                        <div class="item-input">
+                                            <div class="range-slider">
+                                                <input type="range" min="0" max="100" value="50" step="0.1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Tabbar-->
+    <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner"><a href="#view-1" class="tab-link active">
+            <i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Information</span></a><a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Inbox</span></a><a href="#view-3" class="tab-link">
+            <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Upload</span></a><a href="#view-4" class="tab-link">
+            <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a></div>
+    </div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+<script src="js/vendor.min.js"></script>
+<script src="js/commons.min.js"></script>
+<script src="js/login.min.js"></script>
+<script src="js/menu.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
 </body>
 
 </html>
