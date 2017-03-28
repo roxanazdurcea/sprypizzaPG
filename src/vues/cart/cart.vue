@@ -230,6 +230,7 @@
                 var items = JSON.parse(items)['items'];
                 Store.commit('setItems', items);
             }
+            this.clearCart();
         },
         updated: function () {
             var itemsArray = {};
