@@ -2,13 +2,316 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b0021ca-a956-4c3f-976c-15c95b592b04" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/scripts/sfnt2woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/fonts/Framework7Icons-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/fonts/Framework7Icons-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/fonts/Framework7Icons-Regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/fonts/Framework7Icons-Regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/sketch/framework7-icons.sketch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/blank.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/build_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/cheatsheet/icon-row.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/cheatsheet/template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/generate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/scripts/eotlitetool.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/build/scripts/generate_font.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/cheatsheet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/css/framework7-icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/add.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/add_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/add_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/alarm.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/alarm_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/albums.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/albums_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_down_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_left_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_right_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/arrow_up_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/at.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/at_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bag.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bag_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bars.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bell.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bell_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bolt.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bolt_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bolt_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bolt_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/book.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/book_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bookmark.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/bookmark_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/box.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/box_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/briefcase.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/briefcase_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/calendar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/calendar_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/camera.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/camera_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/card.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/card_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chat.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chat_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chats.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chats_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/check.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/check_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/check_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chevron_down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chevron_left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chevron_right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/chevron_up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/circle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/circle_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/circle_half.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/close.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/close_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/close_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud_download.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud_download_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud_upload.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/cloud_upload_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/collection.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/collection_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/compass.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/compass_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/compose.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/compose_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/data.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/data_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/delete.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/delete_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/delete_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/document.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/document_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/document_text.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/document_text_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/download.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/download_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/download_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/download_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/drawer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/drawer_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/drawers.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/drawers_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/email.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/email_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/eye.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/eye_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/fastforward.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/fastforward_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/fastforward_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/fastforward_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/favorites.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/favorites_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/film.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/film_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/filter-fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/filter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/flag.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/flag_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/folder.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/folder_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/forward.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/forward_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/gear.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/gear_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/graph_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/graph_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/graph_square.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/graph_square_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/heart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/heart_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/help.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/help_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/home.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/home_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/images.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/images_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/info.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/info_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/keyboard.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/keyboard_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/layers.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/layers_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/list.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/list_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/lock.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/lock_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/login.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/login_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/logout.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/logout_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/menu.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/mic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/mic_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_dollar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_dollar_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_euro.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_euro_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_pound.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_pound_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_rubl.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_rubl_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_yen.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/money_yen_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_vertical.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_vertical_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_vertical_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/more_vertical_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/navigation.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/navigation_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/paper_plane.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/paper_plane_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pause.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pause_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pause_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pause_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/person.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/person_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/persons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/persons_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/phone.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/phone_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/phone_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/phone_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/photos.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/photos_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pie.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/pie_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/play.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/play_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/play_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/play_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/radio.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/redo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/refresh.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/refresh_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/refresh_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/reload.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/reload_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/reload_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/reply.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/reply_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/rewind.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/rewind_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/rewind_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/rewind_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/search.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/search_strong.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/settings.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/settings_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/share.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/share_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_facebook.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_facebook_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_github.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_github_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_googleplus.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_instagram.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_instagram_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_linkedin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_linkedin_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_rss.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_rss_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_twitter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/social_twitter_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/sort.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/sort_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/star.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/star_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/star_half.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/stopwatch.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/stopwatch_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tabs.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tabs_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tags.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tags_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tape.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tape_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/ticket.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/ticket_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/time.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/time_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/timer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/timer_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/today.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/today_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/trash.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/trash_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tune.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/tune_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/undo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/unlock.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/unlock_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/videocam.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/videocam_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/videocam_round.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/videocam_round_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume_low.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume_low_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume_mute.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/volume_mute_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/world.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/world_fill.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/zoom_in.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/Icons-master/src/zoom_out.svg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/about.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/blog-single.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/blog.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/specials.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/custom.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/browser.json" afterPath="$PROJECT_DIR$/platforms/browser/browser.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/css/custom.css" afterPath="$PROJECT_DIR$/platforms/browser/www/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/css/index.css" afterPath="$PROJECT_DIR$/platforms/browser/www/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/commons.min.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/commons.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/login.min.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/login.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/menu.min.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/menu.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/vendor.min.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/vendor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/files/commons.less" afterPath="$PROJECT_DIR$/src/less/files/commons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/files/index.less" afterPath="$PROJECT_DIR$/src/less/files/index.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/cart/cart.vue" afterPath="$PROJECT_DIR$/src/vues/cart/cart.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="$PROJECT_DIR$/www/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/commons.min.js" afterPath="$PROJECT_DIR$/www/js/commons.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/login.min.js" afterPath="$PROJECT_DIR$/www/js/login.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/menu.min.js" afterPath="$PROJECT_DIR$/www/js/menu.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/vendor.min.js" afterPath="$PROJECT_DIR$/www/js/vendor.min.js" />
     </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,34 +319,91 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="sprypizzaPG" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="321" column="23" lean-forward="false" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="1660">
+              <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3822#3828#0" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/commons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="232" column="29" lean-forward="false" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+            <state relative-caret-position="3040">
+              <caret line="280" column="41" selection-start-line="280" selection-start-column="41" selection-end-line="280" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#6404#11249#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="142" column="7" selection-start-line="142" selection-start-column="7" selection-end-line="142" selection-end-column="7" />
+              <folding>
+                <element signature="e#1194#1512#2" expanded="true" />
+                <element signature="e#1570#1825#2" expanded="true" />
+                <element signature="e#1910#2489#2" expanded="true" />
+                <element signature="e#2547#2888#2" expanded="true" />
+                <element signature="e#2973#3857#2" expanded="true" />
+                <element signature="e#3915#4375#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commons.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/less/files/commons.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,7 +435,6 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/js/login.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/src/vues/login/countries.vue" />
         <option value="$PROJECT_DIR$/src/less/files/login.less" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
@@ -83,8 +442,14 @@
         <option value="$PROJECT_DIR$/src/vues/menu/groups.vue" />
         <option value="$PROJECT_DIR$/src/js/menu.js" />
         <option value="$PROJECT_DIR$/src/js/commons.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/src/less/files/index.less" />
+        <option value="$PROJECT_DIR$/www/css/framework7-icons.css" />
+        <option value="$PROJECT_DIR$/www/Framework7-Icons-master/css/framework7-icons.css" />
+        <option value="$PROJECT_DIR$/www/dist/css/my-app.css" />
+        <option value="$PROJECT_DIR$/src/less/files/commons.less" />
         <option value="$PROJECT_DIR$/src/vues/cart/cart.vue" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
       </list>
     </option>
   </component>
@@ -108,7 +473,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -132,7 +497,16 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -154,21 +528,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -178,11 +558,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -190,17 +570,17 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -208,17 +588,39 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,11 +634,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -254,25 +656,33 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vues" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cart" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SprypizzaPG" />
+              <option name="myItemId" value="sprypizzaPG" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -280,7 +690,43 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,7 +735,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="F:/ownCloud/PhpstormProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.3.1" />
@@ -300,12 +746,15 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ownCloud\Phonegap Projects\sprypizzaPG\www\dist" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ownCloud\Phonegap Projects\sprypizzaPG\www\dist" />
+      <recent name="D:\ownCloud\Phonegap Projects\sprypizzaPG\www" />
+      <recent name="D:\ownCloud\Phonegap Projects\sprypizzaPG\src\fonts" />
+      <recent name="D:\ownCloud\Phonegap Projects\sprypizzaPG\www\css" />
       <recent name="C:\Users\Najm Njeim\Desktop\SprypizzaPG\www\img" />
-      <recent name="C:\Users\Najm Njeim\Desktop\SprypizzaPG\src\vues" />
-      <recent name="C:\Users\Najm Njeim\Desktop\SprypizzaPG\src\js" />
-      <recent name="C:\Users\Najm Njeim\Desktop\SprypizzaPG\www\js" />
-      <recent name="C:\Users\Najm Njeim\Desktop\SprypizzaPG\www" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -321,23 +770,6 @@
     </option>
   </component>
   <component name="RunManager" selected="PhoneGap/Cordova.Phonegap/Cordova run">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -366,10 +798,6 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -380,7 +808,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -427,37 +855,48 @@
       <workItem from="1490616022316" duration="14462000" />
       <workItem from="1490675278149" duration="63000" />
       <workItem from="1490679351463" duration="867000" />
+      <workItem from="1490682147727" duration="5410000" />
+      <workItem from="1490688212235" duration="22543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15392000" />
+    <option name="totallyTimeSpent" value="43345000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1716418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1748401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.2740668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="24" y="779" width="1876" height="335" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -467,80 +906,131 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/dist/Icons-master/css/framework7-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6099">
+          <caret line="321" column="23" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3822#3828#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/commons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#6404#11249#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/dist/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/files/bootstrap/mixins/grid.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/files/commons.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2268">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/login/errors.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/dist/js/framework7.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1764">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index_backup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -557,116 +1047,221 @@
     <entry file="file://$PROJECT_DIR$/www/js/login.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/img/pizza-mascot.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/files/login.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/custom.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/login/countries.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/menu/groups.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/generic/map/map.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2394">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/commons.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="321" column="23" lean-forward="false" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="23" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="171">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/framework7-icons.css" />
+    <entry file="file://$PROJECT_DIR$/src/less/files/about.less" />
+    <entry file="file://$PROJECT_DIR$/src/less/files/contact.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/files/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/files/login.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/files/specials.less" />
+    <entry file="file://$PROJECT_DIR$/src/less/files/register.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Framework7-Icons-master/css/framework7-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/dist/Icons-master/css/framework7-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="4" column="4455" selection-start-line="4" selection-start-column="4453" selection-end-line="4" selection-end-column="4455" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/dist/css/my-app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/files/commons.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="232" column="29" lean-forward="false" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="3040">
+          <caret line="280" column="41" selection-start-line="280" selection-start-column="41" selection-end-line="280" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#2;n#li#0;n#ul#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#6404#11249#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1660">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3822#3828#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="142" column="7" selection-start-line="142" selection-start-column="7" selection-end-line="142" selection-end-column="7" />
+          <folding>
+            <element signature="e#1194#1512#2" expanded="true" />
+            <element signature="e#1570#1825#2" expanded="true" />
+            <element signature="e#1910#2489#2" expanded="true" />
+            <element signature="e#2547#2888#2" expanded="true" />
+            <element signature="e#2973#3857#2" expanded="true" />
+            <element signature="e#3915#4375#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
