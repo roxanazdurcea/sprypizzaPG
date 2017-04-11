@@ -1,18 +1,18 @@
 <template>
     <div>
-        <div class="form-group input-group" v-show="search">
-            <input class="form-control input-sm" style="z-index:0;" placeholder="Search the map" id="map-search" type="text" v-on:keyup.13="Search">
-            <span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>
+        <div v-show="search">
+            <input style="z-index:0; width:100%;" placeholder="Search for your address directly on the map" id="map-search" type="text" v-on:keyup.13="Search">
         </div>
-        <div class="form-group" style="margin:0; padding:0;">
-            <div id="map-id" v-bind:style="{ height: height }"></div>
+        <br />
+        <div style="margin:0; padding:0;">
+            <div id="map-id"></div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['search', 'zoom', 'height', 'event'],
+        props: ['search', 'zoom', 'event'],
         name: 'Gmap',
         data: function() {
             return {
@@ -171,9 +171,10 @@
     }
 </script>
 
-<style>
+<style scoped>
     #map-id {
         width: 100%;
+        height: 250px;
         background-color: grey;
         margin: 0 auto;
         border: 1px solid #ccc;

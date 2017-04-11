@@ -8,6 +8,9 @@ window.Vue.use(resource);
 window.Events = new Vue();
 
 import shoppingcart from "../vues/cart/cart.vue";
+import itemCount from "../vues/cart/item-count.vue";
+import branches from "../vues/branches/branch.vue";
+import closestBranch from "../vues/branches/closet-branch.vue";
 
 window.Store = new Vuex.Store({
     state: {
@@ -64,3 +67,41 @@ new Vue({
     }
 });
 
+//Cart icon instance
+new Vue({
+    el: "#itemCount",
+    methods: {
+        openCart: function () {
+            Store.commit('toggleCartActive');
+        }
+    },
+    components: {
+        itemCount
+    }
+});
+
+//all branches
+new Vue({
+    el: "#branches-container",
+    http: {
+        emulateJSON: true,
+        emulateHTTP: true
+    },
+    components: {
+        branches
+    }
+});
+
+
+
+//closest branche
+new Vue({
+    el: '#closest-branch',
+    http: {
+        emulateJSON: true,
+        emulateHTTP: true
+    },
+    components: {
+        closestBranch
+    }
+});

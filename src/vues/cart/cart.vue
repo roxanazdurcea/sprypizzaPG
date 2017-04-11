@@ -5,22 +5,22 @@
             <form style="padding: 3%;">
 
                 <div v-show="items.length === 0">
-                    <h1>Your cart is empty!</h1>
-                    <h5>Hurry up and fill it with goodies!</h5>
+                    <br>
+                    <h1 style="text-align: center;">Your cart is empty!</h1>
+                    <h5 style="text-align: center;">Hurry up and fill it with goodies!</h5>
                 </div>
 
                 <ul class="product-preview-small itemsWrap" style="padding-left: 0px;">
-                    <li style="width:100%;" v-for="(item, idx) in items" v-bind:class="{ borderB : idx < items.length - 1 }">
+                    <li style="width: 100%;" v-for="(item, idx) in items" v-bind:class="{ borderB : idx < items.length - 1 }">
 
                         <div class="cart-product-row">
-                            <div class="cart-product-title">
-                                <h4><b>{{ item.name }}</b></h4>
+                            <div class="cart-product-title"><h4>{{ item.name }}</h4></div>
+                            <div class="cart-product-price"><p style="margin-bottom: 0px;">{{currency}}&nbsp;{{item.price}}</p>
                             </div>
-                            <div class="cart-product-price"><p style="margin-bottom: 0px;"><b>{{currency}}{{item.price}}</b></p></div>
                             <div class="cart-icons">
                                 <div class="icon-minus" v-on:click="rmItem(idx)" style="margin-left: 5px;">
-                                    <i class="f7-icons">delete_round_fill</i></div>
-                                <div class="icon-plus" v-on:click="listModifiers(idx)"><i class="f7-icons">add_round_fill</i>
+                                    <i class="f7-icons size-22">delete_round_fill</i></div>
+                                <div class="icon-plus" v-on:click="listModifiers(idx)"><i class="f7-icons size-22">add_round_fill</i>
                                 </div>
                             </div>
                         </div>
@@ -31,19 +31,20 @@
                                     <li><p>{{ extra.name }}</p></li>
                                 </ul>
                             </div>
-                            <div class="cart-product-price"><b>{{currency}}{{extra.price}}</b></p></div>
+                            <div class="cart-product-price">{{currency}}&nbsp;{{extra.price}}</p></div>
                             <div class="cart-icons">
-                                <div class="icon-minus" v-on:click="rmExtra(idx, extras_idx)"><i class="f7-icons">delete_round_fill</i>
-                                </div>
+                                <div class="icon-minus" v-on:click="rmExtra(idx, extras_idx)">
+                                    <i class="f7-icons size-22">delete_round_fill</i></div>
                             </div>
                         </div>
 
                         <div style="display: table; width: 100%; margin-top:2%;">
                             <div style="display: table-cell; vertical-align: middle; width: 100%; padding-bottom:5px;">
                                 <div class="modifiers buttons-row">
-                                    <div class="btn-group" style="width: 32%;" v-show="item.modifiers.showFreeModifiers">
-                                        <button style="width: 100%;" type="button" class="btn btn-default btn-large" v-on:click="openMod">
-                                            <i class="fa fa-check-square" aria-hidden="true"></i> Free
+
+                                    <div class="btn-group" style="width: 33%;" v-show="item.modifiers.showFreeModifiers">
+                                        <button style="width: 100%;" type="button" class="button modi-button" v-on:click="openMod">
+                                            <i class="f7-icons"></i> Free
                                         </button>
                                         <ul class="dropdown-menu" style="padding: 10px;">
                                             <li style="cursor: pointer" v-for="modifier in item.modifiers.modifiers_free" v-on:click="addModifier(modifier, idx)">
@@ -52,27 +53,28 @@
                                         </ul>
                                     </div>
 
-                                    <div class="btn-group" style="width: 32%;" v-show="item.modifiers.showAddModifiers">
-                                        <button style="width: 100%;" type="button" class="btn btn-default btn-large" v-on:click="openMod">
-                                            <i class="fa fa-plus-square" aria-hidden="true"></i> Add
+                                    <div class="btn-group" style="width: 33%;" v-show="item.modifiers.showAddModifiers">
+                                        <button style="width: 100%;" type="button" class="button modi-button" v-on:click="openMod">
+                                            <i class="f7-icons"></i> Add
                                         </button>
                                         <ul class="dropdown-menu" style="padding: 10px;">
                                             <li style="cursor: pointer" v-for="modifier in item.modifiers.modifiers_add" v-on:click="addModifier(modifier, idx)">
-                                                <span>{{ modifier.name }}</span><span class="pull-right">{{ currency }}{{ modifier.price }}</span>
+                                                <span>{{ modifier.name }}</span><span style="float:right;">{{ currency }}{{ modifier.price }}</span>
                                             </li>
                                         </ul>
                                     </div>
 
-                                    <div class="btn-group" style="width: 32%;" v-show="item.modifiers.showDeleteModifiers">
-                                        <button style="width: 100%;" type="button" class="btn btn-default btn-large" v-on:click="openMod">
-                                            <i class="fa fa-minus-square" aria-hidden="true"></i> Substract
+                                    <div class="btn-group" style="width: 33%;" v-show="item.modifiers.showDeleteModifiers">
+                                        <button style="width: 100%;" type="button" class="button modi-button" v-on:click="openMod">
+                                            <i class="f7-icons"></i> Substract
                                         </button>
                                         <ul class="dropdown-menu" style="padding: 10px;">
                                             <li style="cursor: pointer" v-for="modifier in item.modifiers.modifiers_delete" v-on:click="addModifier(modifier, idx)">
-                                                <span>{{ modifier.name }}</span><span class="pull-right">{{ currency }}{{ modifier.price }}</span>
+                                                <span>{{ modifier.name }}</span><span style="float:right;">{{ currency }}{{ modifier.price }}</span>
                                             </li>
                                         </ul>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -83,17 +85,18 @@
             <hr>
             <div style="padding: 5%;">
                 <div>
-                    <h4 class="text-center product-title"><b>TOTAL {{ currency }}{{ cartTotal }}</b></h4>
-                    <p class="text-center" style="padding-top: 5px; padding-bottom: 5px;">VAT
-                        {{currency}}{{Math.round(0.20*cartTotal * 100) / 100 }}</p>
+                    <h4 class="text-center product-title"><b>TOTAL {{ currency }}&nbsp;{{ cartTotal }}</b></h4>
+                    <p class="text-center" style="padding-top: 5px; padding-bottom: 5px;">VAT&nbsp;{{currency}}&nbsp;{{Math.round(0.20*cartTotal
+                        * 100) / 100 }}</p>
                 </div>
+                <br>
                 <div class="row">
-                    <div class="col-50" v-on:click="clearCart()">
+                    <p class="col-50" v-on:click="clearCart()">
                         <a href="#" class="button button-big color-red">Clear cart</a>
-                    </div>
-                    <div class="col-50" v-on:click="checkout()">
-                        <a href="#" class="button button-big color-orange">Checkout</a>
-                    </div>
+                    </p>
+                    <p class="col-50" v-on:click="checkout()">
+                        <a href="#view-4" class="tab-link button button-big color-orange">Checkout</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -229,7 +232,7 @@
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
     .borderB {
         border-bottom: 1px solid #eaeaea;
@@ -262,28 +265,9 @@
         color: #fff;
     }
 
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
+    .modifiers:nth-child(3) .dropdown-menu {
+        text-align: right;
     }
-
-    h1 {
-        font-family: Archer, "Cormorant Garamond", Vollkorn, "Old Standard TT", "Times New Roman", serif;
-        margin-bottom: 25px;
-        font-weight: normal;
-    }
-
-    h4 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        letter-spacing: 0px;
-    }
-  .modifiers:nth-child(3) .dropdown-menu{
-          text-align: right;
-    }
-    /*.dropdown-menu {*/
-        /*min-width: 100%;*/
-    /*}*/
 
     hr {
         margin-top: 15px;
@@ -301,22 +285,18 @@
 
     @media (max-width: 769px) {
         .cart-content h1 {
-            font-size: 1.6rem;
-            margin-top: 0px;
-            margin-bottom: 0px;
+            font-size: 2rem;
         }
 
-        .cart-content h4 {
-            vertical-align: middle;
-            font-size: 1.8rem;
+        .cart-content h4, .product-preview-small .product-title {
             margin-top: 0px;
-            margin-bottom: 0px;
+            font-size: 1.2rem;
         }
 
-        .cart-content p {
-            font-size: 1.4rem;
-            margin-top: 0px;
+        .cart-content a, .cart-content p, .button-yellow a {
+            font-size: 1rem;
             margin-bottom: 0px;
+            margin-top: 0px;
         }
     }
 
@@ -331,27 +311,25 @@
     }
 
     .cart-product-row {
-        display: table;
         width: 100%;
+        height: 40px;
+        clear: both;
     }
 
     .cart-product-title {
-        width: 70%;
-        margin: 0;
-        vertical-align: middle;
+        width: 60%;
+        float: left;
     }
 
     .cart-product-price {
-        display: table-cell;
         width: 10%;
-        margin: 0;
-        vertical-align: middle;
+        display: inline-block;
+        text-align: center;
     }
 
     .cart-icons {
-        display: table-cell;
-        width: 20%;
-        text-align: right;
+        width: 30%;
+        float: right;
     }
 
     .icon-plus {

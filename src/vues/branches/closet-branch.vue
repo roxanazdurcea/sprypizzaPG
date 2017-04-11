@@ -1,6 +1,7 @@
 <template>
 
     <div class="closestBranch" style="padding: 3%;">
+
         <div class="row">
             <div class="col-xs-5 padleft0">
                 <h5 style="color: #D12027;"><em><span>{{branch.name}}</span></em></h5>
@@ -22,7 +23,6 @@
             <div class="col-xs-11 padleft0"><p>{{branch.number}}</p></div>
         </div>
         <hr>
-
         <div>
             <div style="height: 50px;">
                 <ul>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+
     import moment from 'moment';
 
     export default {
@@ -69,9 +70,10 @@
             this.Get();
         }
     }
+
 </script>
 
-<style>
+<style scoped>
 
     .closestBranch {
         text-align: left;

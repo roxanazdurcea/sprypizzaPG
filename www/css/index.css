@@ -1,5 +1,12 @@
 /* Your app custom files in this file */
 /* Tab bar icons */
+
+@font-face {
+    font-family: Archer;
+    src: url("../dist/archer-medium-opentype.otf");
+    font-weight: normal;
+}
+
 i.tabbar-demo-icon-1 {
     width: 30px;
     height: 30px;
@@ -46,55 +53,50 @@ i.tabbar-demo-icon-4 {
 
 h1, h2 {
     font-family: Archer, "Cormorant Garamond", Vollkorn, "Old Standard TT", "Times New Roman", serif;
-    margin-bottom: 25px;
     font-weight: normal;
+    margin: 0;
 }
 
 h3, h4, h5, h6 {
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
+    margin: 0;
 }
 
 h1 {
-    font-size: 3rem;
-    line-height: 3.2rem;
+    font-size: 2rem;
     color: #f9a153;
 }
 
 h2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 1.8rem;
 }
 
 h3 {
-
-    font-size: 2.3rem;
-    line-height: 2.8rem;
+    font-size: 1.6rem;
 }
 
 h4 {
-
-    font-size: 2.1rem;
-    line-height: 2.6rem;
+    font-size: 1.4rem;
 }
 
 h5 {
-
-    font-size: 1.9rem;
-    line-height: 2.4rem;
+    font-size: 1.2rem;
 }
 
 h6 {
 
-    font-size: 1.7rem;
-    line-height: 2.2rem;
+    font-size: 1.1rem;
 }
 
 p {
     font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+    font-size: 1rem;
     font-weight: 400;
+}
+
+a.button {
+    color: #fff;
 }
 
 .color-red {
@@ -103,17 +105,56 @@ p {
 }
 
 .color-orange {
-    background-color: #F9A153;
+    background-color: #f9a153;
+    color: #fff !important;
+}
+
+.color-green {
+    background-color: #468847;
     color: #fff;
+}
+
+.color-white {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+
+.modi-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border: 1px solid #000 !important;
+    border-radius: 0px !important;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: 0 0;
+    padding: 0 10px;
+    margin: 0;
+    height: 29px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
 }
 
 .f7-icons .badge, .framework7-icons .badge, .icon .badge {
     margin-left: -40px !important;
+    top: 4px;
     z-index: 1000;
+    background-color: rgba(119, 119, 119, 0.8);
 }
 
 .panel {
-    background: rgba(255, 255, 255, 0.9);
+    background: #eeeeee;
     width: 300px;
 }
 
@@ -130,6 +171,10 @@ p {
     height: 0px;
 }
 
+.list-block ul:after {
+    height: 0px;
+}
+
 .list-block .item-inner:after {
     height: 0px;
 }
@@ -137,7 +182,7 @@ p {
 .list-block .item-title.label {
     color: #6d6d72;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 label {
@@ -151,6 +196,138 @@ a.close-panel {
 
 .list-block input[type=time], .list-block input[type=number], .list-block input[type=text], .list-block input[type=password], .list-block input[type=search], .list-block input[type=email], .list-block input[type=tel], .list-block input[type=url], .list-block input[type=date], .list-block input[type=datetime-local], .list-block select, .list-block textarea {
     color: #6d6d72 !important;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.button {
+    border: 0px;
+    border-radius: 0px;
+}
+
+.button.button-big {
+    font-size: 1rem;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu .size-18 {
+    font-size: 1rem;
+}
+
+.page {
+    background: #fff;
+}
+
+.page-content {
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
+}
+
+.img-responsive-F7 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+i.icon.icon-back {
+    float: left;
+    margin-right: 10px;
+}
+
+.back span {
+    float: right;
+    color: #8f8f8f;
+    font-size: 1rem;
+}
+
+.swiper-slide {
+    width: 34%;
+    float: left;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #d1d1d1;
+}
+
+.left-side-icon {
+    margin-right: 5px;
+    color: #8f8f8f;
+}
+
+.tabbar a.active {
+    color: #f9a153;
+}
+
+#menu a {
+    color: #8f8f8f;
+}
+
+#menu a i {
+    color: #f9a153;
+}
+
+.navbar a {
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+/*.tabbar a {*/
+/*color: #fff;*/
+/*}*/
+
+.tabbar-labels {
+    height: 55px;
+}
+
+.tabbar-labels a.link, .tabbar-labels a.tab-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar .center {
+    color: #8f8f8f;
+    font-weight: 500 !important;
+    font-size: 1.2rem;
+}
+
+.navbar .left a + a, .navbar .right a + a {
+    margin-left: 10px;
+}
+
+/*Displaying items in a column*/
+.flexcontainercolumn {
+    padding: 20px;
+    margin-top: 50px;
+    display: -webkit-flex; /*Setting the container to flex */
+    display: flex;
+    -webkit-flex-direction: column; /*sets it to be in a column*/
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.navbar, .subnavbar, .toolbar {
+    background: #e0e0e0;
+}
+
+.toolbar:before {
+    height: 0px;
+}
+
+.navbar:after {
+    height: 0px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* my style */

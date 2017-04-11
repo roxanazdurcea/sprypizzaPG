@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <div>
         <div id="myNav" class="overlay" v-show="isVisible">
             <div style="padding: 3%;">
-                <div class="row vertical-align overlay-header">
+                <div class="vertical-align overlay-header">
                     <div class="col-xs-10 col-sm-11"><h5><b><em>Find our closest location</em></b></h5></div>
                     <div class="col-xs-2 col-sm-1">
                         <button type="button" class="closebtn" v-on:click="HideAside">
@@ -65,10 +65,11 @@
                 </div>
             </div>
         </div>
-    </div><!-- .container -->
+    </div>
 </template>
 
 <script>
+
 
     import Gmap from "../generic/map/map.vue";
 
@@ -124,7 +125,8 @@
     }
 </script>
 
-<style>
+<style scoped>
+
     .overlay {
         height: 100%;
         width: 25%;
@@ -203,7 +205,6 @@
         float: left;
         width: 95%;
     }
-
 
     .overlay-content .fa-envelope {
         font-size: 1.2rem;

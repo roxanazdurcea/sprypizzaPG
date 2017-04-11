@@ -10,28 +10,38 @@
 
     <title>SpryPizza</title>
 
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKOnrOhuNeDi9Z_V32-kvMqnNvH2ZAeKQ" type="text/javascript"></script>
 
+    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="dist/Icons-master/css/framework7-icons.css">
 </head>
 
-
 <body>
-
 
 <!-- Status bar overlay for fullscreen mode-->
 <div class="statusbar-overlay"></div>
-<!-- Left Panel with Reveal effect -->
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+
+<!-- Left panel with reveal effect-->
 <div class="panel panel-left panel-reveal">
     <div class="content-block">
-        <p>Left Panel content here</p>
-        <!-- Click on link with "close-panel" class will close panel -->
-        <a href="#" class="close-panel"><i class="f7-icons">reply</i></a>
+        <nav id="menu" class="left show">
+            <a href="#view-5" class="tab-link"><i class="f7-icons size-18 left-side-icon">home_fill</i>Our Branches</a>
+            <hr>
+            <a href="#view-6" class="tab-link"><i class="f7-icons size-18 left-side-icon">navigation_fill</i>Closest Branch</a>
+            <hr>
+            <a href="#"><i class="f7-icons size-18 left-side-icon">person_fill</i>My Account</a>
+            <hr>
+            <a href="#"><i class="f7-icons size-18 left-side-icon">list_fill</i>My Orders</a>
+            <hr>
+            <a href="#"><i class="f7-icons size-18 left-side-icon">star_fill</i>My Rewards</a>
+        </nav>
     </div>
 </div>
+
 <!-- Right Panel with Cover effect -->
 <div class="panel panel-right panel-cover">
     <div class="content-block">
@@ -40,7 +50,6 @@
                 <h1>Welcome Back!</h1>
                 <p>Sign In To Your Account to See What’s Cooking.</p>
             </div>
-
             <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
                 <ul>
                     <li>
@@ -55,7 +64,7 @@
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input name="mobile_number" class="form-control input-lg" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
+                                <input name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
                             </div>
                         </div>
                     </li>
@@ -77,7 +86,7 @@
                         <div class="item-content">
                             <div class="item-inner">
                                 <div class="item-input">
-                                    <input name="pin_number" class="form-control input-lg" placeholder="PIN" autocomplete="off"/>
+                                    <input name="pin_number" placeholder="PIN" autocomplete="off"/>
                                 </div>
                             </div>
                         </div>
@@ -112,84 +121,80 @@
     </div>
 </div>
 
-<div class="views tabs toolbar-through">
-    <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
-    <div id="view-1" class="view view-main tab active">
-        <!-- Pages-->
+<div class="views tabs toolbar-through pages">
+
+    <div id="view-1" class="view view-main tab active" data-page="index-1">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">SpryPizza</div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">
+                    <img style="zoom: 50%;" src="https://sprypizza.com/assets/images/sprypizza-logo-header-white.svg"></div>
                 <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons">login</i></a>
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
                 </div>
             </div>
         </div>
         <div class="pages navbar-through">
-            <!-- Page, data-page contains page name-->
             <div data-page="index-1" class="page">
-                <!-- Scrollable page content-->
-                <div class="page-content">
+                <div class="page-content" style="    position: relative;">
 
+                        <img style="position: absolute; top: 50px; right: 0; width: 100%;" src="img/top-back.png">
+                        <img style="position: absolute; bottom: 50px; left: 0; width: 100%;" src="img/bottom-back.png">
 
-                    <!--<div>-->
-                    <!--<img src="img/pizza-mascot.svg" class="img-responsive" alt=""/>-->
-                    <!--</div>-->
+                    <div class="flexcontainercolumn">
+                        <div class="item1"><a href="#view-2" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-new-order.png"></a></div>
+                        <div class="item2"><a href="#view-7" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-track-order.png"></a></div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <div id="view-2" class="view tab">
-        <!-- We can make with view with navigation, let's add Top Navbar-->
 
+    <div id="view-2" class="view tab" data-page="index-2">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="back link">
-                        <i class="icon icon-back" style="transform: translate3d(0px, 0px, 0px);"></i><span>Back</span></a>
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
                 </div>
                 <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Menu</div>
                 <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons">login</i></a>
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
                 </div>
             </div>
         </div>
         <div class="pages navbar-through">
             <div data-page="index-2" class="page">
                 <div class="page-content">
-                    <div class="content-block">
-                        <!--<p>This is a second view. Lets, for example, have here some internal pages with navbar-->
-                        <!--navigation</p>-->
-                    </div>
-                    <section id="menu-container">
+                    <section id="menu-container" style="padding: 10px;">
                         <groupscontainer></groupscontainer>
                         <itemscontainer></itemscontainer>
                     </section>
-
-                    <!-- Preloader -->
-                    <!--<div class="infinite-scroll-preloader">-->
-                    <!--<div class="preloader"></div>-->
-                    <!--</div>-->
-
                 </div>
             </div>
         </div>
     </div>
-    <div id="view-3" class="view tab">
+
+    <div id="view-3" class="view tab" data-page="index-3">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="center sliding">Shopping Cart</div>
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-2" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Shopping Cart
+                </div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
             </div>
         </div>
         <div class="pages navbar-through">
             <div data-page="index-3" class="page">
                 <div class="page-content">
-                    <div class="content-block">
-                        <!--<h3>Cart</h3>-->
-                    </div>
-                    <section id="cart-container">
-                        <div class="container">
+                    <section id="cart-container" style="padding: 10px;">
+                        <div>
                             <shoppingcart></shoppingcart>
                         </div>
                     </section>
@@ -197,51 +202,141 @@
             </div>
         </div>
     </div>
-    <div id="view-4" class="view tab">
+
+    <div id="view-4" class="view tab" data-page="index-4">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="center sliding">Another page</div>
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-3" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Checkout</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
             </div>
         </div>
         <div class="pages navbar-through">
-            <div data-page="index-3" class="page">
+            <div data-page="index-4" class="page">
                 <div class="page-content">
-                    <div class="content-block">
-                        <!--<h3>Cart</h3>-->
-                    </div>
-                    Something here
+                    <section style="padding: 10px;">
+                        <h1>Welcome Back!</h1>
+                        <p>Sign In To Your Account to See What’s Cooking.</p>
+                        <br/>
+                        <div id="checkout-container">
+                            <div>
+                                <div id="order-map">
+                                    <Gmap :zoom="14" :search="true" :event="true"></Gmap>
+                                </div>
+                                <div>
+                                    <address-template></address-template>
+                                </div>
+                                <div>
+                                    <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
+                                </div><!-- addresses-container -->
+                            </div>
+                            <br/>
+                            <div>
+                                <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="view-5" class="view tab" data-page="index-5">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Branches</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-4" class="page">
+                <div class="page-content">
+                    <section id="branches-container">
+                        <branches></branches>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-6" class="view tab" data-page="index-6">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Closest Branch</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-4" class="page">
+                <div class="page-content">
+                    <section id="closest-branch">
+                        <closest-branch></closest-branch>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-7" class="view tab" data-page="index-7">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Track Order</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-4" class="page">
+                <div class="page-content">
+                    .......
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bottom Tabbar-->
     <div class="toolbar tabbar tabbar-labels">
         <div class="toolbar-inner">
             <a href="#view-1" class="tab-link active"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
             <a href="#view-2" class="tab-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
-            <a href="#view-3" class="tab-link"><i class="f7-icons">bag<span class="badge bg-red">4</span></i><span class="tabbar-label">Cart</span></a>
-            <a href="#view-4" class="tab-link"><i class="f7-icons">home</i><span class="tabbar-label">Link</span></a>
+            <a href="#view-3" class="tab-link"><i class="f7-icons">bag<span id="itemCount" class="badge bg-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>
+            <a href="#view-7" class="tab-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
         </div>
-        <!--<div class="toolbar-inner">-->
-        <!--<a href="#view-1" class="tab-link active"><i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Information</span></a>-->
-        <!--<a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Inbox</span></a>-->
-        <!--<a href="#view-3" class="tab-link"><i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Upload</span></a>-->
-        <!--<a href="#view-4" class="tab-link"><i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a>-->
-        <!--</div>-->
     </div>
+
 </div>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="dist/js/framework7.min.js"></script>
 <script src="js/vendor.min.js"></script>
 <script src="js/commons.min.js"></script>
 <script src="js/login.min.js"></script>
 <script src="js/menu.min.js"></script>
+<script src="js/checkout.min.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
-<!--<script>-->
-<!--(function () {-->
-<!--localStorage.clear();-->
-<!--})();-->
-<!--</script>-->
+
 </body>
 
 </html>
