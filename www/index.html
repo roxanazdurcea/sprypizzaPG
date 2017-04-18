@@ -16,6 +16,9 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="dist/Icons-master/css/framework7-icons.css">
+
+
+
 </head>
 
 <body>
@@ -29,15 +32,15 @@
 <div class="panel panel-left panel-reveal">
     <div class="content-block">
         <nav id="menu" class="left show">
-            <a href="#view-5" class="tab-link"><i class="f7-icons size-18 left-side-icon">home_fill</i>Our Branches</a>
+            <a href="#view-5" class="tab-link panel-close"><i class="f7-icons size-22 left-side-icon">home_fill</i>Our Branches</a>
             <hr>
-            <a href="#view-6" class="tab-link"><i class="f7-icons size-18 left-side-icon">navigation_fill</i>Closest Branch</a>
+            <a href="#view-6" class="tab-link"><i class="f7-icons size-22 left-side-icon">navigation_fill</i>Closest Branch</a>
             <hr>
-            <a href="#"><i class="f7-icons size-18 left-side-icon">person_fill</i>My Account</a>
+            <a href="#view-7" class="tab-link"><i class="f7-icons size-22 left-side-icon">person_fill</i>My Account</a>
             <hr>
-            <a href="#"><i class="f7-icons size-18 left-side-icon">list_fill</i>My Orders</a>
+            <a href="#view-8" class="tab-link"><i class="f7-icons size-22 left-side-icon">list_fill</i>My Orders</a>
             <hr>
-            <a href="#"><i class="f7-icons size-18 left-side-icon">star_fill</i>My Rewards</a>
+            <a href="#"><i class="f7-icons size-22 left-side-icon">star_fill</i>My Rewards</a>
         </nav>
     </div>
 </div>
@@ -60,15 +63,15 @@
                             </div>
                         </div>
                     </li>
-                    <br>
+
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
+                                <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
                             </div>
                         </div>
                     </li>
-                    <br>
+
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
@@ -81,17 +84,17 @@
                             </div>
                         </div>
                     </li>
-                    <br>
+
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
                                 <div class="item-input">
-                                    <input name="pin_number" placeholder="PIN" autocomplete="off"/>
+                                    <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <br>
+
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
@@ -102,7 +105,7 @@
                             </div>
                         </div>
                     </li>
-                    <br>
+
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
@@ -114,47 +117,74 @@
                             </div>
                         </div>
                     </li>
+
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <button type="submit" class="button button-big color-orange" style="width: 100%;">
+                                        Facebook Login
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </form>
+            <hr>
+            <a href="#view-9" class="tab-link" style="color: #6e6e6e; margin-bottom:3%;"><p style="text-align: center;">New here? Register an account</p></a>
         </div>
         <a href="#" class="close-panel"><i class="f7-icons">forward</i></a>
     </div>
 </div>
 
-<div class="views tabs toolbar-through pages">
 
-    <div id="view-1" class="view view-main tab active" data-page="index-1">
+
+
+
+
+
+
+<div class="views tabs toolbar-fixed toolbar-through pages">
+
+    <!-- ============================ home ============================ -->
+    <!-- ============================ home ============================ -->
+    <!-- ============================ home ============================ -->
+    <div id="view-1" class="view view-main tab active" data-page="home">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">
-                    <img style="zoom: 50%;" src="https://sprypizza.com/assets/images/sprypizza-logo-header-white.svg"></div>
+                <div class="center sliding" style="left: -6.5px;">SpryPizza</div>
                 <div class="right">
                     <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
                     <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-1" class="page">
-                <div class="page-content" style="    position: relative;">
 
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="home" class="page">
+                <div class="page-content" style="position: relative;">
+                    <div class="content-block">
                         <img style="position: absolute; top: 50px; right: 0; width: 100%;" src="img/top-back.png">
                         <img style="position: absolute; bottom: 50px; left: 0; width: 100%;" src="img/bottom-back.png">
 
-                    <div class="flexcontainercolumn">
-                        <div class="item1"><a href="#view-2" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-new-order.png"></a></div>
-                        <div class="item2"><a href="#view-7" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-track-order.png"></a></div>
+                        <div class="flexcontainercolumn">
+                            <div class="item1"><a href="#view-2" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-new-order.png"></a></div>
+                            <div class="item2"><a href="#" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-track-order.png"></a></div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-2" class="view tab" data-page="index-2">
+    <!-- ============================ menu ============================ -->
+    <!-- ============================ menu ============================ -->
+    <!-- ============================ menu ============================ -->
+    <div id="view-2" class="view tab" data-page="menu">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                <div class="left sliding">
                     <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
                 </div>
                 <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Menu</div>
@@ -164,19 +194,23 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-2" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="menu" class="page">
                 <div class="page-content">
-                    <section id="menu-container" style="padding: 10px;">
-                        <groupscontainer></groupscontainer>
-                        <itemscontainer></itemscontainer>
-                    </section>
+                    <div class="content-block">
+                        <section id="menu-container" style="padding: 10px;">
+                            <groupscontainer></groupscontainer>
+                            <itemscontainer></itemscontainer>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-3" class="view tab" data-page="index-3">
+    <!-- ============================ Shopping Cart ============================ -->
+    <!-- ============================ Shopping Cart ============================ -->
+    <!-- ============================ Shopping Cart ============================ -->
+    <div id="view-3" class="view tab" data-page="shopping-cart">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
@@ -190,20 +224,24 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-3" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="shopping-cart" class="page">
                 <div class="page-content">
-                    <section id="cart-container" style="padding: 10px;">
-                        <div>
-                            <shoppingcart></shoppingcart>
-                        </div>
-                    </section>
+                    <div class="content-block">
+                        <section id="cart-container" style="padding: 10px;">
+                            <div>
+                                <shoppingcart></shoppingcart>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-4" class="view tab" data-page="index-4">
+    <!-- ============================ Checkout ============================ -->
+    <!-- ============================ Checkout ============================ -->
+    <!-- ============================ Checkout ============================ -->
+    <div id="view-4" class="view tab" data-page="checkout">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
@@ -216,37 +254,41 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-4" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="checkout" class="page">
                 <div class="page-content">
-                    <section style="padding: 10px;">
-                        <h1>Welcome Back!</h1>
-                        <p>Sign In To Your Account to See What’s Cooking.</p>
-                        <br/>
-                        <div id="checkout-container">
-                            <div>
-                                <div id="order-map">
-                                    <Gmap :zoom="14" :search="true" :event="true"></Gmap>
-                                </div>
-                                <div>
-                                    <address-template></address-template>
-                                </div>
-                                <div>
-                                    <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
-                                </div><!-- addresses-container -->
-                            </div>
+                    <div class="content-block">
+                        <section style="padding: 10px;">
+                            <h1>Welcome Back!</h1>
+                            <p>Sign In To Your Account to See What’s Cooking.</p>
                             <br/>
-                            <div>
-                                <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
+                            <div id="checkout-container">
+                                <div>
+                                    <div id="order-map">
+                                        <Gmap :zoom="14" :search="true" :event="true"></Gmap>
+                                    </div>
+                                    <div>
+                                        <address-template></address-template>
+                                    </div>
+                                    <div>
+                                        <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
+                                    </div><!-- addresses-container -->
+                                </div>
+                                <br/>
+                                <div>
+                                    <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
+                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-5" class="view tab" data-page="index-5">
+    <!-- ============================ Branches ============================ -->
+    <!-- ============================ Branches ============================ -->
+    <!-- ============================ Branches ============================ -->
+    <div id="view-5" class="view tab" data-page="branches">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
@@ -259,18 +301,22 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-4" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="branches" class="page">
                 <div class="page-content">
-                    <section id="branches-container">
-                        <branches></branches>
-                    </section>
+                    <div class="content-block">
+                        <section id="branches-container">
+                            <branches></branches>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-6" class="view tab" data-page="index-6">
+    <!-- ============================ Closest Branch ============================ -->
+    <!-- ============================ Closest Branch ============================ -->
+    <!-- ============================ Closest Branch ============================ -->
+    <div id="view-6" class="view tab" data-page="closest-branch">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
@@ -283,34 +329,99 @@
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-4" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="closest-branch" class="page">
                 <div class="page-content">
-                    <section id="closest-branch">
-                        <closest-branch></closest-branch>
-                    </section>
+                    <div class="content-block">
+                        <section id="closest-branch">
+                            <closest-branch></closest-branch>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="view-7" class="view tab" data-page="index-7">
+    <!-- ============================ My Account ============================ -->
+    <!-- ============================ My Account ============================ -->
+    <!-- ============================ My Account ============================ -->
+    <div id="view-7" class="view tab" data-page="my-account">
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
                     <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
                 </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Track Order</div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">My Account</div>
                 <div class="right">
                     <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
                     <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <div data-page="index-4" class="page">
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="my-account" class="page">
                 <div class="page-content">
-                    .......
+                    <div class="content-block">
+                        <div id="account-container">
+                            <account-form></account-form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================ My orders ============================ -->
+    <!-- ============================ My orders ============================ -->
+    <!-- ============================ My orders ============================ -->
+    <div id="view-8" class="view tab" data-page="my-orders">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">My orders</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="my-orders" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <div id="orders-container">
+                            <table-rows v-bind:rows="tableData"></table-rows>
+                            <table-pagination v-bind:page="page" v-bind:total="total" v-bind:filtered="filtered"></table-pagination>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================ Register ============================ -->
+    <!-- ============================ Register ============================ -->
+    <!-- ============================ Register ============================ -->
+    <div id="view-9" class="view tab" data-page="register">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
+                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                </div>
+                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Register</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-fixed navbar-through">
+            <div data-page="register" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <div id="register-container" class="row">
+                            <register-form></register-form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -335,7 +446,29 @@
 <script src="js/login.min.js"></script>
 <script src="js/menu.min.js"></script>
 <script src="js/checkout.min.js"></script>
-<script type="text/javascript" src="js/my-app.js"></script>
+<script src="js/orders.min.js"></script>
+<script src="js/account.min.js"></script>
+<script src="js/register.min.js"></script>
+
+<script>
+//            var onSuccess = function(position) {
+//                alert('Latitude: '          + position.coords.latitude          + '\n' +
+//                        'Longitude: '         + position.coords.longitude         + '\n' +
+//                        'Altitude: '          + position.coords.altitude          + '\n' +
+//                        'Accuracy: '          + position.coords.accuracy          + '\n' +
+//                        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+//                        'Heading: '           + position.coords.heading           + '\n' +
+//                        'Speed: '             + position.coords.speed             + '\n' +
+//                        'Timestamp: '         + position.timestamp                + '\n');
+//            };
+//            // onError Callback receives a PositionError object
+//            function onError(error) {
+//                alert('code: '    + error.code    + '\n' +
+//                        'message: ' + error.message + '\n');
+//            }
+//            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+</script>
 
 </body>
 

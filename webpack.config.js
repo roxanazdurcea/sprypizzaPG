@@ -8,6 +8,9 @@ module.exports = {
         'login': './src/js/login.js',
         'menu': './src/js/menu.js',
         'checkout': './src/js/checkout.js',
+        'orders': './src/js/orders.js',
+        'account': './src/js/checkout.js',
+        'register': './src/js/orders.js',
         'vendor': ['vue', 'vuex', 'vue-resource', 'underscore']
     },
     output: {

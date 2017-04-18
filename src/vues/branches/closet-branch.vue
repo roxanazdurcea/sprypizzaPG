@@ -1,40 +1,42 @@
 <template>
+    <div>
+        <div class="closestBranch" style="padding: 3%;">
 
-    <div class="closestBranch" style="padding: 3%;">
+            <div style="padding: 3%;"><h5><b><em>Find our closest location</em></b></h5></div>
+            <hr>
+            <div style="background-color: #f4f4f4; padding: 3%;">
+                <div class="row" style="align-items: center;">
+                    <div class="col-33 padleft0">
+                        <h5 style="color:red;"><em><span>{{branch.name}}</span></em></h5>
+                    </div>
+                    <div class="col-66 padleft0">
+                        <p style="text-align: right;"><span><i class="f7-icons size-15">navigation_fill</i></span>&nbsp;&nbsp;{{branch.distance}}&nbsp;Km</p>
+                    </div>
+                </div>
 
-        <div class="row">
-            <div class="col-xs-5 padleft0">
-                <h5 style="color: #D12027;"><em><span>{{branch.name}}</span></em></h5>
-            </div>
-            <div class="col-xs-7 padleft0">
-                <p style="text-align: right;"><span><i class="fa fa-location-arrow"></i></span>&nbsp;&nbsp;{{branch.distance}}&nbsp;Km</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-1 padleft0"><i class="fa fa-home fa-lg"></i></div>
-            <div class="col-xs-11 padleft0"><p>{{branch.street}}, {{branch.city}}, {{branch.country}}</p></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-1 padleft0"><i class="fa fa-envelope fa-lg"></i></div>
-            <div class="col-xs-11 padleft0"><p>{{branch.email_address}}</p></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-1 padleft0"><i class="fa fa-phone fa-lg"></i></div>
-            <div class="col-xs-11 padleft0"><p>{{branch.number}}</p></div>
-        </div>
-        <hr>
-        <div>
-            <div style="height: 50px;">
-                <ul>
-                    <li v-for="sch in branch.schedule" v-if="sch.day === today">
-                        <p v-if="sch.status === '1'">
-                            <span class="schDay">{{ sch.day }}'s Schedule</span><span style="width: 50%; float: right; text-align: right; color: #000;"><span style="color: #D12027;">{{ sch.time_start }}</span> &#8594; <span style="color: #D12027;">{{ sch.time_end }}</span></span>
-                        </p>
-                        <p v-if="sch.status === '0'">
-                            <span class="schDay">{{ sch.day }}</span><span style="width: 50%; float: right; text-align: right; color: #000;">Closed</span>
-                        </p>
-                    </li>
-                </ul>
+                <div><i style="float: left; width:8%;" class="f7-icons size-15">home</i><p style="float: left; margin-left: 1%; width:90%;">{{branch.street}}, {{branch.city}}, {{branch.country}}</p></div>
+                <br>
+                <div><i style="float: left; width:8%;" class="f7-icons size-15">email</i><p style="float: left; margin-left: 1%; width:90%;">{{branch.email_address}}</p></div>
+                <br>
+                <div><i style="float: left; width:8%;" class="f7-icons size-15">phone</i><p style="float: left; margin-left: 1%; width:90%;">{{branch.number}}</p></div>
+                <div style="clear: both;"></div>
+                <hr>
+
+                <div>
+                    <div>
+                        <ul>
+                            <li v-for="sch in branch.schedule" v-if="sch.day === today">
+                                <p v-if="sch.status === '1'">
+                                    <span class="schDay">{{ sch.day }}'s Schedule</span><span style="width: 50%; float: right; text-align: right; color: #000;"><span style="color: #D12027;">{{ sch.time_start }}</span> &#8594; <span style="color: #D12027;">{{ sch.time_end }}</span></span>
+                                </p>
+                                <p v-if="sch.status === '0'">
+                                    <span class="schDay">{{ sch.day }}</span><span style="width: 50%; float: right; text-align: right; color: #000;">Closed</span>
+                                </p>
+                            </li>
+                            <li style="clear: both"></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -58,7 +60,7 @@
         },
         methods: {
             Get: function () {
-                this.$http.post('/branches/get/closest', {
+                this.$http.post('https://sprypizza.com/api/branches/get/closest', {
                     latitude: Cookies.Get('latitude') || '44.4267674',
                     longitude: Cookies.Get('longitude') || '26.1025384',
                 }).then(function (data) {
@@ -78,34 +80,9 @@
     .closestBranch {
         text-align: left;
     }
-    .closestBranch h5 {
-        color: #fff;
-        margin-top: 0px !important;
-    }
-
-    .closestBranch p {
-        font-size: 1.2rem;
-        color: #000;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .closestBranch ul {
-        padding-left: 0px;
-    }
-
-    .closestBranch ul li {
-        list-style: none;
-        background-color: #fff;
-        margin-bottom: 10px;
-    }
 
     .padleft0 {
         padding-left: 0;
-    }
-
-    .closestBranch .schedStyle {
-        height: 30px;
     }
 
     .closestBranch .schedStyle i {
@@ -118,27 +95,18 @@
         width: 95%;
     }
 
-    .closestBranch .fa-envelope {
-        font-size: 1.2rem;
-        line-height: 2rem;
-        color: #D12027;
+    .closestBranch .schDay {
+        width: 50%;
+        float: left;
+        font-weight: 600;
     }
-    .closestBranch .fa-home {
-        font-size: 1.4rem;
-        line-height: 2rem;
-        color: #D12027;
-    }
-    .closestBranch .fa-phone {
-        font-size: 1.4rem;
-        line-height: 2rem;
-        color: #D12027;
-    }
-    .closestBranch hr {
+
+    hr {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    .closestBranch a {
+    a, a:hover, a:focus {
         text-decoration: none;
         font-size: 2rem;
         color: #000;
@@ -146,18 +114,30 @@
         transition: 0.3s;
     }
 
-    .closestBranch a, .closestBranch a:hover, .closestBranch a:focus {
-        color: #000;
-        font-size: 2rem;
+    p {
+        font-size: 0.8rem;
+        color: #818181;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
-    .closestBranch .fa {
-        color: #000;
+    h5 {
+        color: #F9A153;
+        font-size: 1rem;
     }
-    .closestBranch .schDay {
-        width: 50%;
 
-        float: left;
-        font-weight: 600;
+    h5 span {
+        font-size: 1rem;
     }
+
+    ul {
+        padding-left: 0px;
+    }
+
+    ul li {
+        list-style: none;
+        background-color: #f4f4f4;
+        margin-bottom: 10px;
+    }
+
 </style>

@@ -41,7 +41,7 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
     /*----- vue modal component -----*/
     .modal-mask {
@@ -62,7 +62,6 @@
     }
 
     .modal-container {
-        width: 40%;
         margin: 0px auto;
         padding: 10% 30px;
         background-color: #fff;

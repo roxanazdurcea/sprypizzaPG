@@ -56,7 +56,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .star-rating {
         width: 90%;
         margin: 0 auto;

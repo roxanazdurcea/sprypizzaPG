@@ -140,7 +140,7 @@
                         modalMessage: `Your order no.${data.body.response} was successfully updated`
                     };
                     Events.$emit('modalPopup-ev', modalData);
-                    console.log(data.body.response);
+                    window.myApp.alert('Your order no.${data.body.response} was successfully updated', 'Congratulations !');
                     Store.commit('clearItems');
                 });
             }

@@ -100,23 +100,28 @@ a.button {
 }
 
 .color-red {
-    background-color: #D12027;
-    color: #fff;
+    background-color: #D12027 !important;
+    color: #fff !important;
 }
 
 .color-orange {
-    background-color: #f9a153;
+    background-color: #f9a153 !important;
     color: #fff !important;
 }
 
 .color-green {
-    background-color: #468847;
-    color: #fff;
+    background-color: #468847 !important;
+    color: #fff !important;
 }
 
 .color-white {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
+}
+
+.size-15 {
+    font-size: 15px !important;
+    color: #5e5e5e !important;
 }
 
 .modi-button {
@@ -198,6 +203,11 @@ a.close-panel {
     color: #6d6d72 !important;
 }
 
+input {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 .btn {
     border-radius: 0px;
 }
@@ -268,6 +278,7 @@ hr {
 
 #menu a {
     color: #8f8f8f;
+    font-size: 1rem;
 }
 
 #menu a i {
@@ -279,9 +290,11 @@ hr {
     text-decoration: none;
 }
 
-/*.tabbar a {*/
-/*color: #fff;*/
-/*}*/
+.list-block .item-inner {
+    padding-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 
 .tabbar-labels {
     height: 55px;
@@ -300,6 +313,11 @@ hr {
 
 .navbar .left a + a, .navbar .right a + a {
     margin-left: 10px;
+}
+
+ul {
+    padding-left: 0px;
+    list-style: none;
 }
 
 /*Displaying items in a column*/

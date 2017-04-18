@@ -1,3 +1,36 @@
+window.myApp = new Framework7({
+    pushState: 'true',
+    swipePanel: 'left'
+});
+
+window.Cookies = {
+    Create: function (name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    },
+    Get: function (cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+    },
+    Erase: function (name) {
+        this.Create(name, "", -1);
+    }
+};
+
 window._ = require('underscore');
 window.Vue = require('vue');
 import Vuex from 'vuex';
@@ -11,6 +44,8 @@ import shoppingcart from "../vues/cart/cart.vue";
 import itemCount from "../vues/cart/item-count.vue";
 import branches from "../vues/branches/branch.vue";
 import closestBranch from "../vues/branches/closet-branch.vue";
+import accountForm from "../vues/account/form.vue";
+import registerForm from "../vues/register/form.vue";
 
 window.Store = new Vuex.Store({
     state: {
@@ -54,7 +89,6 @@ window.Store = new Vuex.Store({
     getters: {}
 });
 
-
 //Cart instance
 new Vue({
     el: "#cart-container",
@@ -92,8 +126,6 @@ new Vue({
     }
 });
 
-
-
 //closest branche
 new Vue({
     el: '#closest-branch',
@@ -105,3 +137,28 @@ new Vue({
         closestBranch
     }
 });
+
+//account form
+new Vue({
+    el: '#account-container',
+    http: {
+        emulateJSON: true,
+        emulateHTTP: true
+    },
+    components: {
+        accountForm
+    }
+});
+
+//register form
+new Vue({
+    el: '#register-container',
+    http: {
+        emulateJSON: true,
+        emulateHTTP: true
+    },
+    components: {
+        registerForm
+    }
+});
+

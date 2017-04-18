@@ -17,7 +17,10 @@ myApp.onPageInit('about', function (page) {
         createContentPage();
     });
 });
-
+myApp.onPageInit('index-4', function (page) {
+    // run createContentPage func after link was clicked
+    alert(1);
+});
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {

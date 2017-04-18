@@ -13,9 +13,8 @@
                             <h5 id="product-title">{{ item.name }}</h5>
                             <star-rating :value="item.rating | round" :disabled="disabled"></star-rating>
                             <p id="product-description">{{ item.description }}</p>
-                            <div>
-                                <br>
-                                <div class="row">
+
+                                <div class="row" style="margin-top: 10px;">
                                     <div class="col-33">
                                         <p class="product-qty">{{ item.qty }}</p>
                                         <div class="product-pieces">
@@ -27,7 +26,7 @@
                                     <div class="col-66 button modi-button" v-on:click="addToCart(item)"><span>add to cart</span>
                                     </div>
                                 </div>
-                            </div>
+
                         </div>
                     </div><!-- .product-content -->
                 </div>
@@ -167,11 +166,16 @@
     }
 
     .product-pieces .product-pieces-up {
-        top: -30px;
+        top: -35px;
     }
 
     .product-pieces .product-pieces-down {
-        bottom: -3px;
+        bottom: -5px;
+    }
+
+    p{
+        margin-top:5px;
+        margin-bottom:5px;
     }
 
 </style>
