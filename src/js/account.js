@@ -1,15 +1,17 @@
-import accountForm from "../../vues/account/form.vue";
+import accountForm from "../vues/account/form.vue";
 
 new Vue({
     el: '#account-container',
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
+    computed: {
+        current_latitude() {
+            return Store.state.latitude;
+        },
+        current_longitude() {
+            return Store.state.longitude;
+        }
     },
     mounted: function() {
-        var latitude = Cookies.Get('latitude');
-        var longitude = Cookies.Get('longitude');
-        var data = {'latitude': latitude, 'longitude': longitude, 'info': 'Current location'};
+        var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
     },
     components: {

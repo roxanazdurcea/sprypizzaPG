@@ -111,9 +111,9 @@
     export default {
         name: 'shoppingcart',
         computed: {
-            cartTotal: function () {
+            cartTotal() {
                 var total = 0;
-                this.items.forEach(function (item) {
+                this.items.forEach((item) => {
                     total += parseFloat(item.price);
                     if (_.has(item, 'extras')) {
                         item.extras.forEach(function (extra) {
@@ -123,58 +123,58 @@
                 });
                 return total;
             },
-            cartActive: function () {
+            cartActive() {
                 return Store.state.cartActive;
             },
-            items: function () {
+            items() {
                 return Store.state.items;
             },
-            imageURL: function () {
+            imageURL() {
                 return Store.state.imageURL;
             },
-            currency: function () {
+            currency() {
                 return Store.state.currency;
             }
         },
         methods: {
-            openMod: function (event) {
+            openMod(event) {
                 this.closeMod();
                 var ele = event.target;
                 ele.closest('div').classList.add("open");
             },
-            closeMod: function () {
+            closeMod() {
                 var btngroups = document.getElementsByClassName("btn-group");
                 _.each(btngroups, function (ele) {
                     ele.classList.remove("open");
                 });
             },
-            clearCart: function () {
+            clearCart() {
                 localStorage.clear();
                 Store.commit('clearItems');
             },
-            closeCart: function () {
+            closeCart() {
                 Store.commit('setCartActive', false);
             },
-            rmItem: function (idx) {
+            rmItem(idx) {
                 Store.commit('removeItem', idx);
             },
-            rmExtra: function (idx, extras_idx) {
+            rmExtra(idx, extras_idx) {
                 Store.commit('removeExtra', idx, extras_idx);
             },
-            checkout: function () {
+            checkout() {
                 var itemsArray = {};
                 itemsArray.items = _.clone(this.items);
                 itemsArray.total = this.cartTotal;
                 localStorage.setItem('cart', JSON.stringify(itemsArray));
             },
-            listModifiers: function (idx) {
+            listModifiers(idx) {
                 var item_id = this.items[idx]['id'];
 
-                this.$http.post('https://sprypizza.com/api/modifiers', {
+                axios.post('https://sprypizza.com/api/modifiers', {
                     item_id: item_id
-                }).then(function (data) {
+                }).then((data) => {
 
-                    var response = data.body.response;
+                    var response = data.data.response;
 
                     var items = _.clone(this.items);
 
@@ -182,7 +182,7 @@
                     items[idx]['modifiers']['modifiers_add'] = [];
                     items[idx]['modifiers']['modifiers_delete'] = [];
 
-                    response.forEach(function (obj) {
+                    response.forEach((obj) => {
                         switch (obj.modifier_type) {
                             case "free":
                                 items[idx]['modifiers']['modifiers_free'].push(obj);
@@ -194,7 +194,7 @@
                                 items[idx]['modifiers']['modifiers_delete'].push(obj);
                                 break;
                         }
-                    }.bind(this));
+                    });
 
                     items[idx]['modifiers']['showFreeModifiers'] = (items[idx]['modifiers']['modifiers_free'].length > 0) ? true : false;
                     items[idx]['modifiers']['showAddModifiers'] = (items[idx]['modifiers']['modifiers_add'].length > 0) ? true : false;
@@ -203,7 +203,7 @@
                     Store.commit('setItems', items);
                 });
             },
-            addModifier: function (modifier, idx) {
+            addModifier(modifier, idx) {
                 var items = _.clone(this.items);
                 items[idx]['extras'].push(modifier);
                 items[idx]['modifiers']['showAddModifiers'] = items[idx]['modifiers']['showFreeModifiers'] = items[idx]['modifiers']['showDeleteModifiers'] = false;
@@ -213,14 +213,14 @@
             }
 
         },
-        mounted: function () {
+        mounted() {
             var items = localStorage.getItem('cart');
             if (items) {
                 var items = JSON.parse(items)['items'];
                 Store.commit('setItems', items);
             }
         },
-        updated: function () {
+        updated() {
             var itemsArray = {};
             itemsArray.items = _.clone(this.items);
             itemsArray.total = this.cartTotal;

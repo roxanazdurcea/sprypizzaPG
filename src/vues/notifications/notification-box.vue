@@ -18,40 +18,40 @@
 <script>
 export default {
     name: 'notificationBox',
-    data: function() {
+    data() {
         return {
             messages: []
         }
     },
     computed: {
-        divHeight: function() {
+        divHeight() {
             return window.innerHeight*0.5;
         }
     },
     methods: {
-        listAll: function() {
+        listAll() {
 
-            this.$http.post('/messages/read', {
+            axios.post('/messages/read', {
                 user_id: window.Session.UID
-            }).then(function (data) {
-                this.messages = data.body.response;
-                if(data.body.response) {
+            }).then(function(data) {
+                this.messages = data.data.response;
+                if(data.data.response) {
                     Events.$emit('datapass', this.messages.length);
                 }
             }.bind(this));
         },
-        remove: function(idx) {
+        remove(idx) {
 
             var id = this.messages[idx]['id'];
 
             this.messages.splice(idx, 1);
 
-            this.$http.post('/messages/delete', {
+            axios.post('/messages/delete', {
                 id: id
             });
         }
     },
-    mounted: function() {
+    mounted() {
         this.listAll();
         setInterval(this.listAll, 30000);
     }

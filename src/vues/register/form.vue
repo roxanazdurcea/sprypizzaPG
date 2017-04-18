@@ -117,7 +117,7 @@
 
     export default {
         name: 'registerForm',
-        data: function () {
+        data() {
             return {
                 contact: {
                     title: 'Mr',
@@ -146,7 +146,7 @@
             }
         },
         computed: {
-            isDisabled: function () {
+            isDisabled() {
                 if (this.contact.first_nameError || this.contact.last_nameError || this.contact.phones[0]['phoneError'] || this.contact.emails[0]['emailError']
                         || !this.contact.first_name || !this.contact.last_name || !this.contact.phones[0]['number'] || !this.contact.emails[0]['email_address']
                         || this.contact.addresses.length === 0 || this.readonly) {
@@ -155,7 +155,7 @@
                     return false;
                 }
             },
-            nameError: function () {
+            nameError() {
                 if (this.contact.first_nameError && !this.contact.last_nameError) {
                     this.contact.nameErrorMessage = "The first name should be a minimum of 2 characters";
                     return true;
@@ -171,62 +171,62 @@
             }
         },
         filters: {
-            capitalize: function (value) {
+            capitalize(value) {
                 if (!value) return ''
                 value = value.toString()
                 return value.charAt(0).toUpperCase() + value.slice(1)
             }
         },
         methods: {
-            Submit: function () {
+            Submit() {
                 if (!this.isDisabled) {
                     var promise = Promise.resolve();
-                    promise.then(function () {
+                    promise.then(() => {
                         return this.Save();
-                    }.bind(this)).then(function () {
+                    }).then(() => {
                         this.readonly = true;
                         this.showPIN = true;
-                    }.bind(this));
+                    });
                 }
             },
-            ValidateFirstName: function () {
-                this.$http.post('https://sprypizza.com/api/validate/firstname', {
+            ValidateFirstName() {
+                axios.post('https://sprypizza.com/api/validate/firstname', {
                     first_name: this.contact.first_name,
-                }).then(function (data) {
-                    var results = data.body.response;
+                }).then(data => {
+                    let results = data.data.response;
                     this.contact.first_nameError = (results.res_firstname) ? true : false;
-                }.bind(this));
+                });
             },
-            ValidateLastName: function () {
-                this.$http.post('https://sprypizza.com/api/validate/lastname', {
+            ValidateLastName() {
+                axios.post('https://sprypizza.com/api/validate/lastname', {
                     last_name: this.contact.last_name,
-                }).then(function (data) {
-                    var results = data.body.response;
+                }).then(data => {
+                    let results = data.data.response;
                     this.contact.last_nameError = (results.res_lastname) ? true : false;
-                }.bind(this));
+                });
             },
-            ValidatePhones: function () {
-                this.$http.post('https://sprypizza.com/api/validate/phones', {
+            ValidatePhones() {
+                axios.post('https://sprypizza.com/api/validate/phones', {
                     phones: this.contact.phones,
-                }).then(function (data) {
-                    var results = data.body.response;
-                    results.res_phones.forEach(function (phoneError, index) {
+                }).then(data => {
+                    var results = data.data.response;
+                    results.res_phones.forEach((phoneError, index) => {
                         this.contact.phones[index]['phoneError'] = (phoneError) ? true : false;
-                    }.bind(this));
-                }.bind(this));
+                    });
+                });
             },
-            ValidateEmails: function () {
-                this.$http.post('https://sprypizza.com/api/validate/emails', {
+            ValidateEmails() {
+                axios.post('https://sprypizza.com/api/validate/emails', {
                     emails: this.contact.emails,
-                }).then(function (data) {
-                    var results = data.body.response;
-                    results.res_emails.forEach(function (emailError, index) {
+                }).then(data => {
+                    var results = data.data.response;
+                    results.res_emails.forEach((emailError, index) => {
                         this.contact.emails[index]['emailError'] = (emailError) ? true : false;
-                    }.bind(this));
-                }.bind(this));
+                    });
+                });
             },
-            Save: function () {
-                return this.$http.post('https://sprypizza.com/api/contact/save', {
+            Save() {
+                return axios.post('https://sprypizza.com/api/contact/save', {
                     title: this.contact.title,
                     first_name: this.contact.first_name,
                     last_name: this.contact.last_name,
@@ -234,17 +234,17 @@
                     phones: this.contact.phones,
                     emails: this.contact.emails,
                     addresses: this.contact.addresses
-                }).then(function (data) {
-                    this.validationMessage = data.body.response.pin || data.body.response.error;
-                }.bind(this));
+                }).then(data => {
+                    this.validationMessage = data.data.response.pin || data.data.response.error;
+                });
             },
-            ActivateContact: function () {
-                this.$http.post('https://sprypizza.com/api/contact/activate', {
+            ActivateContact() {
+                axios.post('https://sprypizza.com/api/contact/activate', {
                     pin: this.pin,
                     mobile: this.contact.phones[0].number,
                     country_id: this.contact.phones[0].country_id
-                }).then(function (data) {
-                    this.validationMessage = data.body.response.pin || data.body.response.error;
+                }).then(data => {
+                    this.validationMessage = data.data.response.pin || data.data.response.error;
                     this.contact = {
                         title: 'Mr',
                         first_name: '',
@@ -258,18 +258,18 @@
                         addresses: []
                     };
                     document.getElementById('register_Form').reset();
-                }.bind(this));
+                });
             },
-            Countries: function () {
-                this.$http.post('https://sprypizza.com/api/countries', {}).then(function (data) {
-                    this.countries = data.body.response;
+            Countries() {
+                axios.post('https://sprypizza.com/api/countries', {}).then(data => {
+                    this.countries = data.data.response;
                 });
             }
         },
-        mounted: function () {
+        mounted() {
             this.Countries();
 
-            Events.$on('saveAddress-ev', function (address) {
+            Events.$on('saveAddress-ev', (address) => {
 
                 var len = this.contact.addresses.length;
 
@@ -285,9 +285,9 @@
                     longitude: address.longitude,
                     default: address.default
                 });
-            }.bind(this));
+            });
 
-            Events.$on('setDefaultAddress-ev', function (idx) {
+            Events.$on('setDefaultAddress-ev', (idx) => {
                 var selectedLabel = this.contact.addresses[idx]['label'];
                 this.contact.addresses.forEach(function (address, index) {
                     if (address.label === selectedLabel) {
@@ -297,11 +297,11 @@
                         }
                     }
                 });
-            }.bind(this));
+            });
 
-            Events.$on('deleteAddress-ev', function (idx) {
+            Events.$on('deleteAddress-ev', (idx) => {
                 this.contact.addresses.splice(idx, 1);
-            }.bind(this));
+            });
         },
         components: {
             Gmap,

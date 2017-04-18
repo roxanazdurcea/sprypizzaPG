@@ -61,33 +61,41 @@
 
     export default {
         name: 'branches',
-        data: function () {
+        data() {
             return {
                 branches: []
             }
         },
-        mounted: function () {
+        computed: {
+            current_latitude() {
+                return Store.state.latitude;
+            },
+            current_longitude() {
+                return Store.state.longitude;
+            }
+        },
+        mounted() {
             this.List();
         },
         methods: {
-            List: function () {
-                this.$http.post('https://sprypizza.com/api/branches', {
-                    latitude: Cookies.Get('latitude') || '44.4267674',
-                    longitude: Cookies.Get('longitude') || '26.1025384',
+            List() {
+                axios.post('https://sprypizza.com/api/branches', {
+                    latitude: this.current_latitude,
+                    longitude: this.current_longitude,
                 }).then(function (data) {
-                    var branches = data.body.response;
+                    var branches = data.data.response;
                     branches.map(function (branch) {
                         branch.showSchedule = false;
                         return branch;
                     });
                     this.branches = branches;
-                });
+                }.bind(this));
             },
-            ShowBranch: function (branch) {
+            ShowBranch(branch) {
                 var data = {'latitude': branch.latitude, 'longitude': branch.longitude, 'info': branch.street};
                 Events.$emit('branchMapInfo-ev', data);
             },
-            ShowSchedule: function (idx) {
+            ShowSchedule(idx) {
                 this.branches[idx].showSchedule = !this.branches[idx].showSchedule;
             }
         },

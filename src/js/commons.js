@@ -1,42 +1,18 @@
 window.myApp = new Framework7({
-    pushState: 'true',
-    swipePanel: 'left'
+    pushState: false,
+    swipePanel: 'left',
+    template7Pages: true,
+    cache: true
 });
 
-window.Cookies = {
-    Create: function (name, value, days) {
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            var expires = "; expires=" + date.toGMTString();
-        }
-        else var expires = "";
-        document.cookie = name + "=" + value + expires + "; path=/";
-    },
-    Get: function (cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-    },
-    Erase: function (name) {
-        this.Create(name, "", -1);
-    }
-};
+var $$ = Framework7.$
 
 window._ = require('underscore');
+window.axios = require('axios');
+
 window.Vue = require('vue');
 import Vuex from 'vuex';
 window.Vue.use(Vuex);
-import resource from 'vue-resource';
-window.Vue.use(resource);
 
 window.Events = new Vue();
 
@@ -49,6 +25,10 @@ import registerForm from "../vues/register/form.vue";
 
 window.Store = new Vuex.Store({
     state: {
+        contact_id: "58c0312521a1d",
+        isLoggedIn: false,
+        latitude: '44.4267674',
+        longitude: '26.1025384',
         cartActive: false,
         itemCount: 0,
         group_id: 71,
@@ -57,6 +37,12 @@ window.Store = new Vuex.Store({
         currency: "$"
     },
     mutations: {
+        setLatitude: function (state, latitude) {
+            state.latitude = latitude;
+        },
+        setLongitude: function (state, longitude) {
+            state.longitude = longitude;
+        },
         setGroupId: function (state, group_id) {
             state.group_id = group_id;
         },
@@ -92,10 +78,6 @@ window.Store = new Vuex.Store({
 //Cart instance
 new Vue({
     el: "#cart-container",
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     components: {
         shoppingcart
     }
@@ -117,10 +99,6 @@ new Vue({
 //all branches
 new Vue({
     el: "#branches-container",
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     components: {
         branches
     }
@@ -129,10 +107,6 @@ new Vue({
 //closest branche
 new Vue({
     el: '#closest-branch',
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     components: {
         closestBranch
     }
@@ -141,10 +115,6 @@ new Vue({
 //account form
 new Vue({
     el: '#account-container',
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     components: {
         accountForm
     }
@@ -153,12 +123,23 @@ new Vue({
 //register form
 new Vue({
     el: '#register-container',
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     components: {
         registerForm
     }
 });
 
+var onSuccess = function(position) {
+   Store.commit('setLatitude', position.coords.latitude);
+   Store.commit('setLongitude', position.coords.longitude);
+};
+// onError Callback receives a PositionError object
+function onError(error) {
+   alert('code: '    + error.code    + '\n' +
+           'message: ' + error.message + '\n');
+}
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+$$(document).on('page:reinit', '.page[data-page="checkout"]', function (e) {
+    alert(1);
+})

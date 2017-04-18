@@ -48,27 +48,33 @@
 
     export default {
         name: 'closestBranch',
-        data: function () {
+        data() {
             return {
                 branch: []
             }
         },
         computed: {
-            today: function () {
+            today() {
                 return moment().format('dddd');
+            },
+            current_latitude() {
+                return Store.state.latitude;
+            },
+            current_longitude() {
+                return Store.state.longitude;
             }
         },
         methods: {
-            Get: function () {
-                this.$http.post('https://sprypizza.com/api/branches/get/closest', {
-                    latitude: Cookies.Get('latitude') || '44.4267674',
-                    longitude: Cookies.Get('longitude') || '26.1025384',
+            Get() {
+                axios.post('https://sprypizza.com/api/branches/get/closest', {
+                    latitude: this.current_latitude,
+                    longitude: this.current_longitude,
                 }).then(function (data) {
-                    this.branch = data.body.response;
-                });
+                    this.branch = data.data.response;
+                }.bind(this));
             }
         },
-        mounted: function () {
+        mounted() {
             this.Get();
         }
     }

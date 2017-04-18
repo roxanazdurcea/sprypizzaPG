@@ -14,35 +14,41 @@ new Vue({
         longitude: '',
         disabled: true
     },
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
+    computed: {
+        contact_id() {
+            return Store.state.contact_id;
+        },
+        current_latitude() {
+            return Store.state.latitude;
+        },
+        current_longitude() {
+            return Store.state.longitude;
+        }
     },
     methods: {
         GetClosestBranch() {
-            this.$http.post('https://sprypizza.com/api/branches/get/closest', {
-                latitude: this.latitude,
-                longitude: this.longitude
-            }).then(function(data) {
-                if(data.body.response) {
-                    var response = data.body.response;
+            axios.post('https://sprypizza.com/api/branches/get/closest', {
+                latitude: this.current_latitude,
+                longitude: this.current_longitude
+            }).then(data => {
+                if(data.data.response) {
+                    var response = data.data.response;
                     this.branch_id = response.branch_id;
                 } else {
-                    var modalData = {
-                        showModal: true,
-                        modalTitle: "Warning !",
-                        modalMessage: `Your order cannot be processed at this moment.`
-                    };
-                    Events.$emit('modalPopup-ev', modalData);
+                    window.myApp.alert('Your order cannot be processed at this moment', 'Warning !');
                 }
             });
         },
         GetAddresses() {
-            this.$http.post('https://sprypizza.com/api/addresses/get', {
-                contact_id: '58c0312521a1d'
-            }).then(function(data) {
-                var response = data.body.response;
-                this.addresses = response;
+            axios({
+                method: 'POST',
+                url: 'https://sprypizza.com/api/addresses/get',
+                data: {
+                    contact_id: this.contact_id
+                },
+                responseType: 'json'
+            }).then(data => {
+                this.addresses = data.data.response;
             });
         }
     },
@@ -55,15 +61,9 @@ new Vue({
     mounted: function() {
         //Addresses
         this.GetAddresses();
-        //Coordinates
-        let latitude = '44.4267674';
-        let longitude = '26.1025384';
-        //Get Closest Branch
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.GetClosestBranch();
         //Initiate Map
-        let data = {'latitude': latitude, 'longitude': longitude, 'info': 'Current location'};
+        let data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
         //Set Order Address
         Events.$on('setOrderAddress-ev', function(address) {

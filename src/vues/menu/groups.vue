@@ -3,7 +3,7 @@
 
         <div class="swiper-container swiper-3">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(group, index) in groups"><span v-on:click="ListItems(group.id)">{{ group.name }}</span></div>
+                <div class="swiper-slide" v-for="(group, index) in groups" v-on:click="ListItems(group.id)"><span>{{ group.name }}</span></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -28,10 +28,17 @@
         },
         methods: {
             Read_groups: function () {
-                this.$http.post('https://sprypizza.com/api/items-groups', {}).then(function (data) {
-                    var groupsresponse = _.toArray(data.body.response);
+                axios({
+                    method: 'POST',
+                    url: 'https://sprypizza.com/api/items-groups',
+                    data: {
+
+                    },
+                    responseType: 'json'
+                }).then(data => {
+                    var groupsresponse = _.toArray(data.data.response);
                     this.groups = groupsresponse;
-                }.bind(this));
+                });
             },
             ListItems: function (group_id) {
                 Store.commit('setGroupId', group_id);
@@ -62,7 +69,9 @@
 </script>
 
 <style scoped>
-
+    .swiper-slide {
+        padding: 3px;
+    }
     .menu-listing .nav-tabs > li.active > a,
     .menu-listing .nav-tabs > li > a:hover {
         border: none;

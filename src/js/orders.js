@@ -3,10 +3,6 @@ import tablePagination from "../vues/orders/pagination.vue";
 
 new Vue({
     el: '#orders-container',
-    http: {
-        emulateJSON: true,
-        emulateHTTP: true
-    },
     data: {
         rawData: [],
         sortBy: 'id',
@@ -19,7 +15,7 @@ new Vue({
         addColumns: ['action']
     },
     computed: {
-        tableData: function () {
+        tableData() {
 
             var response = this.rawData;
 
@@ -29,18 +25,21 @@ new Vue({
             }.bind(this));
 
             return response;
+        },
+        contact_id() {
+            return Store.state.contact_id;
         }
     },
     methods: {
         List: function() {
-            this.$http.post('https://sprypizza.com/api/orders/get', {
-                contact_id: "58c0312521a1d",
+            axios.post('https://sprypizza.com/api/orders/get', {
+                contact_id: this.contact_id,
                 draw: this.draw,
                 page: this.page,
                 sortBy: this.sortBy,
                 sort: this.sort
             }).then(function (json) {
-                var response = json.body.response;
+                var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
                 this.rawData = _.map(response.orders, function(obj,index) {

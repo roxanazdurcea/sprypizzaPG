@@ -19,9 +19,9 @@
         },
         methods: {
             Countries: function() {
-                this.$http.post('https://sprypizza.com/api/countries', {}).then(function(data) {
-                    this.countries = data.body.response;
-                });
+                axios.post('https://sprypizza.com/api/countries', {}).then(function(data) {
+                    this.countries = data.data.response;
+                }.bind(this));
             },
             SetCountry: function() {
                 Events.$emit('setCountry-ev', this.country_id);

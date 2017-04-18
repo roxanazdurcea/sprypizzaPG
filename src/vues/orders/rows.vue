@@ -52,56 +52,50 @@
         props: ['rows'],
         filters: {},
         computed: {
-            currency: function () {
+            currency() {
                 return Store.state.currency;
             }
         },
         methods: {
-            ReOrder: function(idx) {
+            ReOrder(idx) {
 
                 var order_id = this.rows[idx].id;
 
-                this.$http.post('https://sprypizza.com/api/orders/get', {
+                axios.post('https://sprypizza.com/api/orders/get', {
                     contact_id: Session.UID,
                     order_id: order_id,
-                }).then(function(response) {
-                    var order = response.body.response;
+                }).then(response => {
+                    var order = response.data.response;
                     var cart = {};
                     cart.items = order['items'];
-                    cart.items.forEach(function(obj, idx) {
+                    cart.items.forEach((obj, idx) => {
                         obj.modifiers = [];
                     });
                     cart.total = order['price'];
                     localStorage.setItem('cart', JSON.stringify(cart));
                     window.location.replace('/checkout');
-                    alert(1);
                 });
             },
-            CancelOrder: function(idx) {
+            CancelOrder(idx) {
 
                 var order_id = this.rows[idx].id;
 
-                this.$http.post('https://sprypizza.com/api/orders/cancel', {
+                axios.post('https://sprypizza.com/api/orders/cancel', {
                     order_id: order_id,
                 }).then(function(response) {
-                    var modalData = {
-                        showModal: true,
-                        modalTitle: "Notice !",
-                        modalMessage: "Your order no. <b>" + order_id + "</b> was cancelled."
-                    };
-                    Events.$emit('modalPopup-ev', modalData);
+                    window.myApp.alert( "Your order no. <b>" + order_id + "</b> was cancelled.", "Notice !");
                     Events.$emit('tableRefresh-ev');
                 });
             },
-            TrackOrder: function(idx) {
+            TrackOrder(idx) {
                 window.location.replace('https://sprypizza.com/api/orders/track/' + this.rows[idx]['id']);
             },
-            ShowItems: function(idx) {
+            ShowItems(idx) {
                 Events.$emit('showItems-ev', idx);
             }
         },
         filters: {
-            capitalize: function(value) {
+            capitalize(value) {
                 if (!value) return ''
                 value = value.toString()
                 return value.charAt(0).toUpperCase() + value.slice(1)
@@ -109,9 +103,6 @@
         },
         components: {
             starRating
-        },
-        mounted: function() {
-
         }
     }
 </script>

@@ -20,7 +20,8 @@
                         </div>
                     </li>
                 </ul><!-- .product-preview-small -->
-                <div v-if="items.length === 0"><h6 style="color: red; text-align: center;">The cart is empty !</h6></div>
+                <div v-if="items.length === 0"><h6 style="color: red; text-align: center;">The cart is empty !</h6>
+                </div>
             </form>
         </div>
 
@@ -31,7 +32,8 @@
             <div class="totals-div">
                 <div>
                     <h4 class="text-center product-title"><b>TOTAL {{ currency }}&nbsp;{{ cartTotal }}</b></h4>
-                    <p class="text-center" style="padding-top: 5px; padding-bottom: 5px;">VAT&nbsp;{{currency}}&nbsp;{{Math.round(0.20*cartTotal * 100) / 100 }}</p>
+                    <p class="text-center" style="padding-top: 5px; padding-bottom: 5px;">VAT&nbsp;{{currency}}&nbsp;{{Math.round(0.20*cartTotal
+                        * 100) / 100 }}</p>
                 </div>
             </div>
             <br/>
@@ -44,7 +46,8 @@
             <div class="address-div">
                 <h6 style="color: #f9a153">Delivery Address</h6>
                 <p style="font-size: 12px; color: #555555; line-height: 14px;" v-if="address">{{ address }}</p>
-                <p style="font-size: 12px; color: red; line-height: 14px;" v-if="!address">No delivery address is selected !</p>
+                <p style="font-size: 12px; color: red; line-height: 14px;" v-if="!address">No delivery address is
+                    selected !</p>
             </div>
 
             <div class="row">
@@ -98,6 +101,9 @@
                 } else {
                     return false;
                 }
+            },
+            contact_id() {
+                return Store.state.contact_id;
             }
         },
         methods: {
@@ -123,7 +129,7 @@
 
                 var orderData = {
                     platform: this.platform,
-                    contact_id: '58c0312521a1d',
+                    contact_id: this.contact_id,
                     branch_id: this.branch_id,
                     full_address: this.address,
                     latitude: this.latitude,
@@ -133,14 +139,8 @@
                     note: this.note
                 };
 
-                this.$http.post('https://sprypizza.com/api/orders/save', orderData).then(function (data) {
-                    var modalData = {
-                        showModal: true,
-                        modalTitle: "Congratulations !",
-                        modalMessage: `Your order no.${data.body.response} was successfully updated`
-                    };
-                    Events.$emit('modalPopup-ev', modalData);
-                    window.myApp.alert('Your order no.${data.body.response} was successfully updated', 'Congratulations !');
+                axios.post('https://sprypizza.com/api/orders/save', orderData).then(function (data) {
+                    window.myApp.alert('Your order no.' + data.data.response + ' was successfully submitted', 'Congratulations !');
                     Store.commit('clearItems');
                 });
             }
@@ -187,8 +187,6 @@
         display: inline-block;
         text-align: center;
     }
-
-
 
     #checkout-cart .totals-div {
         height: 100px;
@@ -281,8 +279,6 @@
     .itemsWrap {
         width: 100%;
     }
-
-
 
     .product-title {
         color: #D12027;

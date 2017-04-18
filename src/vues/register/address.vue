@@ -76,8 +76,13 @@
         },
         methods: {
             Countries: function() {
-                this.$http.post('https://sprypizza.com/api/countries', {}).then(function(data) {
-                    this.countries = data.body.response;
+                axios({
+                    method: 'POST',
+                    url:'https://sprypizza.com/api/countries',
+                    data: {},
+                    responseType: 'json'
+                }).then(data => {
+                    this.countries = data.data.response;
                 });
             },
             AddAddress: function() {
@@ -112,10 +117,10 @@
 
                 var country = data.address_components.country;
 
-                this.$http.post('https://sprypizza.com/api/countries/id', {
+                axios.post('https://sprypizza.com/api/countries/id', {
                     country: country
                 }).then(function(data) {
-                    template.country_id = data.body.response;
+                    template.country_id = data.data.response;
                     this.template = template;
                     this.showTemplate = true;
                 }.bind(this));

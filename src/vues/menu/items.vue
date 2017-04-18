@@ -61,8 +61,15 @@
         },
         methods: {
             Read: function () {
-                this.$http.post('https://sprypizza.com/api/items', {group_id: Store.state.group_id}).then(function (data) {
-                    var itemresponse = _.toArray(data.body.response);
+                axios({
+                    method:'POST',
+                    url:'https://sprypizza.com/api/items',
+                    data:{
+                        group_id: Store.state.group_id
+                    },
+                    responseType: 'json'
+                }).then(data => {
+                    var itemresponse = _.toArray(data.data.response);
                     itemresponse = _.map(itemresponse, function (item) {
                         item['qty'] = 1;
                         item['extras'] = [];
@@ -73,7 +80,7 @@
                         return item;
                     });
                     this.items = itemresponse;
-                }.bind(this));
+                });
             },
             addToCart: function (item) {
                 var q = item.qty;
