@@ -11,7 +11,7 @@ module.exports = {
         'orders': './src/js/orders.js',
         'account': './src/js/checkout.js',
         'register': './src/js/orders.js',
-        'vendor': ['vue', 'vuex', 'vue-resource', 'underscore']
+        'vendor': ['vue', 'vuex', 'vue-router', 'underscore']
     },
     output: {
         path: path.join(__dirname, './www/js/'),

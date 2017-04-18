@@ -48,21 +48,14 @@
         mounted: function () {
             this.Read_groups();
 
-
-            var myApp = new Framework7({
-
-            });
             // 3 Slides Per View, 10px Between
-            var mySwiper3 = myApp.swiper('.swiper-3', {
-                pagination: '.swiper-pagination',
-                speed: 400,
-                autoplay: 2000,
-                spaceBetween: 10,
-                slidesPerView: 3
-            });
-
-
-
+//            var mySwiper3 = myApp.swiper('.swiper-3', {
+//                pagination: '.swiper-pagination',
+//                speed: 400,
+//                autoplay: 2000,
+//                spaceBetween: 10,
+//                slidesPerView: 3
+//            });
         }
     }
 
