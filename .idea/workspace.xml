@@ -2,122 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b0021ca-a956-4c3f-976c-15c95b592b04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/js/framework7-vue.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/js/vue.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/dist/js/bmbcframework7.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-core/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-core/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-core/index.js" afterPath="$PROJECT_DIR$/node_modules/babel-core/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-core/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-core/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-core/register.js" afterPath="$PROJECT_DIR$/node_modules/babel-core/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-generator/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-generator/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-generator/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-generator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-call-delegate/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-define-map/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-define-map/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-define-map/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-define-map/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-define-map/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-define-map/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-function-name/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-function-name/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-function-name/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-function-name/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-function-name/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-function-name/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-hoist-variables/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-optimise-call-expression/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-regex/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-regex/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-regex/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-regex/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-regex/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helper-replace-supers/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helpers/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-helpers/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helpers/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-helpers/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-helpers/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-helpers/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-block-scoping/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-classes/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-computed-properties/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-function-name/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-amd/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-modules-umd/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-parameters/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-preset-es2015/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2015/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-preset-es2015/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2015/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-preset-es2015/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2015/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-register/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-register/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-register/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-register/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-register/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-register/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-template/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-template/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-template/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-template/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-template/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-template/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-traverse/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-traverse/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-traverse/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-traverse/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-traverse/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-traverse/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-types/.npmignore" afterPath="$PROJECT_DIR$/node_modules/babel-types/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-types/README.md" afterPath="$PROJECT_DIR$/node_modules/babel-types/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/babel-types/package.json" afterPath="$PROJECT_DIR$/node_modules/babel-types/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/regenerator-transform/.npmignore" afterPath="$PROJECT_DIR$/node_modules/regenerator-transform/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/regenerator-transform/README.md" afterPath="$PROJECT_DIR$/node_modules/regenerator-transform/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/regenerator-transform/package.json" afterPath="$PROJECT_DIR$/node_modules/regenerator-transform/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/commons.js" afterPath="$PROJECT_DIR$/src/js/commons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/menu/menu.vue" afterPath="$PROJECT_DIR$/src/vues/menu/menu.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.ios.colors.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.ios.colors.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.ios.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.ios.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.material.colors.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.material.colors.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.material.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.material.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/js/framework7.min.js" afterPath="$PROJECT_DIR$/www/dist/js/framework7.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/account.min.js" afterPath="$PROJECT_DIR$/www/js/account.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.js" afterPath="$PROJECT_DIR$/www/js/app.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/checkout.min.js" afterPath="$PROJECT_DIR$/www/js/checkout.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/commons.min.js" afterPath="$PROJECT_DIR$/www/js/commons.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/login.min.js" afterPath="$PROJECT_DIR$/www/js/login.min.js" />
@@ -146,42 +35,48 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1137">
-              <caret line="194" column="28" selection-start-line="194" selection-start-column="28" selection-end-line="194" selection-end-column="28" />
+            <state relative-caret-position="391">
+              <caret line="219" column="43" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
               <folding>
                 <element signature="n#f7-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#f7-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#f7-popup#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#f7-login-screen#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#section#0;n#f7-block#0;n#f7-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1492587913307" expanded="false" signature="18876:18887" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="19430:19449" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="19516:19549" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="19846:19858" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="20132:20144" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="20331:20364" ph="..." />
-                <marker date="1492587913307" expanded="false" signature="20376:20395" ph="..." />
+                <element signature="n#template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1492593379658" expanded="false" signature="19546:19557" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="20100:20119" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="20186:20219" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="20516:20528" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="20802:20814" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="21001:21034" ph="..." />
+                <marker date="1492593379658" expanded="false" signature="21046:21065" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vues/checkout/checkout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="e#2999#3029#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/commons.js">
+      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="111" column="19" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="19" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,21 +84,12 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            <state relative-caret-position="437">
+              <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
               <folding>
                 <element signature="e#210#264#0" expanded="true" />
+                <element signature="e#732#789#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/menu/menu.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -273,13 +159,13 @@
         <option value="$PROJECT_DIR$/src/vues/branches/closet-branch.vue" />
         <option value="$PROJECT_DIR$/src/js/menu.js" />
         <option value="$PROJECT_DIR$/src/vues/menu/groups.vue" />
-        <option value="$PROJECT_DIR$/src/vues/cart/cart.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/js/commons.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/src/vues/menu/menu.vue" />
+        <option value="$PROJECT_DIR$/src/vues/cart/cart.vue" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -513,6 +399,72 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vues" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vues" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vues" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -675,12 +627,12 @@
       <workItem from="1492086835062" duration="9922000" />
       <workItem from="1492494404182" duration="911000" />
       <workItem from="1492505147558" duration="17409000" />
-      <workItem from="1492582083742" duration="6135000" />
+      <workItem from="1492582083742" duration="10345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177551000" />
+    <option name="totallyTimeSpent" value="181761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -693,7 +645,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.36345777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.31827113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="24" y="779" width="1876" height="335" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.22888015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="24" y="779" width="1876" height="335" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -733,13 +685,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/less/custom.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/generic/rating/rating.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -839,14 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/notifications/notification-box.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -896,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -921,13 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="757">
           <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/checkout/checkout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -971,29 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/menu/groups.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1064,26 +964,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="77" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/commons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1096,33 +980,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/cart/item-count.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/menu/groups.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="905">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/commons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="77" column="27" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="48" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        <state relative-caret-position="437">
+          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
           <folding>
             <element signature="e#210#264#0" expanded="true" />
+            <element signature="e#732#789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#2999#3029#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1137">
-          <caret line="194" column="28" selection-start-line="194" selection-start-column="28" selection-end-line="194" selection-end-column="28" />
+        <state relative-caret-position="391">
+          <caret line="219" column="43" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
           <folding>
             <element signature="n#f7-panel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#f7-panel#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#f7-popup#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#f7-login-screen#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#section#0;n#f7-block#0;n#f7-page#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1492587913307" expanded="false" signature="18876:18887" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="19430:19449" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="19516:19549" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="19846:19858" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="20132:20144" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="20331:20364" ph="..." />
-            <marker date="1492587913307" expanded="false" signature="20376:20395" ph="..." />
+            <element signature="n#template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1492593379658" expanded="false" signature="19546:19557" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="20100:20119" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="20186:20219" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="20516:20528" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="20802:20814" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="21001:21034" ph="..." />
+            <marker date="1492593379658" expanded="false" signature="21046:21065" ph="..." />
           </folding>
         </state>
       </provider>

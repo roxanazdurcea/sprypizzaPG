@@ -111,6 +111,8 @@
                         <f7-list-item link="/about/" title="About"></f7-list-item>
                         <f7-list-item link="/form/" title="Form"></f7-list-item>
                         <f7-list-item link="/menu/" title="Menu"></f7-list-item>
+                        <f7-list-item link="/cart/" title="Cart"></f7-list-item>
+                        <f7-list-item link="/checkout/" title="Checkout"></f7-list-item>
                     </f7-list>
                     <f7-block-title>Side Panels</f7-block-title>
                     <f7-block>
@@ -190,12 +192,32 @@
 <!-- menu Page Template -->
 <template id="page-menu">
     <f7-page>
-        <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+        <f7-navbar title="Menu" back-link="Back" sliding></f7-navbar>
         <f7-block inner>
             <section style="padding: 10px;">
                 <groupscontainer></groupscontainer>
                 <itemscontainer></itemscontainer>
             </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- cart Page Template -->
+<template id="page-cart">
+    <f7-page>
+        <f7-navbar title="Cart" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <Cart></Cart>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- checkout Page Template -->
+<template id="page-checkout">
+    <f7-page>
+        <f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <checkout-cart></checkout-cart>
         </f7-block>
     </f7-page>
 </template>
@@ -396,9 +418,6 @@
         </f7-block>
     </f7-page>
 </template>
-
-
-
 
 
 <!--&lt;!&ndash; Status bar overlay for fullscreen mode&ndash;&gt;-->
