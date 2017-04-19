@@ -73,13 +73,6 @@ window.Store = new Vuex.Store({
     getters: {}
 });
 
-// //Cart instance
-// new Vue({
-//     el: "#cart-container",
-//     components: {
-//         shoppingcart
-//     }
-// });
 //
 // //Cart icon instance
 // new Vue({
@@ -102,7 +95,7 @@ window.Store = new Vuex.Store({
 //     }
 // });
 //
-// //closest branche
+// //closest branch
 // new Vue({
 //     el: '#closest-branch',
 //     components: {

@@ -1,13 +1,18 @@
 // Init F7 Vue Plugin
-window.Vue.use(Framework7Vue)
+window.Vue.use(Framework7Vue);
 
 // Init Page Components
 Vue.component('page-about', {
     template: '#page-about'
-})
+});
+
+Vue.component('page-home', {
+    template: '#page-home'
+});
+
 Vue.component('page-form', {
     template: '#page-form'
-})
+});
 
 //page-menu
 import groupscontainer from "../vues/menu/groups.vue";
@@ -26,11 +31,12 @@ Vue.component('page-menu', {
 });
 
 //cart-menu
-import Cart from "../vues/cart/cart.vue";
+import shoppingcart from "../vues/cart/cart.vue";
+
 Vue.component('page-cart', {
     template: '#page-cart',
     components: {
-        Cart
+        shoppingcart
     }
 });
 
@@ -149,6 +155,10 @@ new Vue({
         /* Uncomment to enable Material theme: */
         // material: true,
         routes: [
+            {
+                path: '/',
+                component: 'page-home'
+            },
             {
                 path: '/about/',
                 component: 'page-about'

@@ -95,7 +95,7 @@
                         <a href="#" class="button button-big color-red">Clear cart</a>
                     </p>
                     <p class="col-50" v-on:click="checkout()">
-                        <a href="/checkout" class="tab-link button button-big color-orange">Checkout</a>
+                        <a href="/checkout/" class="tab-link button button-big color-orange">Checkout</a>
                     </p>
                 </div>
             </div>
@@ -109,7 +109,7 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'Cart',
+        name: 'shoppingcart',
         computed: {
             cartTotal() {
                 var total = 0;
