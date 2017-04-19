@@ -19,6 +19,7 @@
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "framework7": "^1.6.0",
     "graceful-fs": ">=1.2.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": ">=2.4.0",
@@ -46,11 +47,9 @@
     "test": "tests"
   },
   "dependencies": {
-    "jquery": "2.2.4",
     "underscore": "^1.8.3",
     "vue": "2.1.8",
-    "vue-resource": "1.2.0",
-    "vue-router": "^2.4.0",
-    "vuex": "2.1.2"
+    "vuex": "2.1.2",
+    "framework7-vue": "^0.7.0"
   }
 }

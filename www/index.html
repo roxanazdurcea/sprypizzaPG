@@ -13,172 +13,551 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKOnrOhuNeDi9Z_V32-kvMqnNvH2ZAeKQ" type="text/javascript"></script>
 
     <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" href="dist/Icons-master/css/framework7-icons.css">
-
-
-
+    <link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/custom.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css"/>-->
+    <!--<link rel="stylesheet" href="dist/Icons-master/css/framework7-icons.css">-->
 </head>
 
+
 <body>
+<div id="app">
+    <!-- Statusbar -->
+    <f7-statusbar></f7-statusbar>
 
-<!-- Status bar overlay for fullscreen mode-->
-<div class="statusbar-overlay"></div>
-<!-- Panels overlay-->
-<div class="panel-overlay"></div>
+    <!-- Left Panel -->
+    <f7-panel left reveal layout="dark">
+        <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
+            <f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>
+            <f7-pages>
+                <f7-page>
+                    <f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>
+                    <f7-block inner>
+                        <p>Left panel content goes here</p>
+                    </f7-block>
+                    <f7-block-title>Load page in panel</f7-block-title>
+                    <f7-list>
+                        <f7-list-item link="/about/" title="About"></f7-list-item>
+                        <f7-list-item link="/form/" title="Form"></f7-list-item>
+                    </f7-list>
+                    <f7-block-title>Load page in main view</f7-block-title>
+                    <f7-list>
+                        <f7-list-item link="/about/" title="About" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item>
+                    </f7-list>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-panel>
 
-<!-- Left panel with reveal effect-->
-<div class="panel panel-left panel-reveal">
-    <div class="content-block">
-        <nav id="menu" class="left show">
-            <a href="#view-5" class="tab-link panel-close"><i class="f7-icons size-22 left-side-icon">home_fill</i>Our Branches</a>
-            <hr>
-            <a href="#view-6" class="tab-link"><i class="f7-icons size-22 left-side-icon">navigation_fill</i>Closest Branch</a>
-            <hr>
-            <a href="#view-7" class="tab-link"><i class="f7-icons size-22 left-side-icon">person_fill</i>My Account</a>
-            <hr>
-            <a href="#view-8" class="tab-link"><i class="f7-icons size-22 left-side-icon">list_fill</i>My Orders</a>
-            <hr>
-            <a href="#"><i class="f7-icons size-22 left-side-icon">star_fill</i>My Rewards</a>
-        </nav>
-    </div>
+    <!-- Right Panel -->
+    <f7-panel right cover layout="dark">
+        <f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
+            <f7-navbar v-if="$theme.ios" title="Right Panel" sliding></f7-navbar>
+            <f7-pages>
+                <f7-page>
+                    <f7-navbar v-if="$theme.ios" title="Right Panel" sliding></f7-navbar>
+                    <f7-block>
+                        <p>Right panel content goes here</p>
+                    </f7-block>
+                    <f7-block-title>Load page in panel</f7-block-title>
+                    <f7-list>
+                        <f7-list-item link="/about/" title="About"></f7-list-item>
+                        <f7-list-item link="/form/" title="Form"></f7-list-item>
+                    </f7-list>
+                    <f7-block-title>Load page in main view</f7-block-title>
+                    <f7-list>
+                        <f7-list-item link="/about/" title="About" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item>
+                    </f7-list>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-panel>
+
+    <!-- Main Views -->
+    <f7-views>
+        <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
+            <!-- iOS Theme Navbar -->
+            <f7-navbar v-if="$theme.ios">
+                <f7-nav-left>
+                    <f7-link icon="icon-bars" open-panel="left"></f7-link>
+                </f7-nav-left>
+                <f7-nav-center sliding>Framework7</f7-nav-center>
+                <f7-nav-right>
+                    <f7-link icon="icon-bars" open-panel="right"></f7-link>
+                </f7-nav-right>
+            </f7-navbar>
+            <!-- Pages -->
+            <f7-pages>
+                <f7-page>
+                    <!-- Material Theme Navbar -->
+                    <f7-navbar v-if="$theme.material">
+                        <f7-nav-left>
+                            <f7-link icon="icon-bars" open-panel="left"></f7-link>
+                        </f7-nav-left>
+                        <f7-nav-center sliding>Framework7</f7-nav-center>
+                        <f7-nav-right>
+                            <f7-link icon="icon-bars" open-panel="right"></f7-link>
+                        </f7-nav-right>
+                    </f7-navbar>
+                    <f7-block-title>Welcome to my App</f7-block-title>
+                    <f7-block inner>
+                        <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum
+                            aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                    </f7-block>
+                    <f7-block-title>Navigation</f7-block-title>
+                    <f7-list>
+                        <f7-list-item link="/about/" title="About"></f7-list-item>
+                        <f7-list-item link="/form/" title="Form"></f7-list-item>
+                        <f7-list-item link="/menu/" title="Menu"></f7-list-item>
+                    </f7-list>
+                    <f7-block-title>Side Panels</f7-block-title>
+                    <f7-block>
+                        <f7-grid>
+                            <f7-col width="50">
+                                <f7-button open-panel="left">Left Panel</f7-button>
+                            </f7-col>
+                            <f7-col width="50">
+                                <f7-button open-panel="right">Right Panel</f7-button>
+                            </f7-col>
+                        </f7-grid>
+                    </f7-block>
+                    <f7-block-title>Modals</f7-block-title>
+                    <f7-block>
+                        <f7-grid>
+                            <f7-col width="50">
+                                <f7-button open-popup="#popup">Popup</f7-button>
+                            </f7-col>
+                            <f7-col width="50">
+                                <f7-button open-login-screen="#login-screen">Login Screen</f7-button>
+                            </f7-col>
+                        </f7-grid>
+                    </f7-block>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-views>
+
+    <!-- Popup -->
+    <f7-popup id="popup">
+        <f7-view navbar-fixed>
+            <f7-pages>
+                <f7-page>
+                    <f7-navbar title="Popup">
+                        <f7-nav-right>
+                            <f7-link close-popup>Close</f7-link>
+                        </f7-nav-right>
+                    </f7-navbar>
+                    <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate
+                        laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam.
+                        Omnis iusto nemo quos ullam obcaecati, quod.
+                    </f7-block>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-popup>
+
+    <!-- Login Screen -->
+    <f7-login-screen id="login-screen">
+        <f7-view>
+            <f7-pages>
+                <f7-page login-screen>
+                    <f7-login-screen-title>Login</f7-login-screen-title>
+                    <f7-list form>
+                        <f7-list-item>
+                            <f7-label>Username</f7-label>
+                            <f7-input name="username" placeholder="Username" type="text"></f7-input>
+                        </f7-list-item>
+                        <f7-list-item>
+                            <f7-label>Password</f7-label>
+                            <f7-input name="password" type="password" placeholder="Password"></f7-input>
+                        </f7-list-item>
+                    </f7-list>
+                    <f7-list>
+                        <f7-list-button title="Sign In" close-login-screen></f7-list-button>
+                        <f7-list-label>
+                            <p>Click Sign In to close Login Screen</p>
+                        </f7-list-label>
+                    </f7-list>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-login-screen>
 </div>
 
-<!-- Right Panel with Cover effect -->
-<div class="panel panel-right panel-cover">
-    <div class="content-block">
-        <div>
-            <div>
-                <h1>Welcome Back!</h1>
-                <p>Sign In To Your Account to See What’s Cooking.</p>
-            </div>
-            <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">Country</div>
-                                <countries-listing :country_id="country_id"></countries-listing>
-                            </div>
-                        </div>
-                    </li>
 
-                    <li class="item-content">
-                        <div class="item-inner">
-                            <div class="item-input">
-                                <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">
-                                        Get pin
-                                    </button>
-                                    <login-errors :error="error" :pin="pin"></login-errors>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <label style="padding-left: 10px;" name="rememberMe">Remember me</label>&nbsp;
-                                    <input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="submit" class="button button-big color-orange" style="width: 100%;">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="submit" class="button button-big color-orange" style="width: 100%;">
-                                        Facebook Login
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </form>
-            <hr>
-            <a href="#view-9" class="tab-link" style="color: #6e6e6e; margin-bottom:3%;"><p style="text-align: center;">New here? Register an account</p></a>
-        </div>
-        <a href="#" class="close-panel"><i class="f7-icons">forward</i></a>
-    </div>
-</div>
-
-<div>
-
-    <!-- ============================ home ============================ -->
-    <!-- ============================ home ============================ -->
-    <!-- ============================ home ============================ -->
-    <!-- ============================ menu ============================ -->
-    <!-- ============================ menu ============================ -->
-    <!-- ============================ menu ============================ -->
-    <div id="view-2" class="view tab" data-page="menu">
-        <div>
-            <div>
-                <div>
-                    <div id="App">
-                        <router-view></router-view>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Shopping Cart ============================ -->
-    <!-- ============================ Shopping Cart ============================ -->
+<!-- menu Page Template -->
+<template id="page-menu">
+    <f7-page>
+        <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <groupscontainer></groupscontainer>
+                <itemscontainer></itemscontainer>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
 
 
+<!-- About Page Template -->
+<template id="page-about">
+    <f7-page>
+        <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <p>Here is About page!</p>
+            <p>You can go
+                <f7-link back>back</f7-link>
+                .
+            </p>
+            <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem.
+                Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas
+                sed orci. In hac habitasse platea dictumst.</p>
+            <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis.
+                Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non
+                sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis
+                quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu
+                metus elit. Ut vel diam dolor.</p>
+        </f7-block>
+    </f7-page>
+</template>
 
-    <!-- Bottom Tabbar-->
-    <div class="toolbar tabbar tabbar-labels">
-        <div class="toolbar-inner">
-            <a href="#view-1" class="tab-link active"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
-            <a href="index.html#/menu" class="tab-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
-            <a href="index.html#/cart" class="tab-link"><i class="f7-icons">bag<span id="itemCount" class="badge bg-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>
-            <a href="#" class="tab-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
-        </div>
-    </div>
+<!-- Form Page Template -->
+<template id="page-form">
+    <f7-page>
+        <f7-navbar title="Form" back-link="Back" sliding></f7-navbar>
+        <f7-block-title>Form</f7-block-title>
+        <f7-list form>
+            <f7-list-item>
+                <f7-label>Name</f7-label>
+                <f7-input type="text" placeholder="Name"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Password</f7-label>
+                <f7-input type="password" placeholder="Password"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>E-mail</f7-label>
+                <f7-input type="email" placeholder="E-mail"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>URL</f7-label>
+                <f7-input type="url" placeholder="URL"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Phone</f7-label>
+                <f7-input type="tel" placeholder="Phone"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Birth date</f7-label>
+                <f7-input type="date" placeholder="Birth date" value="2014-04-30"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Date time</f7-label>
+                <f7-input type="datetime-local"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Gender</f7-label>
+                <f7-input type="select">
+                    <option value="1">Male</option>
+                    <option value="1">Female</option>
+                </f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Switch</f7-label>
+                <f7-input type="switch"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Range</f7-label>
+                <f7-input type="range" min="0" max="100" step="1" value="90"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label>Textarea</f7-label>
+                <f7-input type="textarea" placeholder="Textarea"></f7-input>
+            </f7-list-item>
+        </f7-list>
 
-</div>
+        <f7-block-title>Form With Floating Labels</f7-block-title>
+        <f7-list form>
+            <f7-list-item>
+                <f7-label floating>Name</f7-label>
+                <f7-input type="text" placeholder="Name"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label floating>Password</f7-label>
+                <f7-input type="password" placeholder="Password"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-label floating>E-mail</f7-label>
+                <f7-input type="email" placeholder="E-mail"></f7-input>
+            </f7-list-item>
+        </f7-list>
+
+        <f7-block-title>Form Without Labels</f7-block-title>
+        <f7-list form>
+            <f7-list-item>
+                <f7-input type="text" placeholder="Name"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-input type="password" placeholder="Password"></f7-input>
+            </f7-list-item>
+            <f7-list-item>
+                <f7-input type="email" placeholder="E-mail"></f7-input>
+            </f7-list-item>
+        </f7-list>
+
+        <f7-block-title>Checkboxes</f7-block-title>
+        <f7-list form>
+            <f7-list-item v-for="n in 3" checkbox name="my-checkbox" :value="n" :title="'Checkbox ' + n"></f7-list-item>
+        </f7-list>
+
+        <f7-block-title>Radios</f7-block-title>
+        <f7-list form>
+            <f7-list-item v-for="n in 3" radio name="my-radio" :checked="n === 1" :value="n" :title="'Radio ' + n"></f7-list-item>
+        </f7-list>
+
+        <f7-block-title>Buttons</f7-block-title>
+        <f7-block inner>
+            <p>
+                <f7-button>Button</f7-button>
+            </p>
+            <p>
+                <f7-button round>Button Round</f7-button>
+            </p>
+            <p>
+                <f7-button fill>Button Fill</f7-button>
+            </p>
+            <p>
+                <f7-buttons>
+                    <f7-button round active>Button 1</f7-button>
+                    <f7-button round>Button 2</f7-button>
+                    <f7-button round>Button 3</f7-button>
+                </f7-buttons>
+            </p>
+            <p>
+                <f7-buttons color="orange">
+                    <f7-button round big>Button 1</f7-button>
+                    <f7-button round big active>Button 2</f7-button>
+                    <f7-button round big>Button 3</f7-button>
+                </f7-buttons>
+            </p>
+            <p>
+                <f7-grid>
+                    <f7-col>
+                        <f7-button big fill color="green">Send</f7-button>
+                    </f7-col>
+                    <f7-col>
+                        <f7-button big fill color="red">Delete</f7-button>
+                    </f7-col>
+                </f7-grid>
+            </p>
+            <p>
+                <f7-grid>
+                    <f7-col>
+                        <f7-button fill raised color="green">Raised</f7-button>
+                    </f7-col>
+                    <f7-col>
+                        <f7-button raised color="red">Raised</f7-button>
+                    </f7-col>
+                    <f7-col>
+                        <f7-button fill raised color="pink">Raised</f7-button>
+                    </f7-col>
+                </f7-grid>
+            </p>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- Dynamic Routing Page Template -->
+<template id="page-dynamic-routing">
+    <f7-page>
+        <f7-navbar title="Dynamic Route" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <ul>
+                <li><b>Url:</b> {{$route.url}}</li>
+                <li><b>Path:</b> {{$route.path}}</li>
+                <li><b>Hash:</b> {{$route.hash}}</li>
+                <li><b>Params:</b>
+                    <ul>
+                        <li v-for="(value, key) in $route.params"><b>{{key}}:</b> {{value}}</li>
+                    </ul>
+                </li>
+                <li><b>Query:</b>
+                    <ul>
+                        <li v-for="(value, key) in $route.query"><b>{{key}}:</b> {{value}}</li>
+                    </ul>
+                </li>
+                <li><b>Route:</b> {{$route.route}}</li>
+            </ul>
+        </f7-block>
+        <f7-block inner>
+            <f7-link @click="$router.back()">Go back via Router API</f7-link>
+        </f7-block>
+    </f7-page>
+</template>
+
+
+
+
+
+<!--&lt;!&ndash; Status bar overlay for fullscreen mode&ndash;&gt;-->
+<!--<div class="statusbar-overlay"></div>-->
+<!--&lt;!&ndash; Panels overlay&ndash;&gt;-->
+<!--<div class="panel-overlay"></div>-->
+
+<!--&lt;!&ndash; Left panel with reveal effect&ndash;&gt;-->
+<!--<div class="panel panel-left panel-reveal">-->
+<!--<div class="content-block">-->
+<!--<nav id="menu" class="left show">-->
+<!--<a href="#view-5" class="tab-link panel-close"><i class="f7-icons size-22 left-side-icon">home_fill</i>Our Branches</a>-->
+<!--<hr>-->
+<!--<a href="#view-6" class="tab-link"><i class="f7-icons size-22 left-side-icon">navigation_fill</i>Closest Branch</a>-->
+<!--<hr>-->
+<!--<a href="#view-7" class="tab-link"><i class="f7-icons size-22 left-side-icon">person_fill</i>My Account</a>-->
+<!--<hr>-->
+<!--<a href="#view-8" class="tab-link"><i class="f7-icons size-22 left-side-icon">list_fill</i>My Orders</a>-->
+<!--<hr>-->
+<!--<a href="#"><i class="f7-icons size-22 left-side-icon">star_fill</i>My Rewards</a>-->
+<!--</nav>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Right Panel with Cover effect &ndash;&gt;-->
+<!--<div class="panel panel-right panel-cover">-->
+<!--<div class="content-block">-->
+<!--<div>-->
+<!--<div>-->
+<!--<h1>Welcome Back!</h1>-->
+<!--<p>Sign In To Your Account to See What’s Cooking.</p>-->
+<!--</div>-->
+<!--<form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">-->
+<!--<ul>-->
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-title label">Country</div>-->
+<!--<countries-listing :country_id="country_id"></countries-listing>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">-->
+<!--Get pin-->
+<!--</button>-->
+<!--<login-errors :error="error" :pin="pin"></login-errors>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<label style="padding-left: 10px;" name="rememberMe">Remember me</label>&nbsp;-->
+<!--<input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<button type="submit" class="button button-big color-orange" style="width: 100%;">-->
+<!--Login-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--<li>-->
+<!--<div class="item-content">-->
+<!--<div class="item-inner">-->
+<!--<div class="item-input">-->
+<!--<button type="submit" class="button button-big color-orange" style="width: 100%;">-->
+<!--Facebook Login-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+<!--</ul>-->
+<!--</form>-->
+<!--<hr>-->
+<!--<a href="#view-9" class="tab-link" style="color: #6e6e6e; margin-bottom:3%;"><p style="text-align: center;">New here? Register an account</p></a>-->
+<!--</div>-->
+<!--<a href="#" class="close-panel"><i class="f7-icons">forward</i></a>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div>-->
+
+<!--&lt;!&ndash; ============================ home ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ home ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ home ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ menu ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ menu ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ menu ============================ &ndash;&gt;-->
+<!--<div id="view-2" class="view tab" data-page="menu">-->
+<!--<div>-->
+<!--<div>-->
+<!--<div>-->
+<!--<div id="App">-->
+<!--<router-view></router-view>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; ============================ Shopping Cart ============================ &ndash;&gt;-->
+<!--&lt;!&ndash; ============================ Shopping Cart ============================ &ndash;&gt;-->
+
+
+<!--&lt;!&ndash; Bottom Tabbar&ndash;&gt;-->
+<!--<div class="toolbar tabbar tabbar-labels">-->
+<!--<div class="toolbar-inner">-->
+<!--<a href="#view-1" class="tab-link active"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>-->
+<!--<a href="index.html#/menu" class="tab-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>-->
+<!--<a href="index.html#/cart" class="tab-link"><i class="f7-icons">bag<span id="itemCount" class="badge bg-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>-->
+<!--<a href="#" class="tab-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+
 
 <script type="text/javascript" src="cordova.js"></script>
-<!--<script type="text/javascript" src="dist/js/framework7.min.js"></script>-->
 <script src="js/vendor.min.js"></script>
 <script src="js/commons.min.js"></script>
+<script src="js/app.min.js"></script>
+
 <!--<script src="js/login.min.js"></script>-->
 <!--<script src="js/menu.min.js"></script>-->
 <!--<script src="js/checkout.min.js"></script>-->

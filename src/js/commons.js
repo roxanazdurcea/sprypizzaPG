@@ -1,17 +1,11 @@
-// window.myApp = new Framework7({
-//     pushState: false,
-//     swipePanel: 'left',
-//     template7Pages: true,
-//     cache: true
-// });
-//
-// var $$ = Framework7.$
 
 window._ = require('underscore');
 //Axios Ajax Lib
 window.axios = require('axios');
 //Vue
 window.Vue = require('vue');
+window.framework7 = require('framework7');
+window.Framework7Vue = require('framework7-vue');
 //Store
 import Vuex from 'vuex';
 window.Vue.use(Vuex);
@@ -143,23 +137,3 @@ function onError(error) {
 }
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-
-// $$(document).on('page:reinit', '.page[data-page="checkout"]', function (e) {
-//     alert(1);
-// });
-
-import Menu from "../vues/menu/menu.vue";
-import Cart from "../vues/cart/cart.vue";
-
-const routes = [
-    { path: '/menu', component: Menu },
-    { path: '/cart', component: Cart },
-];
-
-const router = new VueRouter({
-    routes
-});
-
-const app = new Vue({
-    router
-}).$mount('#App');
