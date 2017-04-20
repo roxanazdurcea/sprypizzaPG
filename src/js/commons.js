@@ -15,7 +15,8 @@ window.Vue.use(VueRouter)
 //Events
 window.Events = new Vue();
 
-// import itemCount from "../vues/cart/item-count.vue";
+import itemCount from "../vues/cart/item-count.vue";
+
 // import branches from "../vues/branches/branch.vue";
 // import closestBranch from "../vues/branches/closet-branch.vue";
 // import accountForm from "../vues/account/form.vue";
@@ -73,20 +74,21 @@ window.Store = new Vuex.Store({
     getters: {}
 });
 
-//
-// //Cart icon instance
-// new Vue({
-//     el: "#itemCount",
-//     methods: {
-//         openCart: function () {
-//             Store.commit('toggleCartActive');
-//         }
-//     },
-//     components: {
-//         itemCount
-//     }
-// });
-//
+
+//Cart icon instance
+new Vue({
+    el: "#itemCount",
+    methods: {
+        openCart: function () {
+            Store.commit('toggleCartActive');
+        }
+    },
+    components: {
+        itemCount
+    }
+});
+
+
 // //all branches
 // new Vue({
 //     el: "#branches-container",

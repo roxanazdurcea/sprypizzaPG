@@ -148,8 +148,8 @@
 
     #product-description {
         font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.1rem;
+        font-size: 0.9rem;
+        line-height: 1rem;
     }
 
     .product-preview-container {

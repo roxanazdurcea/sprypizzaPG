@@ -1,18 +1,21 @@
 // Init F7 Vue Plugin
 window.Vue.use(Framework7Vue);
 
+
+
 // Init Page Components
-Vue.component('page-about', {
-    template: '#page-about'
-});
+// Vue.component('page-about', {
+//     template: '#page-about'
+// });
 
 Vue.component('page-home', {
     template: '#page-home'
 });
 
-Vue.component('page-form', {
-    template: '#page-form'
-});
+// Vue.component('page-form', {
+//     template: '#page-form'
+// });
+
 
 //page-menu
 import groupscontainer from "../vues/menu/groups.vue";
@@ -39,6 +42,193 @@ Vue.component('page-cart', {
         shoppingcart
     }
 });
+
+
+//all branches
+import branches from "../vues/branches/branch.vue";
+
+Vue.component('page-branches', {
+    template: '#page-branches',
+    components: {
+        branches
+    }
+});
+
+//closest branch
+import closestBranch from "../vues/branches/closet-branch.vue";
+
+Vue.component('page-branch', {
+    template: '#page-branch',
+    components: {
+        closestBranch
+    }
+});
+
+
+//login
+import loginErrors from "../vues/login/errors.vue";
+import countriesListing from "../vues/login/countries.vue";
+
+Vue.component('page-login', {
+    template: '#page-login',
+    data() {
+        return {
+            mobile: '',
+            country_id: '40',
+            isDisabled: false,
+            pin: '',
+            error: ''
+        }
+    },
+    methods: {
+        Send() {
+            axios.post('https://sprypizza.com/api/sms/send', {
+                mobile: this.mobile,
+                country_id: this.country_id
+            }).then(function(data) {
+
+                this.error = this.pin = '';
+
+                if (data.data.error) {
+                    this.error = data.data.error;
+                }
+                else if (data.data.pin) {
+                    this.isDisabled = true;
+                    this.pin = data.data.pin;
+                }
+            }.bind(this));
+        }
+    },
+    mounted() {
+        Events.$on('setCountry-ev', function(country_id) {
+            this.country_id = country_id;
+        }.bind(this));
+    },
+    components: {
+        loginErrors,
+        countriesListing
+    }
+});
+
+//account form
+import accountForm from "../vues/account/form.vue";
+
+Vue.component('page-account', {
+    template: '#page-account',
+    computed: {
+        current_latitude() {
+            return Store.state.latitude;
+        },
+        current_longitude() {
+            return Store.state.longitude;
+        }
+    },
+    mounted: function() {
+        var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
+        Events.$emit('mapInfo-ev', data);
+    },
+    components: {
+        accountForm
+    }
+});
+
+//register form
+import registerForm from "../vues/register/form.vue";
+
+Vue.component('page-register', {
+    template: '#page-register',
+    components: {
+        registerForm
+    }
+});
+
+//orders
+import tableRows from "../vues/orders/rows.vue";
+import tablePagination from "../vues/orders/pagination.vue";
+
+Vue.component('page-orders', {
+    template: '#page-orders',
+    data() {
+        return {
+            rawData: [],
+            sortBy: 'id',
+            sort: 'desc',
+            draw: 1,
+            page: 5,
+            total: '',
+            filtered: '',
+            excludeColumns: ['items', 'showItems'],
+            addColumns: ['action']
+        }
+    },
+    computed: {
+        tableData() {
+
+            var response = this.rawData;
+
+            response = _.map(response, function (obj,index) {
+                obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
+                return obj;
+            }.bind(this));
+
+            return response;
+        },
+        contact_id() {
+            return Store.state.contact_id;
+        }
+    },
+    methods: {
+        List: function() {
+            axios.post('https://sprypizza.com/api/orders/get', {
+                contact_id: this.contact_id,
+                draw: this.draw,
+                page: this.page,
+                sortBy: this.sortBy,
+                sort: this.sort
+            }).then(function (json) {
+                var response = json.data.response;
+                this.total = response.total;
+                this.filtered = response.filtered;
+                this.rawData = _.map(response.orders, function(obj,index) {
+                    obj['showItems'] = false;
+                    return obj;
+                });
+            }.bind(this));
+        },
+        StrAdj: function (str) {
+            var string = str.replace(/\w\S*/g, function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+            return string.replace('_', ' ');
+        }
+    },
+    mounted: function () {
+
+        this.List();
+
+        Events.$on('showItems-ev', function(idx) {
+            this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
+        }.bind(this));
+
+        Events.$on('sort-ev', function (idx) {
+            this.Sort(idx);
+        }.bind(this));
+
+        Events.$on('setPage-ev', function(draw) {
+            this.draw = draw;
+            this.List();
+        }.bind(this));
+
+        Events.$on('tableRefresh-ev', function() {
+            this.List();
+        }.bind(this));
+    },
+    components: {
+        tablePagination,
+        tableRows
+    }
+});
+
 
 
 //checkout-menu
@@ -152,6 +342,8 @@ new Vue({
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
+        swipePanel: 'both',
+        reveal: true,
         /* Uncomment to enable Material theme: */
         // material: true,
         routes: [
@@ -178,6 +370,30 @@ new Vue({
             {
                 path: '/checkout/',
                 component: 'page-checkout'
+            },
+            {
+                path: '/branches/',
+                component: 'page-branches'
+            },
+            {
+                path: '/branch/',
+                component: 'page-branch'
+            },
+            {
+                path: '/account/',
+                component: 'page-account'
+            },
+            {
+                path: '/register/',
+                component: 'page-register'
+            },
+            {
+                path: '/login/',
+                component: 'page-login'
+            },
+            {
+                path: '/orders/',
+                component: 'page-orders'
             }
         ],
     }

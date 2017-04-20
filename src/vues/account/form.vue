@@ -11,47 +11,40 @@
             </p>
         </div>
 
-        <div class="form-group" v-bind:class="{ 'has-error' : contact.first_nameError }">
-            <div class="input-group">
-                <div>
-                    <select class="form-control" v-model="contact.title" :disabled="disabled">
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Miss">Miss</option>
-                    </select>
-                </div>
-                <div>
-                    <input class="form-control" type="text" name="first_name" placeholder="First Name" v-model="contact.first_name" v-on:blur="ValidateFirstName" :disabled="disabled">
-                </div>
-                <div>
-                    <input class="form-control" type="text" name="last_name" placeholder="Last Name" v-model="contact.last_name" v-on:blur="ValidateLastName" :disabled="disabled">
-                </div>
-            </div>
+        <div v-bind:class="{ 'has-error' : contact.first_nameError }">
+            <select class="form-control" v-model="contact.title" :disabled="disabled">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+            </select>
+
+            <input class="form-control" type="text" name="first_name" placeholder="First Name" v-model="contact.first_name" v-on:blur="ValidateFirstName" :disabled="disabled">
+
+            <input class="form-control" type="text" name="last_name" placeholder="Last Name" v-model="contact.last_name" v-on:blur="ValidateLastName" :disabled="disabled">
             <div class="divError" v-show="nameError"><p>{{ contact.nameErrorMessage }}</p></div>
         </div>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker'>
-                <datepicker :inputClass="datepicker.inputClass" :placeholder="datepicker.placeholder" :format="datepicker.format" :disabled="disabled" v-model="contact.birthdate"></datepicker>
-                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-            </div>
+
+        <div class="date" id="datetimepicker">
+            <datepicker :inputClass="datepicker.inputClass" :placeholder="datepicker.placeholder" :format="datepicker.format" :disabled="disabled" v-model="contact.birthdate"></datepicker>
+            <span><i class="fa fa-calendar-o"></i></span>
         </div>
-        <div v-for="email in contact.emails" class="form-group" v-bind:class="{ 'has-error' : contact.email }">
+
+        <div v-for="email in contact.emails" v-bind:class="{ 'has-error' : contact.email }">
             <input class="form-control" type="text" name="email" placeholder="Email" v-model="email.email_address" v-on:blur="ValidateEmails" :disabled="disabled"/>
             <div class="divError" v-show="email.emailError"><p>The Email is required or already exist</p></div>
         </div>
-        <div v-for="phone in contact.phones" class="form-group" v-bind:class="{ 'has-error' : contact.mobile }">
-            <div class="input-group">
-                <div class="input-group-btn">
-                    <select class="form-control" placeholder="country" v-model="phone.country_id" :disabled="disabled">
-                        <option v-for="country in countries" v-bind:value="country.phonecode">
-                            {{ country.nicename }}
-                        </option>
-                    </select>
-                </div>
-                <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" v-model="phone.number" v-on:blur="ValidatePhones" :disabled="disabled"/>
-            </div>
-            <div class="divError" v-show="phone.phoneError"><p>The phone number already exists or is in a wrong
-                format</p></div>
+        <div v-for="phone in contact.phones" v-bind:class="{ 'has-error' : contact.mobile }">
+
+
+            <select class="form-control" placeholder="country" v-model="phone.country_id" :disabled="disabled">
+                <option v-for="country in countries" v-bind:value="country.phonecode">
+                    {{ country.nicename }}
+                </option>
+            </select>
+
+            <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" v-model="phone.number" v-on:blur="ValidatePhones" :disabled="disabled"/>
+
+            <div class="divError" v-show="phone.phoneError"><p>The phone number already exists or is in a wrong format</p></div>
         </div>
 
         <addresses-listing v-bind:addresses="contact.addresses" v-bind:disabled="disabled"></addresses-listing>

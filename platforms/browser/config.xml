@@ -6,14 +6,15 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Hello World</name>
+    <name>SpryPizza</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Food Ordering Platform
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@bmbc.co" href="www.bmbc.co">
+        BMBC Team
     </author>
     <content src="index.html" />
+    <icon src="www/res/icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

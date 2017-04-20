@@ -21,8 +21,12 @@
 <body>
 
 <div id="app">
+
     <!-- Statusbar -->
     <f7-statusbar></f7-statusbar>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
 
     <!-- Left Panel -->
     <f7-panel left reveal layout="dark">
@@ -30,21 +34,11 @@
             <!--<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>-->
             <f7-pages>
                 <f7-page>
-                    <!--<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>-->
-                    <!--<f7-block inner>-->
-                        <!--<p>Left panel content goes here</p>-->
-                    <!--</f7-block>-->
-                    <!--<f7-block-title>Load page in panel</f7-block-title>-->
-                    <!--<f7-list>-->
-                        <!--<f7-list-item link="/about/" title="About"></f7-list-item>-->
-                        <!--<f7-list-item link="/form/" title="Form"></f7-list-item>-->
-                    <!--</f7-list>-->
-                    <!--<f7-block-title>Load page in main view</f7-block-title>-->
                     <f7-list>
-                        <f7-list-item link="/our-branches/" title="Our Branches" link-view="#main-view" link-close-panel></f7-list-item>
-                        <f7-list-item link="/closest-branch/" title="Closest Branch" link-view="#main-view" link-close-panel></f7-list-item>
-                        <f7-list-item link="/my-account/" title="My Account" link-view="#main-view" link-close-panel></f7-list-item>
-                        <f7-list-item link="/my-orders/" title="My Orders" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/branches/" title="Our Branches" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/branch/" title="Closest Branch" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/account/" title="My Account" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/orders/" title="My Orders" link-view="#main-view" link-close-panel></f7-list-item>
                         <f7-list-item link="/my-rewards/" title="My Rewards" link-view="#main-view" link-close-panel></f7-list-item>
                     </f7-list>
                 </f7-page>
@@ -55,24 +49,102 @@
     <!-- Right Panel -->
     <f7-panel right cover layout="dark">
         <f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
-            <f7-navbar v-if="$theme.ios" title="Right Panel" sliding></f7-navbar>
+            <f7-navbar v-if="$theme.ios" title="Login" sliding></f7-navbar>
             <f7-pages>
-                <f7-page>
-                    <f7-navbar v-if="$theme.ios" title="Right Panel" sliding></f7-navbar>
-                    <f7-block>
-                        <p>Right panel content goes here</p>
-                    </f7-block>
-                    <f7-block-title>Load page in panel</f7-block-title>
-                    <f7-list>
-                        <f7-list-item link="/about/" title="About"></f7-list-item>
-                        <f7-list-item link="/form/" title="Form"></f7-list-item>
-                    </f7-list>
-                    <f7-block-title>Load page in main view</f7-block-title>
-                    <f7-list>
-                        <f7-list-item link="/about/" title="About" link-view="#main-view" link-close-panel></f7-list-item>
-                        <f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item>
-                    </f7-list>
-                </f7-page>
+                <!--<f7-page>-->
+                <!--<section style="padding: 10px;">-->
+                <!--<div style="margin-top: 50px;">-->
+
+                <!--<h1>Welcome Back!</h1>-->
+                <!--<p style="margin: 0px;">Sign In To Your Account to See What’s Cooking.</p>-->
+
+                <!--<form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">-->
+                <!--<ul>-->
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-title label">Country</div>-->
+                <!--<countries-listing :country_id="country_id"></countries-listing>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">-->
+                <!--Get pin-->
+                <!--</button>-->
+                <!--<login-errors :error="error" :pin="pin"></login-errors>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<label style="padding-left: 5px;" name="rememberMe">Remember-->
+                <!--me</label>&nbsp;-->
+                <!--<input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<button type="submit" class="button button-big color-orange" style="width: 100%;">-->
+                <!--Login-->
+                <!--</button>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                <!--<div class="item-content">-->
+                <!--<div class="item-inner">-->
+                <!--<div class="item-input">-->
+                <!--<button type="submit" class="button button-big color-blue" style="width: 100%;">-->
+                <!--Facebook Login-->
+                <!--</button>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--</ul>-->
+                <!--</form>-->
+                <!--<hr>-->
+                <!--<a href="/register/" class="item-link" link-view="#main-view" link-close-panel>-->
+                <!--<p style="text-align: center; color: #6e6e6e; margin-bottom:3%;">New here? Register an-->
+                <!--account</p></a>-->
+                <!--</div>-->
+                <!--</section>-->
+                <!--</f7-page>-->
             </f7-pages>
         </f7-view>
     </f7-panel>
@@ -83,69 +155,49 @@
             <!-- iOS Theme Navbar -->
             <f7-navbar v-if="$theme.ios">
                 <f7-nav-left>
-                    <f7-link icon="icon-bars" open-panel="left"></f7-link>
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <!--<f7-link icon="icon-bars" open-panel="left"></f7-link>-->
                 </f7-nav-left>
-                <f7-nav-center sliding>SpryPizza</f7-nav-center>
+                <f7-nav-center>SpryPizza</f7-nav-center>
                 <f7-nav-right>
-                    <f7-link icon="icon-bars" open-panel="right"></f7-link>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                    <!--<f7-link icon="icon-bars" open-panel="right"></f7-link>-->
                 </f7-nav-right>
             </f7-navbar>
             <!-- Pages -->
             <f7-pages>
+
                 <f7-page>
                     <!-- Material Theme Navbar -->
                     <f7-navbar v-if="$theme.material">
                         <f7-nav-left>
                             <f7-link icon="icon-bars" open-panel="left"></f7-link>
                         </f7-nav-left>
-                        <f7-nav-center sliding>Framework7</f7-nav-center>
+                        <f7-nav-center sliding>SpryPizza</f7-nav-center>
                         <f7-nav-right>
                             <f7-link icon="icon-bars" open-panel="right"></f7-link>
                         </f7-nav-right>
                     </f7-navbar>
-                    <f7-block-title>Welcome to my App</f7-block-title>
-                    <f7-block inner>
-                        <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum
-                            aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                    </f7-block>
-                    <f7-block-title>Navigation</f7-block-title>
-                    <f7-list>
-                        <f7-list-item link="/about/" title="About"></f7-list-item>
-                        <f7-list-item link="/form/" title="Form"></f7-list-item>
-                        <f7-list-item link="/menu/" title="Menu"></f7-list-item>
-                        <f7-list-item link="/cart/" title="Cart"></f7-list-item>
-                        <f7-list-item link="/checkout/" title="Checkout"></f7-list-item>
-                    </f7-list>
-                    <f7-block-title>Side Panels</f7-block-title>
                     <f7-block>
-                        <f7-grid>
-                            <f7-col width="50">
-                                <f7-button open-panel="left">Left Panel</f7-button>
-                            </f7-col>
-                            <f7-col width="50">
-                                <f7-button open-panel="right">Right Panel</f7-button>
-                            </f7-col>
-                        </f7-grid>
-                    </f7-block>
-                    <f7-block-title>Modals</f7-block-title>
-                    <f7-block>
-                        <f7-grid>
-                            <f7-col width="50">
-                                <f7-button open-popup="#popup">Popup</f7-button>
-                            </f7-col>
-                            <f7-col width="50">
-                                <f7-button open-login-screen="#login-screen">Login Screen</f7-button>
-                            </f7-col>
-                        </f7-grid>
+                        <div style="position: relative; height: 85vh;">
+                            <img style="position: absolute; top: 0px; right: 0; width: 100%;" src="img/top-back.png">
+                            <img style="position: absolute; bottom: 0px; left: 0; width: 100%;" src="img/bottom-back.png">
+                            <div style="position: absolute; top: 15%; width:50%; margin-left:25%;">
+                                <a href="/menu/" class="item-link"><img style="width: 100%; height:auto;" src="img/sprypizzaPG-new-order.png"></a>
+                            </div>
+                            <div style="position: absolute; bottom: 15%; width:50%; margin-left:25%;">
+                                <a href="/track/" class="item-link"><img style="width: 100%; height:auto;" src="img/sprypizzaPG-track-order.png"></a>
+                            </div>
+                        </div>
                     </f7-block>
                 </f7-page>
 
                 <!-- Bottom Tabbar-->
                 <div class="toolbar tabbar tabbar-labels">
-                    <div class="toolbar-inner">
+                    <div class="toolbar-inner bottom-padding">
                         <a href="/" class="item-link"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
                         <a href="/menu/" class="item-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
-                        <a href="/cart/" class="item-link"><i class="f7-icons">bag<span id="itemCount" class="badge bg-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>
+                        <a href="/cart/" class="item-link"><i class="f7-icons">bag<span id="itemCount" class="badge color-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>
                         <a href="/track/" class="item-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
                     </div>
                 </div>
@@ -173,34 +225,8 @@
         </f7-view>
     </f7-popup>
 
-    <!-- Login Screen -->
-    <f7-login-screen id="login-screen">
-        <f7-view>
-            <f7-pages>
-                <f7-page login-screen>
-                    <f7-login-screen-title>Login</f7-login-screen-title>
-                    <f7-list form>
-                        <f7-list-item>
-                            <f7-label>Username</f7-label>
-                            <f7-input name="username" placeholder="Username" type="text"></f7-input>
-                        </f7-list-item>
-                        <f7-list-item>
-                            <f7-label>Password</f7-label>
-                            <f7-input name="password" type="password" placeholder="Password"></f7-input>
-                        </f7-list-item>
-                    </f7-list>
-                    <f7-list>
-                        <f7-list-button title="Sign In" close-login-screen></f7-list-button>
-                        <f7-list-label>
-                            <p>Click Sign In to close Login Screen</p>
-                        </f7-list-label>
-                    </f7-list>
-                </f7-page>
-            </f7-pages>
-        </f7-view>
-    </f7-login-screen>
-
 </div>
+<!-- home Page Template -->
 <template id="page-home">
     <f7-page>
         <!-- Material Theme Navbar -->
@@ -208,45 +234,22 @@
             <f7-nav-left>
                 <f7-link icon="icon-bars" open-panel="left"></f7-link>
             </f7-nav-left>
-            <f7-nav-center sliding>Framework7</f7-nav-center>
+            <f7-nav-center sliding>SpryPizza</f7-nav-center>
             <f7-nav-right>
                 <f7-link icon="icon-bars" open-panel="right"></f7-link>
             </f7-nav-right>
         </f7-navbar>
-        <f7-block-title>Welcome to my App</f7-block-title>
-        <f7-block inner>
-            <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum
-                aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-        </f7-block>
-        <f7-block-title>Navigation</f7-block-title>
-        <f7-list>
-            <f7-list-item link="/about/" title="About"></f7-list-item>
-            <f7-list-item link="/form/" title="Form"></f7-list-item>
-            <f7-list-item link="/menu/" title="Menu"></f7-list-item>
-            <f7-list-item link="/cart/" title="Cart"></f7-list-item>
-            <f7-list-item link="/checkout/" title="Checkout"></f7-list-item>
-        </f7-list>
-        <f7-block-title>Side Panels</f7-block-title>
         <f7-block>
-            <f7-grid>
-                <f7-col width="50">
-                    <f7-button open-panel="left">Left Panel</f7-button>
-                </f7-col>
-                <f7-col width="50">
-                    <f7-button open-panel="right">Right Panel</f7-button>
-                </f7-col>
-            </f7-grid>
-        </f7-block>
-        <f7-block-title>Modals</f7-block-title>
-        <f7-block>
-            <f7-grid>
-                <f7-col width="50">
-                    <f7-button open-popup="#popup">Popup</f7-button>
-                </f7-col>
-                <f7-col width="50">
-                    <f7-button open-login-screen="#login-screen">Login Screen</f7-button>
-                </f7-col>
-            </f7-grid>
+            <div style="position: relative; height: 85vh;">
+                <img style="position: absolute; top: 0px; right: 0; width: 100%;" src="img/top-back.png">
+                <img style="position: absolute; bottom: 0px; left: 0; width: 100%;" src="img/bottom-back.png">
+                <div style="position: absolute; top: 15%; width:50%; margin-left:25%;">
+                    <a href="/menu/" class="item-link"><img style="width: 100%; height:auto;" src="img/sprypizzaPG-new-order.png"></a>
+                </div>
+                <div style="position: absolute; bottom: 15%; width:50%; margin-left:25%;">
+                    <a href="/track/" class="item-link"><img style="width: 100%; height:auto;" src="img/sprypizzaPG-track-order.png"></a>
+                </div>
+            </div>
         </f7-block>
     </f7-page>
 </template>
@@ -254,7 +257,22 @@
 <!-- menu Page Template -->
 <template id="page-menu">
     <f7-page>
-        <f7-navbar title="Menu" back-link="Back" sliding></f7-navbar>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Menu</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
         <f7-block inner>
             <section style="padding: 10px;">
                 <groupscontainer></groupscontainer>
@@ -267,12 +285,170 @@
 <!-- cart Page Template -->
 <template id="page-cart">
     <f7-page>
-        <f7-navbar title="Cart" back-link="Back" sliding></f7-navbar>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Cart</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Cart" back-link="Back" sliding></f7-navbar>-->
         <f7-block inner>
             <section style="padding: 10px;">
-                <div>
-                    <shoppingcart></shoppingcart>
+                <shoppingcart></shoppingcart>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- branches Page Template -->
+<template id="page-branches">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
                 </div>
+                <div class="center">Our Branches</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Branches" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section>
+                <branches></branches>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- branch Page Template -->
+<template id="page-branch">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Closest Branch</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Closest Branch" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner class="ClosestBranch">
+            <section>
+                <closest-branch></closest-branch>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- account Page Template -->
+<template id="page-account">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">My Account</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="My Account" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <account-form></account-form>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- orders Page Template -->
+<template id="page-orders">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">My Orders</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="My Orders" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div id="orders-container">
+                    <table-rows v-bind:rows="tableData"></table-rows>
+                    <table-pagination v-bind:page="page" v-bind:total="total" v-bind:filtered="filtered"></table-pagination>
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+
+<!-- register Page Template -->
+<template id="page-register">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Register</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Register" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <register-form></register-form>
             </section>
         </f7-block>
     </f7-page>
@@ -281,23 +457,34 @@
 <!-- checkout Page Template -->
 <template id="page-checkout">
     <f7-page>
-        <f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Checkout</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/" ><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>-->
         <f7-block inner>
             <section style="padding: 10px;">
-                <h1>Welcome Back!</h1>
-                <p>Sign In To Your Account to See What’s Cooking.</p>
-                <br/>
-                <div>
-                    <div id="order-map">
-                        <Gmap :zoom="14" :search="true" :event="true"></Gmap>
-                    </div>
-                    <div>
-                        <address-template></address-template>
-                    </div>
-                    <div>
-                        <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
-                    </div><!-- addresses-container -->
+                <div id="order-map">
+                    <Gmap :zoom="14" :search="true" :event="true"></Gmap>
                 </div>
+                <div>
+                    <address-template></address-template>
+                </div>
+                <div>
+                    <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
+                </div><!-- addresses-container -->
                 <br/>
                 <div>
                     <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
@@ -329,6 +516,107 @@
         </f7-block>
     </f7-page>
 </template>
+
+
+<!-- login Page Template -->
+<template id="page-login">
+    <f7-page>
+        <f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div>
+                    <div>
+                        <h1>Welcome Back!</h1>
+                        <p style="margin: 0px;">Sign In To Your Account to See What’s Cooking.</p>
+                    </div>
+                    <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Country</div>
+                                        <countries-listing :country_id="country_id"></countries-listing>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">
+                                                Get pin
+                                            </button>
+                                            <login-errors :error="error" :pin="pin"></login-errors>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <label style="padding-left: 5px;" name="rememberMe">Remember me</label>&nbsp;
+                                            <input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="submit" class="button button-big color-orange" style="width: 100%;">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="submit" class="button button-big color-orange" style="width: 100%;">
+                                                Facebook Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </form>
+                    <hr>
+                    <a href="/register/" class="item-link" style="color: #6e6e6e; margin-bottom:3%;">
+                        <p style="text-align: center;">New here? Register an account</p></a>
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
 
 <!-- Form Page Template -->
 <template id="page-form">

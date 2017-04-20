@@ -57,11 +57,11 @@
 
 <style scoped>
 
-    .addressContainer {
-        background-color: white;
-        padding: 5px 10px 5px 10px;
-        border: 1px solid #ccc;
-    }
+    /*.addressContainer {*/
+        /*background-color: white;*/
+        /*padding: 5px 10px 5px 10px;*/
+        /*border: 1px solid #ccc;*/
+    /*}*/
 
     .addressHead {
         display: flex;

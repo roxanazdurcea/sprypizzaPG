@@ -7,21 +7,17 @@
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group" v-bind:class="{ 'has-error' : contact.first_nameError }">
-                            <div class="input-group">
-                                <div>
-                                    <select class="form-control" v-model="contact.title">
-                                        <option value="Mr">Mr</option>
-                                        <option value="Mrs">Mrs</option>
-                                        <option value="Miss">Miss</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="text" name="first_name" placeholder="First Name" v-model="contact.first_name" v-on:blur="ValidateFirstName">
-                                </div>
-                                <div>
-                                    <input class="form-control" type="text" name="last_name" placeholder="Last Name" v-model="contact.last_name" v-on:blur="ValidateLastName">
-                                </div>
-                            </div>
+
+                            <select class="form-control" v-model="contact.title">
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                            </select>
+
+                            <input class="form-control" type="text" name="first_name" placeholder="First Name" v-model="contact.first_name" v-on:blur="ValidateFirstName">
+
+                            <input class="form-control" type="text" name="last_name" placeholder="Last Name" v-model="contact.last_name" v-on:blur="ValidateLastName">
+
                             <div class="divError" v-show="nameError"><p>{{ contact.nameErrorMessage }}</p></div>
 
                         </div>
@@ -32,9 +28,9 @@
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group">
-                            <div class='input-group date' id='datetimepicker'>
+                            <div class="date" id="datetimepicker">
                                 <datepicker :inputClass="datepicker.inputClass" :placeholder="datepicker.placeholder" :format="datepicker.format" v-model="contact.birthdate"></datepicker>
-                                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+                                <span><i class="fa fa-calendar-o"></i></span>
                             </div>
                         </div>
                     </div>
@@ -55,18 +51,16 @@
                     <div class="item-inner">
                         <div class="item-input form-group " v-for="email in contact.emails" v-bind:class="{ 'has-error' : contact.email }">
                             <div v-for="phone in contact.phones" class="form-group" v-bind:class="{ 'has-error' : contact.mobile }">
-                                <div class="input-group">
-                                    <div class="input-group-btn">
-                                        <select class="form-control" placeholder="country" v-model="phone.country_id">
-                                            <option v-for="country in countries" v-bind:value="country.phonecode">
-                                                {{ country.nicename }}
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" v-model="phone.number" v-on:blur="ValidatePhones"/>
-                                </div>
-                                <div class="divError" v-show="phone.phoneError"><p>The phone number already exists or is
-                                    in a wrong format</p></div>
+
+                                <select class="form-control" placeholder="country" v-model="phone.country_id">
+                                    <option v-for="country in countries" v-bind:value="country.phonecode">
+                                        {{ country.nicename }}
+                                    </option>
+                                </select>
+
+                                <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" v-model="phone.number" v-on:blur="ValidatePhones"/>
+
+                                <div class="divError" v-show="phone.phoneError"><p>The phone number already exists or is in a wrong format</p></div>
                             </div>
                         </div>
                     </div>
@@ -77,7 +71,7 @@
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group">
-                            <button class="btn btn-lg btn-success btn-block" type="button" v-on:click.once="Submit" v-bind:disabled="isDisabled">
+                            <button type="submit" class="button button-big color-blue" style="width: 100%;"  v-on:click.once="Submit" v-bind:disabled="isDisabled">
                                 Create Account
                             </button>
                         </div>
@@ -87,9 +81,9 @@
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group" v-show="showPIN">
-                            <div class="input-group">
+                            <div>
                                 <input placeholder="PIN" type="text" class="form-control" name="pin" v-model="pin"/>
-                                <span class="input-group-btn"><button class="btn btn-lg" type="button" v-on:click="ActivateContact">Activate</button></span>
+                                <span><button class="btn btn-lg" type="button" v-on:click="ActivateContact">Activate</button></span>
                             </div>
                             <div class="divError">
                                 <p>{{ validationMessage }}</p>
@@ -316,7 +310,8 @@
     #register_Form {
         width: 100%;
     }
-    p{
+
+    p {
         font-size: 0.6rem;
     }
 </style>

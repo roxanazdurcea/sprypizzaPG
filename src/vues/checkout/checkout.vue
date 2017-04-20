@@ -3,7 +3,7 @@
         <div>
             <form>
                 <ul class="product-preview-small itemsWrap" style="padding-left: 0px;">
-                    <li v-for="(item, idx) in items" v-bind:class="{ borderB : idx < items.length - 1 }" style="margin-top:5px;">
+                    <li v-for="(item, idx) in items" style="margin-top:5px;">
                         <div class="cart-product-row">
                             <div class="cart-product-title"><h4>{{ item.name }}</h4></div>
                             <div class="cart-product-price"><p style="margin-bottom: 0px;">{{ currency }}&nbsp;{{
@@ -27,7 +27,7 @@
 
 
         <hr>
-        <div style="padding: 3%;">
+        <div>
 
             <div class="totals-div">
                 <div>
@@ -52,7 +52,7 @@
 
             <div class="row">
                 <p class="col-50">
-                    <a href="#view-2" class="tab-link button button-big color-orange">Continue Ordering</a>
+                    <a href="/menu/" class="item-link button button-big color-orange">Menu</a>
                 </p>
                 <p class="col-50" v-on:click="confirmOrder()" v-bind:disabled="isDisabled">
                     <a href="#" class="button button-big color-green">Confirm Order</a>
@@ -168,12 +168,11 @@
         background-color: #FAFAFA;
         border: 5px solid #CCCCCC;
         padding: 10px;
-        margin-bottom: 20px;
     }
 
     #checkout-cart .cart-product-row {
         width: 100%;
-        height: 40px;
+        /*height: 40px;*/
         clear: both;
     }
 
@@ -189,7 +188,7 @@
     }
 
     #checkout-cart .totals-div {
-        height: 100px;
+        /*height: 100px;*/
         padding: 10px;
         border-bottom: 1px solid #ccc;
         background-color: snow;
@@ -236,9 +235,6 @@
         background-color: #777;
     }
 
-    .borderB {
-        border-bottom: 1px dotted #eaeaea;
-    }
 
     @media (max-width: 991px) {
         .cart-content ol, .cart-content ul {

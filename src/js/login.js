@@ -29,13 +29,13 @@ new Vue({
             }.bind(this));
         }
     },
-    components: {
-        loginErrors,
-        countriesListing
-    },
     mounted() {
         Events.$on('setCountry-ev', function(country_id) {
             this.country_id = country_id;
         }.bind(this));
-    }
+    },
+    components: {
+        loginErrors,
+        countriesListing
+    },
 });

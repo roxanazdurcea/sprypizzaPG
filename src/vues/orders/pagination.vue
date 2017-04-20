@@ -3,7 +3,7 @@
         <div id="listing">
             <p>Showing {{ 1 + this.page * (this.setPage - 1) }} to {{ (this.setPage * this.page <= this.total) ? this.setPage * this.page : this.total }} of {{ this.total }} entries</p>
         </div>
-        <div class="row" style="padding: 5%;">
+        <div class="row" style="padding: 3%;">
             <p class="col-50">
                 <a href="#" class="button button-big color-orange" v-on:click="Previous" v-bind:disabled=" setPage == 1 ">Previous</a>
             </p>
