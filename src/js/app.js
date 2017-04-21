@@ -1,21 +1,9 @@
 // Init F7 Vue Plugin
 window.Vue.use(Framework7Vue);
 
-
-
-// Init Page Components
-// Vue.component('page-about', {
-//     template: '#page-about'
-// });
-
 Vue.component('page-home', {
     template: '#page-home'
 });
-
-// Vue.component('page-form', {
-//     template: '#page-form'
-// });
-
 
 //page-menu
 import groupscontainer from "../vues/menu/groups.vue";
@@ -85,7 +73,7 @@ Vue.component('page-login', {
             axios.post('https://sprypizza.com/api/sms/send', {
                 mobile: this.mobile,
                 country_id: this.country_id
-            }).then(function(data) {
+            }).then(function (data) {
 
                 this.error = this.pin = '';
 
@@ -100,7 +88,7 @@ Vue.component('page-login', {
         }
     },
     mounted() {
-        Events.$on('setCountry-ev', function(country_id) {
+        Events.$on('setCountry-ev', function (country_id) {
             this.country_id = country_id;
         }.bind(this));
     },
@@ -123,7 +111,7 @@ Vue.component('page-account', {
             return Store.state.longitude;
         }
     },
-    mounted: function() {
+    mounted: function () {
         var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
     },
@@ -166,7 +154,7 @@ Vue.component('page-orders', {
 
             var response = this.rawData;
 
-            response = _.map(response, function (obj,index) {
+            response = _.map(response, function (obj, index) {
                 obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
                 return obj;
             }.bind(this));
@@ -178,7 +166,7 @@ Vue.component('page-orders', {
         }
     },
     methods: {
-        List: function() {
+        List: function () {
             axios.post('https://sprypizza.com/api/orders/get', {
                 contact_id: this.contact_id,
                 draw: this.draw,
@@ -189,7 +177,7 @@ Vue.component('page-orders', {
                 var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
-                this.rawData = _.map(response.orders, function(obj,index) {
+                this.rawData = _.map(response.orders, function (obj, index) {
                     obj['showItems'] = false;
                     return obj;
                 });
@@ -206,7 +194,7 @@ Vue.component('page-orders', {
 
         this.List();
 
-        Events.$on('showItems-ev', function(idx) {
+        Events.$on('showItems-ev', function (idx) {
             this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
         }.bind(this));
 
@@ -214,12 +202,12 @@ Vue.component('page-orders', {
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function(draw) {
+        Events.$on('setPage-ev', function (draw) {
             this.draw = draw;
             this.List();
         }.bind(this));
 
-        Events.$on('tableRefresh-ev', function() {
+        Events.$on('tableRefresh-ev', function () {
             this.List();
         }.bind(this));
     },
@@ -228,7 +216,6 @@ Vue.component('page-orders', {
         tableRows
     }
 });
-
 
 
 //checkout-menu
@@ -335,6 +322,34 @@ Vue.component('page-checkout', {
     }
 });
 
+//Cart icon instance
+Vue.component('item-count',{
+    template: "#item-count",
+    computed: {
+        itemcount() {
+            return Store.state.itemCount;
+        }
+    }
+});
+//track page
+// import registerForm from "../vues/register/form.vue";
+//
+// Vue.component('page-register', {
+//     template: '#page-register',
+//     components: {
+//         registerForm
+//     }
+// });
+
+//rewards page
+// import registerForm from "../vues/register/form.vue";
+//
+// Vue.component('page-register', {
+//     template: '#page-register',
+//     components: {
+//         registerForm
+//     }
+// });
 
 // Init App
 new Vue({
@@ -395,6 +410,14 @@ new Vue({
                 path: '/orders/',
                 component: 'page-orders'
             }
+            // {
+            //     path: '/track/',
+            //     component: 'page-track'
+            // },
+            // {
+            //     path: '/rewards/',
+            //     component: 'page-rewards'
+            // }
         ],
     }
 });

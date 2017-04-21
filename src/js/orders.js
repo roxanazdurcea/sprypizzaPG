@@ -19,7 +19,7 @@ new Vue({
 
             var response = this.rawData;
 
-            response = _.map(response, function (obj,index) {
+            response = _.map(response, function (obj, index) {
                 obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
                 return obj;
             }.bind(this));
@@ -31,7 +31,7 @@ new Vue({
         }
     },
     methods: {
-        List: function() {
+        List: function () {
             axios.post('https://sprypizza.com/api/orders/get', {
                 contact_id: this.contact_id,
                 draw: this.draw,
@@ -42,7 +42,7 @@ new Vue({
                 var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
-                this.rawData = _.map(response.orders, function(obj,index) {
+                this.rawData = _.map(response.orders, function (obj, index) {
                     obj['showItems'] = false;
                     return obj;
                 });
@@ -59,7 +59,7 @@ new Vue({
 
         this.List();
 
-        Events.$on('showItems-ev', function(idx) {
+        Events.$on('showItems-ev', function (idx) {
             this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
         }.bind(this));
 
@@ -67,12 +67,12 @@ new Vue({
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function(draw) {
-           this.draw = draw;
-           this.List();
+        Events.$on('setPage-ev', function (draw) {
+            this.draw = draw;
+            this.List();
         }.bind(this));
 
-        Events.$on('tableRefresh-ev', function() {
+        Events.$on('tableRefresh-ev', function () {
             this.List();
         }.bind(this));
     },

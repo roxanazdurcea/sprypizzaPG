@@ -1,4 +1,3 @@
-
 window._ = require('underscore');
 //Axios Ajax Lib
 window.axios = require('axios');
@@ -14,13 +13,10 @@ import VueRouter from 'vue-router'
 window.Vue.use(VueRouter)
 //Events
 window.Events = new Vue();
-
-import itemCount from "../vues/cart/item-count.vue";
-
-// import branches from "../vues/branches/branch.vue";
-// import closestBranch from "../vues/branches/closet-branch.vue";
-// import accountForm from "../vues/account/form.vue";
-// import registerForm from "../vues/register/form.vue";
+//Definition of Databases
+var DataStore = require('nedb');
+var cartDB = new DataStore({filename: "cart.db"});
+cartDB.loadDatabase();
 
 window.Store = new Vuex.Store({
     state: {
@@ -75,60 +71,29 @@ window.Store = new Vuex.Store({
 });
 
 
-//Cart icon instance
-new Vue({
-    el: "#itemCount",
-    methods: {
-        openCart: function () {
-            Store.commit('toggleCartActive');
-        }
-    },
-    components: {
-        itemCount
-    }
-});
-
-
-// //all branches
-// new Vue({
-//     el: "#branches-container",
-//     components: {
-//         branches
-//     }
-// });
-//
-// //closest branch
-// new Vue({
-//     el: '#closest-branch',
-//     components: {
-//         closestBranch
-//     }
-// });
-//
-// //account form
-// new Vue({
-//     el: '#account-container',
-//     components: {
-//         accountForm
-//     }
-// });
-//
-// //register form
-// new Vue({
-//     el: '#register-container',
-//     components: {
-//         registerForm
-//     }
-// });
-
-var onSuccess = function(position) {
-   Store.commit('setLatitude', position.coords.latitude);
-   Store.commit('setLongitude', position.coords.longitude);
+var onSuccess = function (position) {
+    Store.commit('setLatitude', position.coords.latitude);
+    Store.commit('setLongitude', position.coords.longitude);
 };
 // onError Callback receives a PositionError object
 function onError(error) {
-   alert('code: '    + error.code    + '\n' +
-           'message: ' + error.message + '\n');
+    alert('code: ' + error.code + '\n' +
+        'message: ' + error.message + '\n');
 }
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+window.Cart = {
+    obj: [],
+    Save() {
+        cartDB.insert(this.obj);
+    },
+    Read() {
+        cartDB.find({}, (err, doc) => {
+            this.obj = doc;
+        });
+    },
+    Delete() {
+        cartDB.remove({}, { multi: true });
+        this.obj = {};
+    }
+};

@@ -117,6 +117,9 @@
                 itemsArray.items = items;
                 itemsArray.total = this.cartTotal;
                 localStorage.setItem('cart', JSON.stringify(itemsArray));
+                window.Cart.Delete();
+                window.Cart.obj = items;
+                window.Cart.Save();
             },
             Increase: function (idx) {
                 this.items[idx]['qty']++;

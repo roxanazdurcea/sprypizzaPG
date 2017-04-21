@@ -47,9 +47,10 @@
     "test": "tests"
   },
   "dependencies": {
+    "framework7-vue": "^0.7.0",
+    "nedb": "^1.8.0",
     "underscore": "^1.8.3",
     "vue": "2.1.8",
-    "vuex": "2.1.2",
-    "framework7-vue": "^0.7.0"
+    "vuex": "2.1.2"
   }
 }

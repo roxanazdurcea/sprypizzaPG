@@ -15,7 +15,7 @@ new Vue({
             axios.post('https://sprypizza.com/api/sms/send', {
                 mobile: this.mobile,
                 country_id: this.country_id
-            }).then(function(data) {
+            }).then(function (data) {
 
                 this.error = this.pin = '';
 
@@ -30,7 +30,7 @@ new Vue({
         }
     },
     mounted() {
-        Events.$on('setCountry-ev', function(country_id) {
+        Events.$on('setCountry-ev', function (country_id) {
             this.country_id = country_id;
         }.bind(this));
     },
