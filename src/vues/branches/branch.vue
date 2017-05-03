@@ -27,7 +27,9 @@
                         <div><i style="float: left; width:8%;" class="f7-icons size-15">phone</i><p style="float: left; margin-left: 1%; width:90%;">{{branch.number}}</p></div>
                         <div style="clear: both;"></div>
                         <hr>
-                        <div class="schedStyle"><i style="color: red;" class="fa" aria-hidden="true" v-bind:class="[branch.showSchedule ? 'fa-caret-down' : 'fa-caret-right']"></i>
+                        <div class="schedStyle">
+                            <i style="color: red;" class="f7-icons size-15" aria-hidden="true">{{ branch.showSchedule ? 'chevron_down' : 'chevron_right' }}</i>
+                            <!--<i style="color: red;" class="fa" aria-hidden="true" v-bind:class="[branch.showSchedule ? 'fa-caret-down' : 'fa-caret-right']"></i>-->
                             <p style="color: red;" v-on:click="ShowSchedule(idx)"><em>Branch Schedule</em></p>
                         </div>
                         <div v-show="branch.showSchedule">
@@ -156,6 +158,7 @@
     .schedStyle p {
         float: left;
         width: 95%;
+        margin-left: 5px;
     }
 
     hr {

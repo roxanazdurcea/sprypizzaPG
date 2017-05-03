@@ -1,26 +1,29 @@
 <template>
-    <div class="panel panel-default addressContainer">
-        <div class="panel-heading addressHead">
+    <div class="addressContainer">
+        <div class="addressHead">
             <div class="title">My Addresses</div>
             <div class="addAddress" v-on:click="ShowAddressTemplate()" :disabled="disabled" v-show="!disabled">
-                <i class="fa fa-plus-circle"></i>
+                <i class="f7-icons size-15">add_round_fill</i>
             </div>
         </div>
         <div v-if=" addresses.length == 0 " style="padding-bottom: 5px !important; margin-bottom: 0!important;">
             <div class="addressAlert">
-                <span><i class="fa fa-exclamation-circle" style="color: #FAFAFA; font-size: 12px;"></i></span>&nbsp;&nbsp;
+                <span><i class="f7-icons size-15" style="color: #FAFAFA;">info_fill</i></span>&nbsp;&nbsp;
                 <span style="text-align:center; font-size: 12px;">No addresses are defined</span>
             </div>
         </div>
         <div v-for="(address, idx) in addresses" style="padding-bottom: 5px !important; margin-bottom: 0!important;">
-            <div class="container addressBox" @click="ShowOnMap(address)">
+            <div class="addressBox" @click="ShowOnMap(address)">
                 <select class="addressLabel" v-model="address.label" v-bind:disabled="disabled" v-on:change="SetDefaultAddress(idx)">
                     <option v-for="label in labels" v-bind:value="label">{{ label | capitalize }}</option>
                 </select>
-                <div class="addressDetails">{{ address.street }},&nbsp;{{ address.city }},&nbsp;{{ address.postalcode }},&nbsp;{{ address.state }}</div>
+                <div class="addressDetails">{{ address.street }},&nbsp;{{ address.city }},&nbsp;{{ address.postalcode }},&nbsp;{{ address.state }}
+                </div>
                 <div class="addressDefault">
-                    <i class="fa fa-lg" v-bind:class="[ (address.default == 1) ? 'fa-star':'fa-star-o' ]" v-on:click="SetDefaultAddress(idx)" v-bind:disabled="disabled"></i>
-                    <i class="fa fa-trash-o fa-lg" v-on:click="DeleteAddress(idx)" v-bind:disabled="disabled"></i>
+                    <!--<i class="fa fa-lg" v-bind:class="[ (address.default == 1) ? 'fa-star':'fa-star-o' ]" v-on:click="SetDefaultAddress(idx)" v-bind:disabled="disabled"></i>-->
+                    <i class="f7-icons size-15" v-on:click="SetDefaultAddress(idx)" v-bind:disabled="disabled">{{ (address.default == 1) ? 'star_fill' : 'star' }}</i>
+                    <!--<i class="fa fa-trash-o fa-lg" v-on:click="DeleteAddress(idx)" v-bind:disabled="disabled"></i>-->
+                    <i class="f7-icons size-15" v-on:click="DeleteAddress(idx)" v-bind:disabled="disabled">trash_fill</i>
                 </div>
             </div>
         </div>
@@ -31,30 +34,34 @@
     export default {
         name: 'addressesListing',
         props: ['addresses', 'disabled'],
-        data: function() {
+        data: function () {
             return {
                 labels: ['home', 'work', 'other']
             }
         },
         filters: {
-            capitalize: function(value) {
+            capitalize: function (value) {
                 if (!value) return ''
                 value = value.toString()
                 return value.charAt(0).toUpperCase() + value.slice(1)
             }
         },
         methods: {
-            SetDefaultAddress: function(idx) {
+            SetDefaultAddress: function (idx) {
                 Events.$emit('setDefaultAddress-ev', idx);
             },
-            DeleteAddress: function(idx) {
+            DeleteAddress: function (idx) {
                 Events.$emit('deleteAddress-ev', idx);
             },
-            ShowAddressTemplate: function() {
+            ShowAddressTemplate: function () {
                 Events.$emit('showAddressTemplate-ev');
             },
-            ShowOnMap: function(address) {
-                let data = {'latitude': address.latitude, 'longitude': address.longitude, 'info': address.street + ', ' + address.city};
+            ShowOnMap: function (address) {
+                let data = {
+                    'latitude': address.latitude,
+                    'longitude': address.longitude,
+                    'info': address.street + ', ' + address.city
+                };
                 Events.$emit('mapInfo-ev', data);
             }
         }
@@ -63,10 +70,17 @@
 
 <style scoped>
 
+    /*.addressContainer {*/
+    /*background-color: white;*/
+    /*padding: 5px 10px 5px 10px;*/
+    /*border: 1px solid #ccc;*/
+    /*}*/
+
     .addressHead {
         display: flex;
         flex-direction: row;
-        height: 40px;
+        /*height: 40px;*/
+        padding:5px;
         background-color: #e5e5e5;
         margin: 5px 0 5px 0;
     }
@@ -77,18 +91,19 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        width: 95%;
     }
 
     .addressHead .addAddress {
         display: flex;
         align-items: center;
+        width: 5%;
     }
 
     .addressHead .addAddress i {
         display: flex;
         align-items: center;
-        margin-left:95%;
-        color: green;
+        color: #D12027 !important;
         cursor: pointer;
     }
 
@@ -106,40 +121,50 @@
 
     .addressBox {
         background-color: #f1f1f1 !important;
-        width: 100%;
-        padding: 10px;
+        /*width: 100%;*/
+        /*padding: 10px;*/
+        min-height: 35px;
+        padding:5px;
     }
 
-    .addressBox:hover {
-        background-color: #cccccc !important;
-        width: 100%;
-        padding: 10px;
-        cursor: pointer;
+    /*.addressBox:hover {*/
+    /*background-color: #cccccc !important;*/
+    /*!*width: 100%;*!*/
+    /*padding: 10px;*/
+    /*!*cursor: pointer;*!*/
+    /*}*/
+
+    .addressLabel {
+        float: left;
+        background-color: #F9A153 !important;
+        /*width: 60px;*/
+        text-align: center;
+        font-size: 0.7rem !important;
+        color: #FAFAFA;
     }
-
-
 
     .addressDetails {
         float: left;
         margin-left: 2%;
-        font-size: 0.90rem !important;
-        width: 75%;
+        font-size: 0.70rem !important;
+        width: 70%;
     }
 
     .addressDefault {
         float: right;
-        margin-left: 2%;
-        font-size: 1.1rem !important;
+        font-size: 0.70rem !important;
     }
 
-    .addressDefault i:nth-child(1) {
-        color: orange;
-        cursor: pointer;
-    }
+    /*.addressDefault i:nth-child(1) {*/
+    /*color: #F9A153;*/
+    /*cursor: pointer;*/
+    /*width:5%;*/
 
-    .addressDefault i:nth-child(2) {
-        margin-left: 5px;
-        color: #2e3436;
-        cursor: pointer;
-    }
+    /*}*/
+
+    /*.addressDefault i:nth-child(2) {*/
+    /*margin-left: 5px;*/
+    /*color: #2e3436;*/
+    /*cursor: pointer;*/
+    /*}*/
 </style>

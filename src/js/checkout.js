@@ -3,6 +3,7 @@ import addressesListing from "../vues/checkout/addresses.vue";
 import addressTemplate from "../vues/register/address.vue";
 import Gmap from "../vues/generic/map/map.vue";
 
+
 //Cart instance
 new Vue({
     el: "#checkout-container",

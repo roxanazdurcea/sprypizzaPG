@@ -1,9 +1,9 @@
 <template>
     <div id="items-rows">
 
-        <div style="padding-top:2%; padding-bottom:2%; border-bottom: 1px dashed #f9a153;" v-for="(row, idx) in rows" @click="ShowItems(idx)">
+        <div style="padding-top:2%; padding-bottom:2%; border-bottom: 1px dashed #f9a153;" v-for="(row, idx) in rows">
             <div class="tr-order" style="width: 100%;">
-                <div style="width: 70%; float: left;">
+                <div style="width: 70%; float: left;" @click="ShowItems(idx)">
                     <div><i class="f7-icons size-15">{{ (row.showItems) ? 'delete_round_fill' : 'add_round_fill' }}</i> Order no.{{ row.id }} </div>
                     <div>{{ row.status | capitalize }}</div>
                     <div>{{ row.created_at }}</div>
@@ -12,11 +12,11 @@
 
                 <div class="actionDiv" style="width: 30%; float: right;">
                     <button title="ReOrder" class="button button-fill color-orange" v-on:click="ReOrder(idx)" v-bind:disabled=" row.status === 'pending' ">
-                        <i class="fa fa-undo"></i>&nbsp;&nbsp;ReOrder</button>
+                        <i class="f7-icons size-15">undo</i>&nbsp;&nbsp;ReOrder</button>
                     <button title="Cancel Order" class="button button-fill color-orange" v-on:click="CancelOrder(idx)" v-bind:disabled=" row.status !== 'pending' ">
-                        <i class="fa fa-times"></i>&nbsp;&nbsp;Cancel</button>
+                        <i class="f7-icons size-15">close_round_fill</i>&nbsp;&nbsp;Cancel</button>
                     <button title="Track Order" class="button button-fill color-orange" v-on:click="TrackOrder(idx)" v-bind:disabled=" row.status === 'completed' ">
-                        <i class="fa fa-location-arrow"></i>&nbsp;&nbsp;Track</button>
+                        <i class="f7-icons size-15">navigation_fill</i>&nbsp;&nbsp;Track</button>
                 </div>
                 <div style="clear: both;"></div>
             </div>

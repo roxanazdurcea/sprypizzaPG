@@ -8,7 +8,7 @@
                     <p style="margin-bottom:3px;">{{ msg.message }}</p>
                 </div>
                 <div class="buttonMessage">
-                    <i class="fa fa-lg fa-times" v-on:click="remove(index)"></i>
+                    <i class="f7-icons size-15" v-on:click="remove(index)">close_round_fill</i>
                 </div>
             </div>
         </div>

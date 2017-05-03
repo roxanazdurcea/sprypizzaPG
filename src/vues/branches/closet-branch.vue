@@ -99,6 +99,7 @@
     .closestBranch .schedStyle p {
         float: left;
         width: 95%;
+        margin-left: 5px;
     }
 
     .closestBranch .schDay {

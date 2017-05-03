@@ -30,7 +30,7 @@
                         <div class="item-input form-group">
                             <div class="date" id="datetimepicker">
                                 <datepicker :inputClass="datepicker.inputClass" :placeholder="datepicker.placeholder" :format="datepicker.format" v-model="contact.birthdate"></datepicker>
-                                <span><i class="fa fa-calendar-o"></i></span>
+                                <!--<span><i class="f7-icons size-15">calendar_fill</i></span>-->
                             </div>
                         </div>
                     </div>

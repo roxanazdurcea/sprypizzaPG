@@ -1,7 +1,7 @@
 <template>
     <div class="notificationIcon">
         <div class="noti">
-            <span class="badge">{{ messageCount }}</span><i class="fa fa-lg fa-bell-o" v-on:click="setVisible()"></i>
+            <span class="badge">{{ messageCount }}</span><i class="f7-icons size-15" v-on:click="setVisible()">bell_fill</i>
         </div>
         <div>
             <transition name="fade">

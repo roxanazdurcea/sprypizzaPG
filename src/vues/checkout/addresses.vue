@@ -1,14 +1,17 @@
+
+
+
 <template>
     <div class="addressContainer">
         <div class="addressHead">
             <div class="title">My Addresses</div>
             <div class="addAddress" v-on:click="showAddressTemplate()">
-                <i class="fa fa-plus-circle"></i>
+                <i class="f7-icons size-15">add_round_fill</i>
             </div>
         </div>
         <div v-if=" addresses.length == 0 " style="padding-bottom: 5px !important; margin-bottom: 0!important;">
             <div class="addressAlert">
-                <span><i class="fa fa-exclamation-circle" style="color: #FAFAFA; font-size: 12px;"></i></span>&nbsp;&nbsp;
+                <span><i class="f7-icons size-15" style="color: #FAFAFA;">info_fill</i></span>&nbsp;&nbsp;
                 <span style="text-align:center; font-size: 12px;">No addresses are defined</span>
             </div>
         </div>
@@ -19,7 +22,8 @@
                 </select>
                 <div class="addressDetails">{{ address.street }},&nbsp;{{ address.city }},&nbsp;{{ address.postalcode }},&nbsp;{{ address.state }}</div>
                 <div class="addressDefault">
-                    <i class="fa fa-lg" v-bind:class="[ (address.default == 1) ? 'fa-star':'fa-star-o' ]"></i>
+                    <i class="f7-icons size-15">{{ (address.default == 1) ? 'star_fill' : 'star' }}</i>
+                    <!--<i class="fa fa-lg" v-bind:class="[ (address.default == 1) ? 'fa-star':'fa-star-o' ]"></i>-->
                 </div>
             </div>
         </div>
@@ -78,18 +82,19 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        width: 95%;
     }
 
     .addressHead .addAddress {
         display: flex;
         align-items: center;
+        width: 5%;
     }
 
     .addressHead .addAddress i {
         display: flex;
         align-items: center;
-        margin-left:95%;
-        color: green;
+        color: #D12027 !important;
         cursor: pointer;
     }
 
@@ -122,7 +127,7 @@
 
     .addressLabel {
         float: left;
-        background-color: #F9A153;
+        background-color: #F9A153 !important;
         /*width: 60px;*/
         text-align: center;
         font-size: 0.7rem !important;
@@ -138,18 +143,19 @@
 
     .addressDefault {
         float: right;
-        margin-left: 2%;
         font-size: 0.70rem !important;
     }
 
-    .addressDefault i:nth-child(1) {
-        color: orange;
-        cursor: pointer;
-    }
+    /*.addressDefault i:nth-child(1) {*/
+        /*color: #F9A153;*/
+        /*cursor: pointer;*/
+        /*width:5%;*/
 
-    .addressDefault i:nth-child(2) {
-        margin-left: 5px;
-        color: #2e3436;
-        cursor: pointer;
-    }
+    /*}*/
+
+    /*.addressDefault i:nth-child(2) {*/
+        /*margin-left: 5px;*/
+        /*color: #2e3436;*/
+        /*cursor: pointer;*/
+    /*}*/
 </style>

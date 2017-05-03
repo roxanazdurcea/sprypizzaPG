@@ -1,6 +1,8 @@
 // Init F7 Vue Plugin
 window.Vue.use(Framework7Vue);
 
+window.myApp = new Framework7();
+
 Vue.component('page-home', {
     template: '#page-home'
 });

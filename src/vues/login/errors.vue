@@ -2,13 +2,13 @@
     <div>
         <div class="loginError" v-if="pin">
             <p style='font-size:11px;'>
-                <i class='fa fa-check' style='color:green;'></i>
+                <i class="f7-icons size-15" style='color:green;'>check_round_fill</i>
                 <span style='margin-left:10px;'>{{ pin }}</span>
             </p>
         </div>
         <div class="loginError" v-if="error">
             <p style='font-size:11px;'>
-                <i class='fa fa-exclamation-circle' style='color:red;'></i>
+                <i class="f7-icons size-15" style='color:red;'>info_fill</i>
                 <span style='color: darkred; margin-left:10px;'>{{ error }}</span>
             </p>
         </div>
