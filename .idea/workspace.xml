@@ -2,7 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b0021ca-a956-4c3f-976c-15c95b592b04" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/res/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/js/framework7-vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/dist/js/vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/app.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/account.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/contact.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/index.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/login.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/files/register.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/dist/js/bmbcframework7.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/account.js" afterPath="$PROJECT_DIR$/src/js/account.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/commons.js" afterPath="$PROJECT_DIR$/src/js/commons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/login.js" afterPath="$PROJECT_DIR$/src/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/menu.js" afterPath="$PROJECT_DIR$/src/js/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/orders.js" afterPath="$PROJECT_DIR$/src/js/orders.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/register.js" afterPath="$PROJECT_DIR$/src/js/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/custom.less" afterPath="$PROJECT_DIR$/src/less/custom.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/files/commons.less" afterPath="$PROJECT_DIR$/src/less/files/commons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/account/form.vue" afterPath="$PROJECT_DIR$/src/vues/account/form.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/cart/cart.vue" afterPath="$PROJECT_DIR$/src/vues/cart/cart.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/checkout/addresses.vue" afterPath="$PROJECT_DIR$/src/vues/checkout/addresses.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/checkout/checkout.vue" afterPath="$PROJECT_DIR$/src/vues/checkout/checkout.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/login/countries.vue" afterPath="$PROJECT_DIR$/src/vues/login/countries.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/login/errors.vue" afterPath="$PROJECT_DIR$/src/vues/login/errors.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/menu/groups.vue" afterPath="$PROJECT_DIR$/src/vues/menu/groups.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/menu/items.vue" afterPath="$PROJECT_DIR$/src/vues/menu/items.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/orders/pagination.vue" afterPath="$PROJECT_DIR$/src/vues/orders/pagination.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/register/address.vue" afterPath="$PROJECT_DIR$/src/vues/register/address.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/register/addresses.vue" afterPath="$PROJECT_DIR$/src/vues/register/addresses.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/register/form.vue" afterPath="$PROJECT_DIR$/src/vues/register/form.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/custom.css" afterPath="$PROJECT_DIR$/www/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.ios.colors.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.ios.colors.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.ios.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.ios.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.material.colors.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.material.colors.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/css/framework7.material.min.css" afterPath="$PROJECT_DIR$/www/dist/css/framework7.material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/dist/js/framework7.min.js" afterPath="$PROJECT_DIR$/www/dist/js/framework7.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/account.min.js" afterPath="$PROJECT_DIR$/www/js/account.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/checkout.min.js" afterPath="$PROJECT_DIR$/www/js/checkout.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/commons.min.js" afterPath="$PROJECT_DIR$/www/js/commons.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/login.min.js" afterPath="$PROJECT_DIR$/www/js/login.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/menu.min.js" afterPath="$PROJECT_DIR$/www/js/menu.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/my-app.js" afterPath="$PROJECT_DIR$/www/js/my-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/orders.min.js" afterPath="$PROJECT_DIR$/www/js/orders.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/register.min.js" afterPath="$PROJECT_DIR$/www/js/register.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/vendor.min.js" afterPath="$PROJECT_DIR$/www/js/vendor.min.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +74,7 @@
     <favorites_list name="sprypizzaPG" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -163,7 +217,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,130 +235,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vues" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vues" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -445,24 +377,26 @@
       <workItem from="1492494404182" duration="911000" />
       <workItem from="1492505147558" duration="14079000" />
       <workItem from="1492593516253" duration="156000" />
+      <workItem from="1493799318941" duration="99000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168242000" />
+    <option name="totallyTimeSpent" value="168341000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907662" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.36345777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.2907662" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="24" y="779" width="1876" height="335" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.29118773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="24" y="779" width="1876" height="335" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -675,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2128">
           <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
           <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5301">
           <caret line="283" column="20" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1843">
           <caret line="97" column="41" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,9 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding>
-            <element signature="e#321#370#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,9 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="231" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="454" selection-end-column="7" />
-          <folding>
-            <element signature="n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

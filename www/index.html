@@ -13,442 +13,596 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKOnrOhuNeDi9Z_V32-kvMqnNvH2ZAeKQ" type="text/javascript"></script>
 
     <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="dist/Icons-master/css/framework7-icons.css">
-
-
-
 </head>
 
 <body>
 
-<!-- Status bar overlay for fullscreen mode-->
-<div class="statusbar-overlay"></div>
-<!-- Panels overlay-->
-<div class="panel-overlay"></div>
+<div id="app">
 
-<!-- Left panel with reveal effect-->
-<div class="panel panel-left panel-reveal">
-    <div class="content-block">
-        <nav id="menu" class="left show">
-            <a href="#view-5" class="tab-link panel-close"><i class="f7-icons size-22 left-side-icon">home_fill</i>Our Branches</a>
-            <hr>
-            <a href="#view-6" class="tab-link"><i class="f7-icons size-22 left-side-icon">navigation_fill</i>Closest Branch</a>
-            <hr>
-            <a href="#view-7" class="tab-link"><i class="f7-icons size-22 left-side-icon">person_fill</i>My Account</a>
-            <hr>
-            <a href="#view-8" class="tab-link"><i class="f7-icons size-22 left-side-icon">list_fill</i>My Orders</a>
-            <hr>
-            <a href="#"><i class="f7-icons size-22 left-side-icon">star_fill</i>My Rewards</a>
-        </nav>
-    </div>
+    <!-- Statusbar -->
+    <f7-statusbar></f7-statusbar>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+
+    <!-- Left Panel -->
+    <f7-panel left reveal layout="dark">
+        <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
+            <f7-pages>
+                <f7-page>
+                    <f7-list>
+                        <f7-list-item link="/branches/" title="Our Branches" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/branch/" title="Closest Branch" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/account/" title="My Account" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/orders/" title="My Orders" link-view="#main-view" link-close-panel></f7-list-item>
+                        <f7-list-item link="/rewards/" title="My Rewards" link-view="#main-view" link-close-panel></f7-list-item>
+                    </f7-list>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-panel>
+
+    <!-- Main Views -->
+    <f7-views>
+        <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
+            <!-- iOS Theme Navbar -->
+            <f7-navbar v-if="$theme.ios">
+                <f7-nav-left>
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <!--<f7-link icon="icon-bars" open-panel="left"></f7-link>-->
+                </f7-nav-left>
+                <f7-nav-center>SpryPizza</f7-nav-center>
+                <f7-nav-right>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                    <!--<f7-link icon="icon-bars" open-panel="right"></f7-link>-->
+                </f7-nav-right>
+            </f7-navbar>
+            <!-- Pages -->
+            <f7-pages>
+
+                <f7-page>
+                    <!-- Material Theme Navbar -->
+                    <!--<f7-navbar v-if="$theme.material">-->
+                        <!--<f7-nav-left>-->
+                            <!--<f7-link icon="icon-bars" open-panel="left"></f7-link>-->
+                        <!--</f7-nav-left>-->
+                        <!--<f7-nav-center sliding>SpryPizza</f7-nav-center>-->
+                        <!--<f7-nav-right>-->
+                            <!--<f7-link icon="icon-bars" open-panel="right"></f7-link>-->
+                        <!--</f7-nav-right>-->
+                    <!--</f7-navbar>-->
+                    <f7-block>
+                        <div style="position: relative; height: 85vh;">
+                            <img style="position: absolute; top: 0px; right: 0; width: 100%;" src="img/top-back.png">
+                            <img style="position: absolute; bottom: 0px; left: 0; width: 100%;" src="img/bottom-back.png">
+                            <div style="position: absolute; top: 15%; width:50%; margin-left:25%;">
+                                <div style="overflow: hidden;">
+                                    <a href="/menu/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-new-order.png"></a>
+                                    <a href="/track/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-track-order.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </f7-block>
+                </f7-page>
+
+                <!-- Bottom Tabbar-->
+                <div class="toolbar tabbar tabbar-labels">
+                    <div class="toolbar-inner bottom-padding">
+                        <a href="/" class="item-link"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
+                        <a href="/menu/" class="item-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
+                        <a href="/cart/" class="item-link"><i class="f7-icons">bag</i><span class="tabbar-label">Cart</span><item-count></item-count></a>
+                        <a href="/track/" class="item-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
+                    </div>
+                </div>
+
+            </f7-pages>
+        </f7-view>
+    </f7-views>
+
+    <!-- Popup -->
+    <f7-popup id="popup">
+        <f7-view navbar-fixed>
+            <f7-pages>
+                <f7-page>
+                    <f7-navbar title="Popup">
+                        <f7-nav-right>
+                            <f7-link close-popup>Close</f7-link>
+                        </f7-nav-right>
+                    </f7-navbar>
+                    <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate
+                        laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam.
+                        Omnis iusto nemo quos ullam obcaecati, quod.
+                    </f7-block>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-popup>
+
 </div>
-
-<!-- Right Panel with Cover effect -->
-<div class="panel panel-right panel-cover">
-    <div class="content-block">
-        <div>
-            <div>
-                <h1>Welcome Back!</h1>
-                <p>Sign In To Your Account to See What’s Cooking.</p>
-            </div>
-            <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">Country</div>
-                                <countries-listing :country_id="country_id"></countries-listing>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="item-content">
-                        <div class="item-inner">
-                            <div class="item-input">
-                                <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">
-                                        Get pin
-                                    </button>
-                                    <login-errors :error="error" :pin="pin"></login-errors>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <label style="padding-left: 10px;" name="rememberMe">Remember me</label>&nbsp;
-                                    <input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="submit" class="button button-big color-orange" style="width: 100%;">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <button type="submit" class="button button-big color-orange" style="width: 100%;">
-                                        Facebook Login
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </form>
-            <hr>
-            <a href="#view-9" class="tab-link" style="color: #6e6e6e; margin-bottom:3%;"><p style="text-align: center;">New here? Register an account</p></a>
-        </div>
-        <a href="#" class="close-panel"><i class="f7-icons">forward</i></a>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-<div class="views tabs toolbar-fixed toolbar-through pages">
-
-    <!-- ============================ home ============================ -->
-    <!-- ============================ home ============================ -->
-    <!-- ============================ home ============================ -->
-    <div id="view-1" class="view view-main tab active" data-page="home">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="center sliding" style="left: -6.5px;">SpryPizza</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="home" class="page">
-                <div class="page-content" style="position: relative;">
-                    <div class="content-block">
-                        <img style="position: absolute; top: 50px; right: 0; width: 100%;" src="img/top-back.png">
-                        <img style="position: absolute; bottom: 50px; left: 0; width: 100%;" src="img/bottom-back.png">
-
-                        <div class="flexcontainercolumn">
-                            <div class="item1"><a href="#view-2" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-new-order.png"></a></div>
-                            <div class="item2"><a href="#" class="tab-link"><img style="width:60%" class="img-responsive-F7" src="img/sprypizzaPG-track-order.png"></a></div>
-                        </div>
+<template id="item-count">
+    <span class="badge color-red">{{ itemcount }}</span>
+</template>
+<!-- home Page Template -->
+<template id="page-home">
+    <f7-page>
+        <!-- Material Theme Navbar -->
+        <!--<f7-navbar v-if="$theme.material">-->
+            <!--<f7-nav-left>-->
+                <!--<f7-link icon="icon-bars" open-panel="left"></f7-link>-->
+            <!--</f7-nav-left>-->
+            <!--<f7-nav-center sliding>SpryPizza</f7-nav-center>-->
+            <!--<f7-nav-right>-->
+                <!--<f7-link icon="icon-bars" open-panel="right"></f7-link>-->
+            <!--</f7-nav-right>-->
+        <!--</f7-navbar>-->
+        <f7-block>
+            <div style="position: relative; height: 85vh;">
+                <img style="position: absolute; top: 0px; right: 0; width: 100%;" src="img/top-back.png">
+                <img style="position: absolute; bottom: 0px; left: 0; width: 100%;" src="img/bottom-back.png">
+                <div style="position: absolute; top: 15%; width:50%; margin-left:25%;">
+                    <div style="overflow: hidden;">
+                        <a href="/menu/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-new-order.png"></a>
+                        <a href="/track/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-track-order.png"></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ============================ menu ============================ -->
-    <!-- ============================ menu ============================ -->
-    <!-- ============================ menu ============================ -->
-    <div id="view-2" class="view tab" data-page="menu">
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- menu Page Template -->
+<template id="page-menu">
+    <f7-page>
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="left sliding">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
                 </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Menu</div>
+                <div class="center">Menu</div>
                 <div class="right">
                     <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
                 </div>
             </div>
         </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="menu" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <section id="menu-container" style="padding: 10px;">
-                            <groupscontainer></groupscontainer>
-                            <itemscontainer></itemscontainer>
-                        </section>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <groupscontainer></groupscontainer>
+                <itemscontainer></itemscontainer>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- cart Page Template -->
+<template id="page-cart">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Cart</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <shoppingcart></shoppingcart>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- branches Page Template -->
+<template id="page-branches">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Our Branches</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section>
+                <branches></branches>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- branch Page Template -->
+<template id="page-branch">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Closest Branch</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner class="ClosestBranch">
+            <section>
+                <closest-branch></closest-branch>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- account Page Template -->
+<template id="page-account">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">My Account</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <account-form></account-form>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- orders Page Template -->
+<template id="page-orders">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">My Orders</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="My Orders" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div id="orders-container">
+                    <table-rows v-bind:rows="tableData"></table-rows>
+                    <table-pagination v-bind:page="page" v-bind:total="total" v-bind:filtered="filtered"></table-pagination>
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+
+<!-- register Page Template -->
+<template id="page-register">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Register</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Register" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <register-form></register-form>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- checkout Page Template -->
+<template id="page-checkout">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Checkout</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <!--<f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>-->
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div id="order-map">
+                    <Gmap :zoom="14" :search="true" :event="true"></Gmap>
+                </div>
+                <div>
+                    <address-template></address-template>
+                </div>
+                <div>
+                    <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
+                </div><!-- addresses-container -->
+                <br/>
+                <div>
+                    <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- login Page Template -->
+<template id="page-login">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Login</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div>
+                    <div>
+                        <h1>Welcome Back!</h1>
+                        <p style="margin: 0px;">Sign In To Your Account to See What’s Cooking.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Shopping Cart ============================ -->
-    <!-- ============================ Shopping Cart ============================ -->
-    <!-- ============================ Shopping Cart ============================ -->
-    <div id="view-3" class="view tab" data-page="shopping-cart">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-2" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Shopping Cart
-                </div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="shopping-cart" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <section id="cart-container" style="padding: 10px;">
-                            <div>
-                                <shoppingcart></shoppingcart>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Checkout ============================ -->
-    <!-- ============================ Checkout ============================ -->
-    <!-- ============================ Checkout ============================ -->
-    <div id="view-4" class="view tab" data-page="checkout">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-3" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Checkout</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="checkout" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <section style="padding: 10px;">
-                            <h1>Welcome Back!</h1>
-                            <p>Sign In To Your Account to See What’s Cooking.</p>
-                            <br/>
-                            <div id="checkout-container">
-                                <div>
-                                    <div id="order-map">
-                                        <Gmap :zoom="14" :search="true" :event="true"></Gmap>
+                    <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Country</div>
+                                        <countries-listing :country_id="country_id"></countries-listing>
                                     </div>
-                                    <div>
-                                        <address-template></address-template>
+                                </div>
+                            </li>
+
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
                                     </div>
-                                    <div>
-                                        <addresses-listing :addresses="addresses" :disabled="disabled"></addresses-listing>
-                                    </div><!-- addresses-container -->
                                 </div>
-                                <br/>
-                                <div>
-                                    <checkout-cart :address="address" :latitude="latitude" :longitude="longitude" :branch_id="branch_id"></checkout-cart>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">
+                                                Get pin
+                                            </button>
+                                            <login-errors :error="error" :pin="pin"></login-errors>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Branches ============================ -->
-    <!-- ============================ Branches ============================ -->
-    <!-- ============================ Branches ============================ -->
-    <div id="view-5" class="view tab" data-page="branches">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Branches</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="branches" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <section id="branches-container">
-                            <branches></branches>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Closest Branch ============================ -->
-    <!-- ============================ Closest Branch ============================ -->
-    <!-- ============================ Closest Branch ============================ -->
-    <div id="view-6" class="view tab" data-page="closest-branch">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Closest Branch</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="closest-branch" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <section id="closest-branch">
-                            <closest-branch></closest-branch>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ My Account ============================ -->
-    <!-- ============================ My Account ============================ -->
-    <!-- ============================ My Account ============================ -->
-    <div id="view-7" class="view tab" data-page="my-account">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">My Account</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="my-account" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <div id="account-container">
-                            <account-form></account-form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ My orders ============================ -->
-    <!-- ============================ My orders ============================ -->
-    <!-- ============================ My orders ============================ -->
-    <div id="view-8" class="view tab" data-page="my-orders">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">My orders</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="my-orders" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <div id="orders-container">
-                            <table-rows v-bind:rows="tableData"></table-rows>
-                            <table-pagination v-bind:page="page" v-bind:total="total" v-bind:filtered="filtered"></table-pagination>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================ Register ============================ -->
-    <!-- ============================ Register ============================ -->
-    <!-- ============================ Register ============================ -->
-    <div id="view-9" class="view tab" data-page="register">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left sliding" style="transform: translate3d(0px, 0px, 0px);">
-                    <a href="#view-1" class="tab-link back"><i class="f7-icons size-22 left-side-icon">left</i><span>Back</span></a>
-                </div>
-                <div class="center sliding" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);">Register</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="#" class="open-panel" data-panel="right"><i class="f7-icons size-22">person</i></a>
-                </div>
-            </div>
-        </div>
-        <div class="pages navbar-fixed navbar-through">
-            <div data-page="register" class="page">
-                <div class="page-content">
-                    <div class="content-block">
-                        <div id="register-container" class="row">
-                            <register-form></register-form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                            </li>
 
-    <!-- Bottom Tabbar-->
-    <div class="toolbar tabbar tabbar-labels">
-        <div class="toolbar-inner">
-            <a href="#view-1" class="tab-link active"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
-            <a href="#view-2" class="tab-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
-            <a href="#view-3" class="tab-link"><i class="f7-icons">bag<span id="itemCount" class="badge bg-red"><item-count></item-count></span></i><span class="tabbar-label">Cart</span></a>
-            <a href="#" class="tab-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
-        </div>
-    </div>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-</div>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <label style="padding-left: 5px;" name="rememberMe">Remember me</label>&nbsp;
+                                            <input style="float: left; font-weight: normal;" type="checkbox" name="rememberMe" checked="checked"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="submit" class="button button-big color-orange" style="width: 100%;">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <button type="submit" class="button button-big color-blue" style="width: 100%;">
+                                                Facebook Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </form>
+                    <hr>
+
+                    <a href="/register/" class="item-link" style="color: #6e6e6e; margin-bottom:3%;">
+                        <p style="text-align: center;">New here? Register an account</p></a>
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- track Page Template -->
+<template id="page-track">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">Track your order</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div>
+                    track your order
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+
+<!-- rewards Page Template -->
+<template id="page-rewards">
+    <f7-page>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="f7-icons size-22 left-side-icon">left</i>
+                        <!-- Back link text rendered only for iOS theme -->
+                        <span>Back</span>
+                    </a>
+                </div>
+                <div class="center">My Rewards</div>
+                <div class="right">
+                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
+                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
+                </div>
+            </div>
+        </div>
+        <f7-block inner>
+            <section style="padding: 10px;">
+                <div>
+                    my rewards
+                </div>
+            </section>
+        </f7-block>
+    </f7-page>
+</template>
+
+
+<!-- Dynamic Routing Page Template -->
+<template id="page-dynamic-routing">
+    <f7-page>
+        <f7-navbar title="Dynamic Route" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <ul>
+                <li><b>Url:</b> {{$route.url}}</li>
+                <li><b>Path:</b> {{$route.path}}</li>
+                <li><b>Hash:</b> {{$route.hash}}</li>
+                <li><b>Params:</b>
+                    <ul>
+                        <li v-for="(value, key) in $route.params"><b>{{key}}:</b> {{value}}</li>
+                    </ul>
+                </li>
+                <li><b>Query:</b>
+                    <ul>
+                        <li v-for="(value, key) in $route.query"><b>{{key}}:</b> {{value}}</li>
+                    </ul>
+                </li>
+                <li><b>Route:</b> {{$route.route}}</li>
+            </ul>
+        </f7-block>
+        <f7-block inner>
+            <f7-link @click="$router.back()">Go back via Router API</f7-link>
+        </f7-block>
+    </f7-page>
+</template>
 
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="dist/js/framework7.min.js"></script>
 <script src="js/vendor.min.js"></script>
 <script src="js/commons.min.js"></script>
-<script src="js/login.min.js"></script>
-<script src="js/menu.min.js"></script>
-<script src="js/checkout.min.js"></script>
-<script src="js/orders.min.js"></script>
-<script src="js/account.min.js"></script>
-<script src="js/register.min.js"></script>
+<script src="js/app.min.js"></script>
+
+<!--<script src="js/login.min.js"></script>-->
+<!--<script src="js/menu.min.js"></script>-->
+<!--<script src="js/checkout.min.js"></script>-->
+<!--<script src="js/orders.min.js"></script>-->
+<!--<script src="js/account.min.js"></script>-->
+<!--<script src="js/register.min.js"></script>-->
 
 </body>
 

@@ -1,18 +1,18 @@
 <template>
     <div class="panel panel-default addressContainer">
         <div class="panel-heading addressHead">
-            <div class="col-xs-6 title">My Addresses</div>
-            <div class="col-xs-6 addAddress" v-on:click="ShowAddressTemplate()" :disabled="disabled" v-show="!disabled">
+            <div class="title">My Addresses</div>
+            <div class="addAddress" v-on:click="ShowAddressTemplate()" :disabled="disabled" v-show="!disabled">
                 <i class="fa fa-plus-circle"></i>
             </div>
         </div>
-        <div class="form-group" v-if=" addresses.length == 0 " style="padding-bottom: 5px !important; margin-bottom: 0!important;">
+        <div v-if=" addresses.length == 0 " style="padding-bottom: 5px !important; margin-bottom: 0!important;">
             <div class="addressAlert">
                 <span><i class="fa fa-exclamation-circle" style="color: #FAFAFA; font-size: 12px;"></i></span>&nbsp;&nbsp;
                 <span style="text-align:center; font-size: 12px;">No addresses are defined</span>
             </div>
         </div>
-        <div v-for="(address, idx) in addresses" class="form-group" style="padding-bottom: 5px !important; margin-bottom: 0!important;">
+        <div v-for="(address, idx) in addresses" style="padding-bottom: 5px !important; margin-bottom: 0!important;">
             <div class="container addressBox" @click="ShowOnMap(address)">
                 <select class="addressLabel" v-model="address.label" v-bind:disabled="disabled" v-on:change="SetDefaultAddress(idx)">
                     <option v-for="label in labels" v-bind:value="label">{{ label | capitalize }}</option>
@@ -62,12 +62,6 @@
 </script>
 
 <style scoped>
-
-    .addressContainer {
-        background-color: white;
-        padding: 10px;
-        border: 1px solid #ccc;
-    }
 
     .addressHead {
         display: flex;
@@ -123,14 +117,7 @@
         cursor: pointer;
     }
 
-    .addressLabel {
-        float: left;
-        background-color: #F9A153;
-        width: 60px;
-        text-align: center;
-        font-size: 1.0rem !important;
-        color: #FAFAFA;
-    }
+
 
     .addressDetails {
         float: left;

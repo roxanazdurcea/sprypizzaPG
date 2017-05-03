@@ -1,6 +1,6 @@
 <template>
     <div class="item-input">
-        <select name="country_id"  v-model="country_id" v-on:change="SetCountry()">
+        <select name="country_id" v-model="country_id" v-on:change="SetCountry()">
             <option v-for="country in countries" v-bind:value="country.phonecode">
                 {{ country.nicename }}
             </option>
@@ -11,23 +11,23 @@
 <script>
     export default {
         name: "countriesListing",
-        data: function() {
+        data: function () {
             return {
                 country_id: '40',
                 countries: []
             }
         },
         methods: {
-            Countries: function() {
-                axios.post('https://sprypizza.com/api/countries', {}).then(function(data) {
+            Countries: function () {
+                axios.post('https://sprypizza.com/api/countries', {}).then(function (data) {
                     this.countries = data.data.response;
                 }.bind(this));
             },
-            SetCountry: function() {
+            SetCountry: function () {
                 Events.$emit('setCountry-ev', this.country_id);
             }
         },
-        mounted: function() {
+        mounted: function () {
             this.Countries();
         }
     }

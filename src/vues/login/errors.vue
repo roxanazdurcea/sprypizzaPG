@@ -18,14 +18,14 @@
 <script>
     export default {
         name: 'loginErrors',
-        props: ['pin','error']
+        props: ['pin', 'error']
     }
 </script>
 
 <style>
     .loginError {
         color: darkred;
-        font-size:11px !important;
-        margin-top:15px;
+        font-size: 11px !important;
+        margin-top: 15px;
     }
 </style>

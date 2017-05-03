@@ -53,7 +53,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="btn-group" style="width: 33%;" v-show="item.modifiers.showAddModifiers">
+                                    <div class="btn-group" style="width: 33%; margin-right: 1%; margin-left: 1%;" v-show="item.modifiers.showAddModifiers">
                                         <button style="width: 100%;" type="button" class="button modi-button" v-on:click="openMod">
                                             <i class="f7-icons"></i> Add
                                         </button>
@@ -83,7 +83,7 @@
                 </ul><!-- .product-preview-small -->
             </form>
             <hr>
-            <div style="padding: 5%;">
+            <div style="padding: 3%;">
                 <div>
                     <h4 class="text-center product-title"><b>TOTAL {{ currency }}&nbsp;{{ cartTotal }}</b></h4>
                     <p class="text-center" style="padding-top: 5px; padding-bottom: 5px;">VAT&nbsp;{{currency}}&nbsp;{{Math.round(0.20*cartTotal
@@ -95,7 +95,7 @@
                         <a href="#" class="button button-big color-red">Clear cart</a>
                     </p>
                     <p class="col-50" v-on:click="checkout()">
-                        <a href="#view-4" class="tab-link button button-big color-orange">Checkout</a>
+                        <a href="/checkout/" class="item-link button button-big color-orange">Checkout</a>
                     </p>
                 </div>
             </div>
@@ -265,9 +265,6 @@
         color: #fff;
     }
 
-    .modifiers:nth-child(3) .dropdown-menu {
-        text-align: right;
-    }
 
     hr {
         margin-top: 15px;
@@ -312,7 +309,7 @@
 
     .cart-product-row {
         width: 100%;
-        height: 40px;
+        /*height: 40px;*/
         clear: both;
     }
 

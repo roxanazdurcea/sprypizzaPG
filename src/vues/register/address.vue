@@ -3,44 +3,31 @@
         <br />
         <div v-show="showTemplate">
             <p style="color: #FAFAFA; font-size: 12px; padding:5px; background-color: #d12027;">Pick your location on the map</p>
-            <div class="form-group">
+
                 <select class="form-control" v-model="template.label">
                     <option v-for="label in labels" v-bind:value="label">
                         {{ label | capitalize }}
                     </option>
                 </select>
-            </div>
 
-            <div class="form-group">
                 <input class="form-control input-sm" placeholder="Street" type="text" v-model="template.street">
-            </div>
-            <div class="form-group">
+
                 <input class="form-control input-sm" placeholder="City" type="text" v-model="template.city">
-            </div>
-            <div class="form-group">
+
                 <input class="form-control input-sm" placeholder="Postalcode" type="text" v-model="template.postalcode">
-            </div>
-            <div class="form-group">
+
                 <input class="form-control input-sm" placeholder="State" type="text" v-model="template.state">
-            </div>
-            <div class="form-group">
+
                 <select class="form-control" v-model="template.country_id">
                     <option v-for="country in countries" v-bind:value="country.phonecode">
                         {{ country.nicename }}
                     </option>
                 </select>
-            </div>
-
 
             <p class="col-50" v-on:click="SaveAddress()">
                 <a href="#" class="button button-big color-orange">Save address</a>
             </p>
 
-
-
-            <!--<div class="form-group">-->
-                <!--<button type="button" class="btn btn-warning" v-on:click="SaveAddress()">Save address</button>-->
-            <!--</div>-->
         </div>
     </div>
 </template>

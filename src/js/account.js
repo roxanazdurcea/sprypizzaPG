@@ -10,7 +10,7 @@ new Vue({
             return Store.state.longitude;
         }
     },
-    mounted: function() {
+    mounted: function () {
         var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
     },

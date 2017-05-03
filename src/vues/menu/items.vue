@@ -14,18 +14,19 @@
                             <star-rating :value="item.rating | round" :disabled="disabled"></star-rating>
                             <p id="product-description">{{ item.description }}</p>
 
-                                <div class="row" style="margin-top: 10px;">
-                                    <div class="col-33">
-                                        <p class="product-qty">{{ item.qty }}</p>
-                                        <div class="product-pieces">
-                                            <i class="f7-icons size-22 product-pieces-up" v-on:click="Increase(idx)">chevron_up</i>
-                                            <i class="f7-icons size-22 product-pieces-down" v-on:click="Decrease(idx)">chevron_down</i>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-66 button modi-button" v-on:click="addToCart(item)"><span>add to cart</span>
+                            <div class="row" style="margin-top: 10px;">
+                                <div class="col-33">
+                                    <p class="product-qty">{{ item.qty }}</p>
+                                    <div class="product-pieces">
+                                        <i class="f7-icons size-22 product-pieces-up" v-on:click="Increase(idx)">chevron_up</i>
+                                        <i class="f7-icons size-22 product-pieces-down" v-on:click="Decrease(idx)">chevron_down</i>
                                     </div>
                                 </div>
+
+                                <div class="col-66 button modi-button" v-on:click="addToCart(item)">
+                                    <span>add to cart</span>
+                                </div>
+                            </div>
 
                         </div>
                     </div><!-- .product-content -->
@@ -51,6 +52,19 @@
         computed: {
             imageURL: function () {
                 return Store.state.imageURL;
+            },
+            cartTotal() {
+                var total = 0;
+                let items = Store.state.items;
+                items.forEach((item) => {
+                    total += parseFloat(item.price);
+                    if (_.has(item, 'extras')) {
+                        item.extras.forEach(function (extra) {
+                            total += parseFloat(extra.price);
+                        });
+                    }
+                });
+                return total;
             }
         },
         filters: {
@@ -62,9 +76,9 @@
         methods: {
             Read: function () {
                 axios({
-                    method:'POST',
-                    url:'https://sprypizza.com/api/items',
-                    data:{
+                    method: 'POST',
+                    url: 'https://sprypizza.com/api/items',
+                    data: {
                         group_id: Store.state.group_id
                     },
                     responseType: 'json'
@@ -89,10 +103,23 @@
                 for (var i = 0; i < q; i++) {
                     Store.commit('addItem', item);
                 }
+                //FIX FOR SIMILAR ITEMS
                 var items = JSON.stringify(Store.state.items);
                 items = JSON.parse(items);
+
                 Store.commit('setItems', items);
-                Store.commit('setCartActive', true);
+
+                var count = items.length;
+                Store.commit('setItemCount', count);
+
+                //Update localStorage
+                var itemsArray = {};
+                itemsArray.items = items;
+                itemsArray.total = this.cartTotal;
+                localStorage.setItem('cart', JSON.stringify(itemsArray));
+                window.Cart.Delete();
+                window.Cart.obj = items;
+                window.Cart.Save();
             },
             Increase: function (idx) {
                 this.items[idx]['qty']++;
@@ -124,8 +151,8 @@
 
     #product-description {
         font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.1rem;
+        font-size: 0.9rem;
+        line-height: 1rem;
     }
 
     .product-preview-container {
@@ -180,9 +207,9 @@
         bottom: -5px;
     }
 
-    p{
-        margin-top:5px;
-        margin-bottom:5px;
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
 </style>
