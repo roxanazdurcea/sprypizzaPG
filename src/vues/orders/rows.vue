@@ -62,7 +62,7 @@
                 var order_id = this.rows[idx].id;
 
                 axios.post('https://sprypizza.com/api/orders/get', {
-                    contact_id: Session.UID,
+                    contact_id: Store.state.contact_id,
                     order_id: order_id,
                 }).then(response => {
                     var order = response.data.response;
@@ -73,7 +73,8 @@
                     });
                     cart.total = order['price'];
                     localStorage.setItem('cart', JSON.stringify(cart));
-                    window.location.replace('/checkout');
+                    //route
+                    window.f7.views[1].loadPage('/checkout/');
                 });
             },
             CancelOrder(idx) {

@@ -184,7 +184,6 @@
     #checkout-cart .cart-product-price {
         width: 20%;
         display: inline-block;
-        text-align: center;
     }
 
     #checkout-cart .totals-div {

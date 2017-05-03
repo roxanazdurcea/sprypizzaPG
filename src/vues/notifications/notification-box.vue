@@ -32,7 +32,8 @@ export default {
         listAll() {
 
             axios.post('/messages/read', {
-                user_id: window.Session.UID
+//                user_id: window.Session.UID
+                user_id: Store.state.user_id
             }).then(function(data) {
                 this.messages = data.data.response;
                 if(data.data.response) {
