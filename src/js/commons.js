@@ -21,6 +21,7 @@ cartDB.loadDatabase();
 window.Store = new Vuex.Store({
     state: {
         contact_id: "58c8ea591b8e5",
+        company_id: "57bf3fb441a58",
         isLoggedIn: false,
         latitude: '44.4267674',
         longitude: '26.1025384',

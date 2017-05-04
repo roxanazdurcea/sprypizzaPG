@@ -241,57 +241,124 @@ Vue.component('page-orders', {
 
 
 //rewards
-import rewardsTableRows from "../vues/rewards/datatable/rows.vue";
-import rewardsTablePagination from "../vues/rewards/datatable/pagination.vue";
-
+import rewardsRows from "../vues/rewards/datatable/rows.vue";
+import rewardsPagination from "../vues/rewards/datatable/pagination.vue";
+import rewardsColumns from "../vues/rewards/datatable/columns.vue";
 Vue.component('page-rewards', {
     template: '#page-rewards',
     data() {
         return {
             rawData: [],
+            settings: [],
             sortBy: 'id',
             sort: 'desc',
             draw: 1,
-            page: 5,
+            page: 10,
             total: '',
             filtered: '',
-            excludeColumns: ['items', 'showItems'],
-            addColumns: ['action']
+            excludeColumns: ['id','contact_id','updated_at'],
+            addColumns: ['expiry'],
         }
     },
     computed: {
-        tableData() {
-
+        tableColumns: function () {
             var response = this.rawData;
-
-            response = _.map(response, function (obj, index) {
-                obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
-                return obj;
+            //Table columns
+            var returnedKeys = [], idx = 0;
+            //data keys
+            var keys = _.keys(_.first(response));
+            //excluded keys
+            var excludeColumns = this.excludeColumns;
+            keys.forEach(function (ele) {
+                if (excludeColumns.indexOf(ele) < 0) {
+                    var key = this.StrAdj(ele);
+                    returnedKeys[idx] = {
+                        'column': key,
+                        'sort': (key !== this.sortBy) ? "none" : this.sort,
+                        'sortClass': (key !== this.sortBy) ? "fa-sort" : "fa-sort-" + this.sort
+                    };
+                    idx++;
+                }
             }.bind(this));
+            //additional keys
+            for (var i = 0; i < this.addColumns.length; i++) {
+                returnedKeys[idx] = {
+                    'column': this.StrAdj(this.addColumns[i]),
+                    'sort': "none",
+                    'sortClass': "fa-sort"
+                };
+                idx++;
+            }
 
-            return response;
+            return returnedKeys;
+        },
+        tableData: function () {
+            return this.rawData;
+        },
+        totalPoints: function() {
+            var total = 0;
+            this.rawData.forEach(function(obj){
+                total += parseFloat(obj.points);
+            });
+
+            return total;
+        },
+        pointsExpiry: function() {
+            return this.settings.expiry;
         },
         contact_id() {
             return Store.state.contact_id;
+        },
+        company_id() {
+            return Store.state.company_id;
         }
     },
     methods: {
-        List: function () {
-            axios.post('https://sprypizza.com/api/orders/get', {
+        List: function() {
+            axios.post('https://sprypizza.com/api/rewards/list', {
                 contact_id: this.contact_id,
                 draw: this.draw,
                 page: this.page,
                 sortBy: this.sortBy,
                 sort: this.sort
             }).then(function (json) {
+                console.log(json);
                 var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
-                this.rawData = _.map(response.orders, function (obj, index) {
-                    obj['showItems'] = false;
-                    return obj;
-                });
+                this.rawData = response.rewards;
             }.bind(this));
+        },
+        Settings: function() {
+            axios.post('https://sprypizza.com/api/rewards/settings', {
+                company_id: this.company_id
+            }).then(function (json) {
+                this.settings = json.data.response
+            }.bind(this));
+        },
+        Sort: function (idx) {
+
+            var columns = this.tableColumns;
+            var sort = columns[idx]['sort'];
+            var column = columns[idx]['column'];
+
+            switch(sort) {
+                case "none":
+                    sort = "asc";
+                    break;
+                case "asc":
+                    sort = "desc";
+                    break;
+                case "desc":
+                    sort = "asc";
+                    break;
+            }
+
+            //Assign to store
+            this.sort = sort;
+            this.sortBy = column;
+            //Refresh data
+            this.List();
         },
         StrAdj: function (str) {
             var string = str.replace(/\w\S*/g, function (txt) {
@@ -303,27 +370,21 @@ Vue.component('page-rewards', {
     mounted: function () {
 
         this.List();
-
-        Events.$on('showItems-ev', function (idx) {
-            this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
-        }.bind(this));
+        this.Settings();
 
         Events.$on('sort-ev', function (idx) {
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function (draw) {
+        Events.$on('setPage-ev', function(draw) {
             this.draw = draw;
-            this.List();
-        }.bind(this));
-
-        Events.$on('tableRefresh-ev', function () {
             this.List();
         }.bind(this));
     },
     components: {
-        rewardsTablePagination,
-        rewardsTableRows
+        rewardsPagination,
+        rewardsRows,
+        rewardsColumns
     }
 });
 

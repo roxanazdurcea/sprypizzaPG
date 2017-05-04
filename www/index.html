@@ -183,11 +183,16 @@
         </div>
         <f7-block inner>
             <section style="padding: 10px;">
-                <h1 class="text-center">Order Tracking</h1>
-                <hr style="margin-top: 10px; margin-bottom: 10px;">
-                <p class="text-center">Get your order status</p>
-                <br>
-                .....
+                <div id="rewards-container">
+                    <h1 style="margin-bottom: 0px; color: #1a1a1a;">Your Total Rewards</h1>
+                    <p style="margin-top: 0px;">You earned  {{ totalPoints }} points</p>
+                    <!-- Nav tabs -->
+                    <div>
+                        <rewards-columns v-bind:columns="tableColumns"></rewards-columns>
+                        <rewards-rows v-bind:rows="tableData" v-bind:expiry="pointsExpiry"></rewards-rows>
+                        <rewards-pagination v-bind:page="page" v-bind:total="total" v-bind:filtered="filtered"></rewards-pagination>
+                    </div>
+                </div>
             </section>
         </f7-block>
     </f7-page>
