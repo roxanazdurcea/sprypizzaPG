@@ -3,10 +3,21 @@ window.Vue.use(Framework7Vue);
 
 window.myApp = new Framework7();
 
+//home page
 Vue.component('page-home', {
-    template: '#page-home'
+    template: '#page-home',
 });
 
+//footer and home page tracking block
+import orderTracking from "../vues/tracking/footer.vue";
+Vue.component('page-track-order', {
+    template: '#page-track-order',
+    components: {
+        orderTracking
+    }
+});
+
+//left panel
 Vue.component('left-panel', {
     template: '#left-panel',
     computed: {
@@ -229,6 +240,93 @@ Vue.component('page-orders', {
 });
 
 
+//rewards
+import rewardsTableRows from "../vues/rewards/datatable/rows.vue";
+import rewardsTablePagination from "../vues/rewards/datatable/pagination.vue";
+
+Vue.component('page-rewards', {
+    template: '#page-rewards',
+    data() {
+        return {
+            rawData: [],
+            sortBy: 'id',
+            sort: 'desc',
+            draw: 1,
+            page: 5,
+            total: '',
+            filtered: '',
+            excludeColumns: ['items', 'showItems'],
+            addColumns: ['action']
+        }
+    },
+    computed: {
+        tableData() {
+
+            var response = this.rawData;
+
+            response = _.map(response, function (obj, index) {
+                obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
+                return obj;
+            }.bind(this));
+
+            return response;
+        },
+        contact_id() {
+            return Store.state.contact_id;
+        }
+    },
+    methods: {
+        List: function () {
+            axios.post('https://sprypizza.com/api/orders/get', {
+                contact_id: this.contact_id,
+                draw: this.draw,
+                page: this.page,
+                sortBy: this.sortBy,
+                sort: this.sort
+            }).then(function (json) {
+                var response = json.data.response;
+                this.total = response.total;
+                this.filtered = response.filtered;
+                this.rawData = _.map(response.orders, function (obj, index) {
+                    obj['showItems'] = false;
+                    return obj;
+                });
+            }.bind(this));
+        },
+        StrAdj: function (str) {
+            var string = str.replace(/\w\S*/g, function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+            return string.replace('_', ' ');
+        }
+    },
+    mounted: function () {
+
+        this.List();
+
+        Events.$on('showItems-ev', function (idx) {
+            this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
+        }.bind(this));
+
+        Events.$on('sort-ev', function (idx) {
+            this.Sort(idx);
+        }.bind(this));
+
+        Events.$on('setPage-ev', function (draw) {
+            this.draw = draw;
+            this.List();
+        }.bind(this));
+
+        Events.$on('tableRefresh-ev', function () {
+            this.List();
+        }.bind(this));
+    },
+    components: {
+        rewardsTablePagination,
+        rewardsTableRows
+    }
+});
+
 //checkout-menu
 import checkoutCart from "../vues/checkout/checkout.vue";
 import addressesListing from "../vues/checkout/addresses.vue";
@@ -366,13 +464,15 @@ Vue.component('page-track', {
         }
     },
     methods: {
-        Get: function () {
-            this.$http.post('/orders/track', {
+        Get: function() {
+            axios.post('https://sprypizza.com/api/orders/track', {
                 order_id: localStorage.getItem('order_id')
             }).then(function (response) {
-                var order = response.body.response.order;
-                var branch = response.body.response.branch;
-                var employee = response.body.response.employee;
+
+                var order = response.data.response.order;
+                var branch = response.data.response.branch;
+                var employee = response.data.response.employee;
+
                 //Order
                 Events.$emit('status-ev', order.status);
                 this.order.address = order.full_address;
@@ -381,26 +481,11 @@ Vue.component('page-track', {
                 this.branch.name = branch.name;
                 //Init Map
                 var markers = [
-                    {
-                        lati: order.latitude,
-                        longi: order.longitude,
-                        icon: "/assets/images/map_marker.png",
-                        title: 'Delivery Address'
-                    },
-                    {
-                        lati: branch.latitude,
-                        longi: branch.longitude,
-                        icon: "/assets/images/branch_icon.png",
-                        title: 'Branch Location'
-                    }
+                    {lati: order.latitude, longi: order.longitude, icon: "../src/images/map_marker.png",title: 'Delivery Address'},
+                    {lati: branch.latitude, longi: branch.longitude, icon: "../src/images/branch_icon.png", title: 'Branch Location'}
                 ];
                 if (employee) {
-                    markers.push({
-                        lati: employee.latitude_c,
-                        longi: employee.longitude_c,
-                        icon: "/assets/images/driver_marker.png",
-                        title: 'Driver Location'
-                    });
+                    markers.push({lati: employee.latitude_c, longi: employee.longitude_c, icon: "../src/images/driver_marker.png", title: 'Driver Location'});
                 }
                 Events.$emit('mapMarkers-ev', markers);
                 //Employee
@@ -482,6 +567,14 @@ new Vue({
             {
                 path: '/track/',
                 component: 'page-track'
+            },
+            {
+                path: '/track-order/',
+                component: 'page-track-order'
+            },
+            {
+                path: '/rewards/',
+                component: 'page-rewards'
             }
         ],
     },

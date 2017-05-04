@@ -3,7 +3,6 @@
         <div v-show="search">
             <input style="z-index:0; width:100%;" placeholder="Search for your address directly on the map" id="map-search" type="text" v-on:keyup.13="Search">
         </div>
-        <br />
         <div style="margin:0; padding:0;">
             <div id="map-id"></div>
         </div>

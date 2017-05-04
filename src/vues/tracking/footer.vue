@@ -2,15 +2,18 @@
     <form id="tracking_Form">
         <input autocomplete="off" class="form-control" type="text" name="order_id" placeholder="Enter your order number" v-model="order_id" v-on:keyup="ValidateOrder()">
         <p style="font-size: 11px; text-align: left;" v-if="orderError">
-            <i class="fa fa-exclamation-circle" style="color: red;"></i>
+            <i class="f7-icons size-15" style="color: red;">info_fill</i>
             <span style="color: darkred; margin-left: 10px;">{{ errorMsg }}</span>
         </p>
         <p style="font-size: 11px; text-align: left;" v-if="status">
-            <i class="fa fa-check" style="color: green;"></i>
-            <span style="color: darkred; margin-left: 10px;">Order {{ order_id }} status is {{ status }}.</span>
+            <i class="f7-icons size-15" style="color: green;">check_round_fill</i>
+            <span style="color: darkred; margin-left: 10px;" v-show="status">Order {{ order_id }} status is {{ status }}.</span>
         </p>
         <div style="margin-top: 2%;">
-            <button class="button-yellow button-heavy" type="button" v-on:click="Track()" :disabled="isDisabled" style="width: 100%; background-color: #D12027;">Track</button>
+            <p v-on:click="Track()" :disabled="isDisabled" style="width: 100%; background-color: #D12027;">
+                <a href="#" class="item-link button button-big color-orange">Track</a>
+            </p>
+            <!--<button class="button-yellow button-heavy" type="button" v-on:click="Track()" :disabled="isDisabled" style="width: 100%; background-color: #D12027;">Track</button>-->
         </div>
     </form>
 </template>
@@ -28,41 +31,52 @@
         },
         computed: {
             isDisabled: function() {
-                if(this.orderError || this.order_id === '') {
+                if(!this.status || this.order_id === '') {
                     return true;
                 } else {
                     return false;
                 }
+            },
+            isLoggedIn() {
+                return Store.state.isLoggedIn;
+            },
+            contact_id() {
+                return Store.state.contact_id;
             }
         },
         methods: {
             ValidateOrder: function() {
-                this.$http.post('https://sprypizza.com/api/orders/validate', {
-                    order_id: this.order_id,
-//                    contact_id: Session.UID
-                    contact_id: Store.state.contact_id
-                }).then(function(data) {
-                    var response = data.body.response;
-                    var keys = _.keys(response)[0];
+                this.orderError = false;
+                this.errorMsg = '';
+                this.status = '';
 
-                    switch(keys) {
-                        case "error":
-                            this.orderError = true;
-                            this.errorMsg = response.error;
-                            this.status = '';
-                            break;
-                        case "success":
-                            this.orderError = false;
-                            this.status = response.success;
-                            break;
+                axios.post('https://sprypizza.com/api/orders/validate', {
+                    order_id: this.order_id,
+                    contact_id: this.contact_id
+                }).then((response) => {
+
+                    var response = response.data.response;
+
+                    if(!this.isLoggedIn) {
+                        this.orderError = true;
+                        this.errorMsg = response.error;
+                        this.status = '';
+                    } else if (response.success) {
+                        this.orderError = false;
+                        this.status = response.success;
                     }
+
                 });
             },
-            Track: function() {
+            Track() {
                 if (!this.orderError) {
-                    window.location.replace('https://sprypizza.com/api/orders/track/'+this.order_id);
+
+                    localStorage.setItem('order_id', this.order_id);
+
+                    window.f7.views[1].loadPage('/track/');
                 }
             }
         }
     }
 </script>
+

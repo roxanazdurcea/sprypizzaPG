@@ -26,9 +26,10 @@ new Vue({
             this.$http.post('/orders/track', {
                 order_id: document.order_id
             }).then(function (response) {
-                var order = response.body.response.order;
-                var branch = response.body.response.branch;
-                var employee = response.body.response.employee;
+                console.log(response);
+                var order = response.data.body.response.order;
+                var branch = response.data.body.response.branch;
+                var employee = response.data.body.response.employee;
                 console.log(order);
                 console.log(branch);
                 console.log(employee);
