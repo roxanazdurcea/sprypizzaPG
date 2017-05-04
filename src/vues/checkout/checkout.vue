@@ -72,7 +72,6 @@
         props: ['address', 'latitude', 'longitude', 'branch_id'],
         data: function () {
             return {
-                platform: 'WM',
                 note: ''
             }
         },
@@ -104,6 +103,12 @@
             },
             contact_id() {
                 return Store.state.contact_id;
+            },
+            platform() {
+                return Store.state.platform;
+            },
+            isLoggedIn() {
+                return Store.state.isLoggedIn;
             }
         },
         methods: {
@@ -139,10 +144,16 @@
                     note: this.note
                 };
 
-                axios.post('https://sprypizza.com/api/orders/save', orderData).then(function (data) {
-                    window.myApp.alert('Your order no.' + data.data.response + ' was successfully submitted', 'Congratulations !');
-                    Store.commit('clearItems');
-                });
+                if (this.isLoggedIn) {
+
+                    axios.post('https://sprypizza.com/api/orders/save', orderData).then(function (data) {
+                        window.myApp.alert('Your order no.' + data.data.response + ' was successfully submitted', 'Congratulations !');
+                        Store.commit('clearItems');
+                    });
+
+                } else {
+                    window.f7.views[1].loadPage('/login/');
+                }
             }
         },
         mounted: function () {
@@ -233,7 +244,6 @@
         height: 20px;
         background-color: #777;
     }
-
 
     @media (max-width: 991px) {
         .cart-content ol, .cart-content ul {

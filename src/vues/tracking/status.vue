@@ -1,6 +1,6 @@
 <template>
     <div class="status-container">
-        <div v-for="(status, idx) in statuses" v-bind:style="{ top: idx*124+'px' }">
+        <div v-for="(status, idx) in statuses" v-bind:style="{ top: idx*44+'px' }">
             <span v-if="status.display"><i class="fa fa-check-circle status-icon"></i></span>
             <span class="status-text">{{ status.value | capitalize }}</span>
         </div>
@@ -40,7 +40,7 @@
 <style scoped>
     .status-container {
         width: 250px;
-        height: 400px;
+        height: 132px;
         border-left: 4px solid #cccccc;
         position: relative;
     }

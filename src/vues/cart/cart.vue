@@ -95,7 +95,7 @@
                         <a href="#" class="button button-big color-red">Clear cart</a>
                     </p>
                     <p class="col-50" v-on:click="checkout()">
-                        <a href="/checkout/" class="item-link button button-big color-orange">Checkout</a>
+                        <a href="#" class="item-link button button-big color-orange">Checkout</a>
                     </p>
                 </div>
             </div>
@@ -134,6 +134,9 @@
             },
             currency() {
                 return Store.state.currency;
+            },
+            isLoggedIn() {
+                return Store.state.isLoggedIn;
             }
         },
         methods: {
@@ -166,6 +169,12 @@
                 itemsArray.items = _.clone(this.items);
                 itemsArray.total = this.cartTotal;
                 localStorage.setItem('cart', JSON.stringify(itemsArray));
+
+                if (this.isLoggedIn) {
+                    window.f7.views[1].loadPage('/checkout/');
+                } else {
+                    window.f7.views[1].loadPage('/login/');
+                }
             },
             listModifiers(idx) {
                 var item_id = this.items[idx]['id'];

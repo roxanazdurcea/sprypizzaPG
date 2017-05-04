@@ -89,7 +89,12 @@
                 });
             },
             TrackOrder(idx) {
-                window.location.replace('https://sprypizza.com/api/orders/track/' + this.rows[idx]['id']);
+
+                var order_id = this.rows[idx].id;
+
+                localStorage.setItem('order_id', order_id);
+
+                window.f7.views[1].loadPage('/track/');
             },
             ShowItems(idx) {
                 Events.$emit('showItems-ev', idx);
