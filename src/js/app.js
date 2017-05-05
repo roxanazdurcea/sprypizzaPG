@@ -578,13 +578,13 @@ Vue.component('page-track', {
                     {
                         lati: order.latitude,
                         longi: order.longitude,
-                        icon: "../src/images/map_marker.png",
+                        icon: "img/pins/map_marker.png",
                         title: 'Delivery Address'
                     },
                     {
                         lati: branch.latitude,
                         longi: branch.longitude,
-                        icon: "../src/images/branch_icon.png",
+                        icon: "img/pins/branch_icon.png",
                         title: 'Branch Location'
                     }
                 ];
@@ -592,7 +592,7 @@ Vue.component('page-track', {
                     markers.push({
                         lati: employee.latitude_c,
                         longi: employee.longitude_c,
-                        icon: "../src/images/driver_marker.png",
+                        icon: "img/pins/driver_marker.png",
                         title: 'Driver Location'
                     });
                 }
