@@ -3,8 +3,8 @@ window.axios = require('axios');
 
 //Definition of Databases
 var DataStore = require('nedb');
-var cartDB = new DataStore({filename: "cart.db"});
-var spryDB = new DataStore({filename: "spry.db"});
+var cartDB = new DataStore({filename: "cart.db", autoload: true});
+var spryDB = new DataStore({filename: "spry.db", autoload: true});
 cartDB.loadDatabase();
 spryDB.loadDatabase();
 

@@ -50,6 +50,8 @@
                     info.setPosition(this.center);
                     info.open(this.map);
                 }
+                //Resize event
+                google.maps.event.trigger(this.map, 'resize');
                 //Mouse event
                 if (this.event === true) {
                     google.maps.event.addListener(this.map, "click", function (event) {
