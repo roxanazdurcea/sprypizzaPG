@@ -25,11 +25,12 @@ var cartDB = new DataStore({filename: "cart.db"});
 var spryDB = new DataStore({filename: "spry.db"});
 cartDB.loadDatabase();
 spryDB.loadDatabase();
+window.Cart = {}, window.Spry = {};
 
 window.Store = new Vuex.Store({
     state: {
-        contact_id: "58c8ea591b8e5",
-        company_id: "57bf3fb441a58",
+        contact_id: "",
+        company_id: "",
         isLoggedIn: false,
         latitude: '44.4267674',
         longitude: '26.1025384',
@@ -78,6 +79,12 @@ window.Store = new Vuex.Store({
         },
         setIsLoggedIn: function (state, isLoggedIn) {
             state.isLoggedIn = isLoggedIn;
+        },
+        setContactId: function (state, contact_id) {
+            state.contact_id = contact_id;
+        },
+        setCompanyId: function (state, company_id) {
+            state.company_id = company_id;
         }
     },
     getters: {}
@@ -95,7 +102,7 @@ function onError(error) {
 }
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-window.Cart = {
+Cart = {
     obj: [],
     Save() {
         cartDB.insert(this.obj);
@@ -107,22 +114,35 @@ window.Cart = {
     },
     Delete() {
         cartDB.remove({}, { multi: true });
-        this.obj = {};
+        this.obj = [];
     }
 };
 
-window.Spry = {
+Spry = {
     obj: [],
+    key: '',
     Save() {
         spryDB.insert(this.obj);
     },
     Read() {
-        spryDB.find({}, (err, doc) => {
+
+        var query = {};
+        if (this.key) {
+            query[this.key] = {$exists: true};
+        }
+        spryDB.find(query, (err, doc) => {
             this.obj = doc;
         });
     },
     Delete() {
         spryDB.remove({}, { multi: true });
-        this.obj = {};
+        this.obj = [];
+    },
+    Remove() {
+        var query = {};
+        if (this.key) {
+            query[this.key] = {$exists: true};
+        }
+        spryDB.remove(query, { multi: true });
     }
 };

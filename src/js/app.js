@@ -83,7 +83,8 @@ Vue.component('page-login', {
     template: '#page-login',
     data() {
         return {
-            mobile: '',
+            mobile_number: '',
+            pin_number: '',
             country_id: '40',
             isDisabled: false,
             pin: '',
@@ -93,7 +94,7 @@ Vue.component('page-login', {
     methods: {
         Send() {
             axios.post('https://sprypizza.com/api/sms/send', {
-                mobile: this.mobile,
+                mobile: this.mobile_number,
                 country_id: this.country_id
             }).then(function (data) {
 
@@ -107,6 +108,34 @@ Vue.component('page-login', {
                     this.pin = data.data.pin;
                 }
             }.bind(this));
+        },
+        Login() {
+            axios.post("https://sprypizza.com/api/login", {
+                mobile_number: this.mobile_number,
+                country_id: this.country_id,
+                pin_number: this.pin_number,
+                rememberMe: true,
+            }).then((response) => {
+                var data = response.data;
+                if (data.user_id) {
+                    Store.commit('setIsLoggedIn', true);
+                    Store.commit('setContactId', data.user_id);
+                    Store.commit('setCompanyId', data.company_id);
+                    //Remove remember_token
+                    Spry.key = "remember_token";
+                    Spry.Remove();
+                    //Save remember_token to DB
+                    Spry.obj = {remember_token: data.remember_token};
+                    Spry.Save();
+                    //Route to home
+                    window.f7.views[1].loadPage('/');
+                } else {
+                    Store.commit('setIsLoggedIn', false);
+                    //Clear existing token
+                    Spry.key = "remember_token";
+                    Spry.Remove();
+                }
+            });
         }
     },
     mounted() {
@@ -256,7 +285,7 @@ Vue.component('page-rewards', {
             page: 10,
             total: '',
             filtered: '',
-            excludeColumns: ['id','contact_id','updated_at'],
+            excludeColumns: ['id', 'contact_id', 'updated_at'],
             addColumns: ['expiry'],
         }
     },
@@ -295,15 +324,15 @@ Vue.component('page-rewards', {
         tableData: function () {
             return this.rawData;
         },
-        totalPoints: function() {
+        totalPoints: function () {
             var total = 0;
-            this.rawData.forEach(function(obj){
+            this.rawData.forEach(function (obj) {
                 total += parseFloat(obj.points);
             });
 
             return total;
         },
-        pointsExpiry: function() {
+        pointsExpiry: function () {
             return this.settings.expiry;
         },
         contact_id() {
@@ -314,7 +343,7 @@ Vue.component('page-rewards', {
         }
     },
     methods: {
-        List: function() {
+        List: function () {
             axios.post('https://sprypizza.com/api/rewards/list', {
                 contact_id: this.contact_id,
                 draw: this.draw,
@@ -322,14 +351,14 @@ Vue.component('page-rewards', {
                 sortBy: this.sortBy,
                 sort: this.sort
             }).then(function (json) {
-                console.log(json);
+
                 var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
                 this.rawData = response.rewards;
             }.bind(this));
         },
-        Settings: function() {
+        Settings: function () {
             axios.post('https://sprypizza.com/api/rewards/settings', {
                 company_id: this.company_id
             }).then(function (json) {
@@ -342,7 +371,7 @@ Vue.component('page-rewards', {
             var sort = columns[idx]['sort'];
             var column = columns[idx]['column'];
 
-            switch(sort) {
+            switch (sort) {
                 case "none":
                     sort = "asc";
                     break;
@@ -376,7 +405,7 @@ Vue.component('page-rewards', {
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function(draw) {
+        Events.$on('setPage-ev', function (draw) {
             this.draw = draw;
             this.List();
         }.bind(this));
@@ -525,9 +554,13 @@ Vue.component('page-track', {
         }
     },
     methods: {
-        Get: function() {
+        Get: function () {
+
+            Spry.key = 'order_id';
+            Spry.Read();
+
             axios.post('https://sprypizza.com/api/orders/track', {
-                order_id: localStorage.getItem('order_id')
+                order_id: Spry.obj.order_id
             }).then(function (response) {
 
                 var order = response.data.response.order;
@@ -542,11 +575,26 @@ Vue.component('page-track', {
                 this.branch.name = branch.name;
                 //Init Map
                 var markers = [
-                    {lati: order.latitude, longi: order.longitude, icon: "../src/images/map_marker.png",title: 'Delivery Address'},
-                    {lati: branch.latitude, longi: branch.longitude, icon: "../src/images/branch_icon.png", title: 'Branch Location'}
+                    {
+                        lati: order.latitude,
+                        longi: order.longitude,
+                        icon: "../src/images/map_marker.png",
+                        title: 'Delivery Address'
+                    },
+                    {
+                        lati: branch.latitude,
+                        longi: branch.longitude,
+                        icon: "../src/images/branch_icon.png",
+                        title: 'Branch Location'
+                    }
                 ];
                 if (employee) {
-                    markers.push({lati: employee.latitude_c, longi: employee.longitude_c, icon: "../src/images/driver_marker.png", title: 'Driver Location'});
+                    markers.push({
+                        lati: employee.latitude_c,
+                        longi: employee.longitude_c,
+                        icon: "../src/images/driver_marker.png",
+                        title: 'Driver Location'
+                    });
                 }
                 Events.$emit('mapMarkers-ev', markers);
                 //Employee
@@ -640,11 +688,42 @@ new Vue({
         ],
     },
     methods: {
-        Login() {
-            Store.commit('setIsLoggedIn', true);
-        }
+
     },
     mounted() {
-        this.Login();
+        // Authenticate();
     }
 });
+
+
+function Authenticate() {
+    Cart.Read();
+    console.log(Cart.obj);
+    setTimeout(() => {
+        Spry.key = "remember_token";
+        Spry.Read();
+
+        // var obj = window.Spry.obj[0];
+        console.log(_.clone(Spry));
+        return;
+
+        axios.post('https://sprypizza.com/api/login/remember', {
+            remember_token: obj.remember_token
+        }).then((response) => {
+
+            var data = response.data;
+
+            if (data.user_id) {
+                Store.commit('setIsLoggedIn', true);
+                Store.commit('setContactId', data.user_id);
+                Store.commit('setCompanyId', data.company_id);
+
+            } else {
+                // Store.commit('setIsLoggedIn', false);
+                // //Clear existing token
+                // window.Spry.key = "remember_token";
+                // window.Spry.Remove();
+            }
+        });
+    }, 3000);
+}

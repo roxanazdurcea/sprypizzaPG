@@ -71,7 +71,12 @@
             Track() {
                 if (!this.orderError) {
 
-                    localStorage.setItem('order_id', this.order_id);
+                    //Delete DB entries with order_id
+                    window.Spry.key = 'order_id';
+                    window.Spry.Remove();
+                    //Save DB
+                    window.Spry.obj = {order_id: this.order_id};
+                    window.Spry.Save();
 
                     window.f7.views[1].loadPage('/track/');
                 }

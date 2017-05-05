@@ -492,7 +492,7 @@
                         <h1>Welcome Back!</h1>
                         <p style="margin: 0px;">Sign In To Your Account to See What’s Cooking.</p>
                     </div>
-                    <form id="login_Form" class="list-block" method="post" url="https://sprypizza.com/api/login">
+                    <form id="login_Form" class="list-block" method="post">
                         <ul>
                             <li>
                                 <div class="item-content">
@@ -506,7 +506,7 @@
                             <li class="item-content">
                                 <div class="item-inner">
                                     <div class="item-input">
-                                        <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile" autocomplete="off"/>
+                                        <input class="form-control" name="mobile_number" placeholder="Mobile Number" v-model="mobile_number" autocomplete="off"/>
                                     </div>
                                 </div>
                             </li>
@@ -528,7 +528,7 @@
                                 <div class="item-content">
                                     <div class="item-inner">
                                         <div class="item-input">
-                                            <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off"/>
+                                            <input class="form-control" name="pin_number" placeholder="PIN" autocomplete="off" v-model="pin_number" />
                                         </div>
                                     </div>
                                 </div>
@@ -549,7 +549,7 @@
                                 <div class="item-content">
                                     <div class="item-inner">
                                         <div class="item-input">
-                                            <button type="submit" class="button button-big color-orange" style="width: 100%;">
+                                            <button type="button" class="button button-big color-orange" style="width: 100%;" v-on:click="Login">
                                                 Login
                                             </button>
                                         </div>
@@ -561,7 +561,7 @@
                                 <div class="item-content">
                                     <div class="item-inner">
                                         <div class="item-input">
-                                            <button type="submit" class="button button-big color-blue" style="width: 100%;">
+                                            <button type="button" class="button button-big color-blue" style="width: 100%;">
                                                 Facebook Login
                                             </button>
                                         </div>
@@ -627,13 +627,6 @@
 <script src="js/vendor.min.js"></script>
 <script src="js/commons.min.js"></script>
 <script src="js/app.min.js"></script>
-
-<!--<script src="js/login.min.js"></script>-->
-<!--<script src="js/menu.min.js"></script>-->
-<!--<script src="js/checkout.min.js"></script>-->
-<!--<script src="js/orders.min.js"></script>-->
-<!--<script src="js/account.min.js"></script>-->
-<!--<script src="js/register.min.js"></script>-->
 
 </body>
 

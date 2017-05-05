@@ -100,8 +100,12 @@
             TrackOrder(idx) {
 
                 var order_id = this.rows[idx].id;
-
-                localStorage.setItem('order_id', order_id);
+                //Delete DB entries with order_id
+                window.Spry.key = 'order_id';
+                window.Spry.Remove();
+                //Save DB
+                window.Spry.obj = {order_id: order_id};
+                window.Spry.Save();
 
                 window.f7.views[1].loadPage('/track/');
             },

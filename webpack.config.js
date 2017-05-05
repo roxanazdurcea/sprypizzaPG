@@ -5,12 +5,6 @@ var CommonChunkPlugin = require('./node_modules/webpack/lib/optimize/CommonsChun
 module.exports = {
     entry: {
         'commons': './src/js/commons.js',
-        'login': './src/js/login.js',
-        'menu': './src/js/menu.js',
-        'checkout': './src/js/checkout.js',
-        'orders': './src/js/orders.js',
-        'account': './src/js/checkout.js',
-        'register': './src/js/orders.js',
         'app': './src/js/app.js',
         'vendor': ['vue', 'vuex', 'underscore', 'framework7-vue', 'framework7']
     },
