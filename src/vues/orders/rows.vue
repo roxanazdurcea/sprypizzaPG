@@ -4,7 +4,9 @@
         <div style="padding-top:2%; padding-bottom:2%; border-bottom: 1px dashed #f9a153;" v-for="(row, idx) in rows">
             <div class="tr-order" style="width: 100%;">
                 <div style="width: 70%; float: left;" @click="ShowItems(idx)">
-                    <div><i class="f7-icons size-15">{{ (row.showItems) ? 'delete_round_fill' : 'add_round_fill' }}</i> Order no.{{ row.id }} </div>
+                    <div><i class="f7-icons size-15">{{ (row.showItems) ? 'delete_round_fill' : 'add_round_fill' }}</i>
+                        Order no.{{ row.id }}
+                    </div>
                     <div>{{ row.status | capitalize }}</div>
                     <div>{{ row.created_at }}</div>
                     <div>{{ row.price }} {{ currency }}</div>
@@ -12,11 +14,14 @@
 
                 <div class="actionDiv" style="width: 30%; float: right;">
                     <button title="ReOrder" class="button button-fill color-orange" v-on:click="ReOrder(idx)" v-bind:disabled=" row.status === 'pending' ">
-                        <i class="f7-icons size-15">undo</i>&nbsp;&nbsp;ReOrder</button>
+                        <i class="f7-icons size-15">undo</i>&nbsp;&nbsp;ReOrder
+                    </button>
                     <button title="Cancel Order" class="button button-fill color-orange" v-on:click="CancelOrder(idx)" v-bind:disabled=" row.status !== 'pending' ">
-                        <i class="f7-icons size-15">close_round_fill</i>&nbsp;&nbsp;Cancel</button>
+                        <i class="f7-icons size-15">close_round_fill</i>&nbsp;&nbsp;Cancel
+                    </button>
                     <button title="Track Order" class="button button-fill color-orange" v-on:click="TrackOrder(idx)" v-bind:disabled=" row.status === 'completed' ">
-                        <i class="f7-icons size-15">navigation_fill</i>&nbsp;&nbsp;Track</button>
+                        <i class="f7-icons size-15">navigation_fill</i>&nbsp;&nbsp;Track
+                    </button>
                 </div>
                 <div style="clear: both;"></div>
             </div>
@@ -65,14 +70,18 @@
                     contact_id: Store.state.contact_id,
                     order_id: order_id,
                 }).then(response => {
+
                     var order = response.data.response;
-                    var cart = {};
-                    cart.items = order['items'];
-                    cart.items.forEach((obj, idx) => {
+                    var items = order['items'];
+
+                    items.forEach((obj, idx) => {
                         obj.modifiers = [];
                     });
-                    cart.total = order['price'];
-                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                    //Write to DB
+                    window.Cart.Delete();
+                    window.Cart.obj = items;
+                    window.Cart.Save();
                     //route
                     window.f7.views[1].loadPage('/checkout/');
                 });
@@ -83,8 +92,8 @@
 
                 axios.post('https://sprypizza.com/api/orders/cancel', {
                     order_id: order_id,
-                }).then(function(response) {
-                    window.myApp.alert( "Your order no. <b>" + order_id + "</b> was cancelled.", "Notice !");
+                }).then(function (response) {
+                    window.myApp.alert("Your order no. <b>" + order_id + "</b> was cancelled.", "Notice !");
                     Events.$emit('tableRefresh-ev');
                 });
             },
@@ -119,10 +128,12 @@
         font-size: 0.8rem;
         padding: 10px;
     }
-    #items-rows button{
+
+    #items-rows button {
         height: 20px;
         line-height: 20px;
     }
+
     .actionDiv {
         display: flex !important;
         flex-direction: column;
@@ -146,10 +157,25 @@
         float: left;
     }
 
-    .tr-items-head div:nth-child(1) {width: 35%; text-align: left;}
-    .tr-items-head div:nth-child(2) {width: 15%; text-align: center;}
-    .tr-items-head div:nth-child(3) {width: 20%; text-align: center;}
-    .tr-items-head div:nth-child(4) {width: 30%; text-align: center;}
+    .tr-items-head div:nth-child(1) {
+        width: 35%;
+        text-align: left;
+    }
+
+    .tr-items-head div:nth-child(2) {
+        width: 15%;
+        text-align: center;
+    }
+
+    .tr-items-head div:nth-child(3) {
+        width: 20%;
+        text-align: center;
+    }
+
+    .tr-items-head div:nth-child(4) {
+        width: 30%;
+        text-align: center;
+    }
 
     .tr-items {
         border-top: 1px dotted #cccccc;
@@ -158,11 +184,35 @@
         font-size: 0.8rem;
     }
 
-    .tr-items div:nth-child(1) {width: 35%; text-align: left; float: left; display: table-cell;}
-    .tr-items div:nth-child(2) {width: 15%; text-align: center; float: left; display: table-cell;}
-    .tr-items div:nth-child(3) {width: 20%; text-align: center; float: left; display: table-cell;}
-    .tr-items div:nth-child(4) {width: 30%; text-align: center; float: left; display: flex; align-content: center; align-items: center;}
+    .tr-items div:nth-child(1) {
+        width: 35%;
+        text-align: left;
+        float: left;
+        display: table-cell;
+    }
 
+    .tr-items div:nth-child(2) {
+        width: 15%;
+        text-align: center;
+        float: left;
+        display: table-cell;
+    }
+
+    .tr-items div:nth-child(3) {
+        width: 20%;
+        text-align: center;
+        float: left;
+        display: table-cell;
+    }
+
+    .tr-items div:nth-child(4) {
+        width: 30%;
+        text-align: center;
+        float: left;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
 
 
 </style>

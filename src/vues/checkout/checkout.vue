@@ -112,12 +112,6 @@
             }
         },
         methods: {
-            checkout: function () {
-                var itemsArray = {};
-                itemsArray.items = _.clone(this.items);
-                itemsArray.total = this.cartTotal;
-                localStorage.setItem('cart', JSON.stringify(itemsArray));
-            },
             confirmOrder: function () {
 
                 var items = _.clone(this.items);
@@ -157,9 +151,11 @@
             }
         },
         mounted: function () {
-            var items = localStorage.getItem('cart');
+            //Read from DB
+            window.Cart.Read();
+            var items = window.Cart.obj;
+            //Update Store
             if (items) {
-                var items = JSON.parse(items)['items'];
                 Store.commit('setItems', items);
             }
         },

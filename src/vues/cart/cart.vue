@@ -152,7 +152,9 @@
                 });
             },
             clearCart() {
-                localStorage.clear();
+                //Delete from DB
+                window.Cart.Delete();
+
                 Store.commit('clearItems');
             },
             closeCart() {
@@ -165,10 +167,12 @@
                 Store.commit('removeExtra', idx, extras_idx);
             },
             checkout() {
-                var itemsArray = {};
-                itemsArray.items = _.clone(this.items);
-                itemsArray.total = this.cartTotal;
-                localStorage.setItem('cart', JSON.stringify(itemsArray));
+
+                var items = _.clone(this.items);
+                //Write to DB
+                window.Cart.Delete();
+                window.Cart.obj = items;
+                window.Cart.Save();
 
                 if (this.isLoggedIn) {
                     window.f7.views[1].loadPage('/checkout/');
@@ -223,17 +227,22 @@
 
         },
         mounted() {
-            var items = localStorage.getItem('cart');
+            //Read from DB
+            window.Cart.Read();
+            var items = window.Cart.obj;
+
             if (items) {
-                var items = JSON.parse(items)['items'];
                 Store.commit('setItems', items);
             }
         },
         updated() {
-            var itemsArray = {};
-            itemsArray.items = _.clone(this.items);
-            itemsArray.total = this.cartTotal;
-            localStorage.setItem('cart', JSON.stringify(itemsArray));
+
+            var items = _.clone(this.items);
+            //Write to DB
+            window.Cart.Delete();
+            window.Cart.obj = items;
+            window.Cart.Save();
+            //Update Store
             var count = this.items.length;
             Store.commit('setItemCount', count);
         }

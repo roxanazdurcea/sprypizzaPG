@@ -1,0 +1,89 @@
+[33mcommit 6edf48b6e1052d5ddbd96c8fadc327c31ab45836[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Thu May 4 15:25:46 2017 +0300
+
+    v0.24 track pages fixed
+
+[33mcommit fcc1fe0f64d437998906463c7a58ce10f569aa47[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Thu May 4 09:44:23 2017 +0300
+
+    v0.23
+
+[33mcommit 3970c8aaf87e5d82a0b9d3ba05ebf274aabc7f76[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed May 3 16:27:01 2017 +0300
+
+    v0.22 fixed routing from JS
+
+[33mcommit 297e9762f202f6c7e5fa1399754b5670084381a7[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed May 3 13:39:08 2017 +0300
+
+    alerts, icons everyware, addresses in my account
+
+[33mcommit 6e8508411b489bd9a3f662f1697afa76baabe9ff[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed May 3 11:17:43 2017 +0300
+
+    v0.20
+
+[33mcommit 95d5c6e5170f81a93febd7d6374bd530f3639dad[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed Apr 19 12:23:07 2017 +0300
+
+    v0.10
+
+[33mcommit 322a3c1a091ce1be80c73aa951cbb36dcf1a48ed[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Tue Apr 18 16:38:25 2017 +0300
+
+    v0.09
+
+[33mcommit 9b02e4c5f834f923f68e7b01d0fb23aa9bf45df1[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Tue Apr 18 10:29:06 2017 +0300
+
+    v0.08
+
+[33mcommit f142792e32127f1041fbd11a7926ae01e1076bf8[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Tue Apr 11 13:53:45 2017 +0300
+
+    v0.07
+
+[33mcommit 33ef8894e8052df750f95b05484dac6b2c22ab94[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed Mar 29 09:36:27 2017 +0300
+
+    v0.06
+
+[33mcommit 4bad5a38d4e12a3708dca6890de3da0ed75737d7[m
+Author: Roxana Zdurcea <roxana@bmbc.co>
+Date:   Wed Mar 29 09:32:36 2017 +0300
+
+    v0.05
+
+[33mcommit 4c46e123206a8f832b6f2e943c25df179f71041e[m
+Author: Najm Njeim <n.njeim@bmbc.co>
+Date:   Tue Mar 28 09:13:36 2017 +0300
+
+    v0.04
+
+[33mcommit 4560c855bfd98285bc736fcfe6dbf8da9c5bee4b[m
+Author: Najm Njeim <n.njeim@bmbc.co>
+Date:   Tue Mar 28 08:49:19 2017 +0300
+
+    v0.03
+
+[33mcommit fc06e56a5f2eba5204fbf242abd132e6e44bcfb5[m
+Author: Najm Njeim <n.njeim@bmbc.co>
+Date:   Mon Mar 27 19:13:58 2017 +0300
+
+    v0.02
+
+[33mcommit e3c9a4b7c586fdc70a78728d9e80878135946ea8[m
+Author: Najm Njeim <n.njeim@bmbc.co>
+Date:   Mon Mar 27 15:28:49 2017 +0300
+
+    v0.01 working login

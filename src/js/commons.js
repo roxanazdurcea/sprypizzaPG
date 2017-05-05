@@ -1,22 +1,30 @@
 window._ = require('underscore');
+
 //Axios Ajax Lib
 window.axios = require('axios');
+
 //Vue
 window.Vue = require('vue');
 window.framework7 = require('framework7');
 window.Framework7Vue = require('framework7-vue');
+
 //Store
 import Vuex from 'vuex';
 window.Vue.use(Vuex);
+
 //Router
 import VueRouter from 'vue-router'
 window.Vue.use(VueRouter)
+
 //Events
 window.Events = new Vue();
+
 //Definition of Databases
 var DataStore = require('nedb');
 var cartDB = new DataStore({filename: "cart.db"});
+var spryDB = new DataStore({filename: "spry.db"});
 cartDB.loadDatabase();
+spryDB.loadDatabase();
 
 window.Store = new Vuex.Store({
     state: {
@@ -99,6 +107,22 @@ window.Cart = {
     },
     Delete() {
         cartDB.remove({}, { multi: true });
+        this.obj = {};
+    }
+};
+
+window.Spry = {
+    obj: [],
+    Save() {
+        spryDB.insert(this.obj);
+    },
+    Read() {
+        spryDB.find({}, (err, doc) => {
+            this.obj = doc;
+        });
+    },
+    Delete() {
+        spryDB.remove({}, { multi: true });
         this.obj = {};
     }
 };

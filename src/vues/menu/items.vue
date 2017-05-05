@@ -111,12 +111,7 @@
 
                 var count = items.length;
                 Store.commit('setItemCount', count);
-
-                //Update localStorage
-                var itemsArray = {};
-                itemsArray.items = items;
-                itemsArray.total = this.cartTotal;
-                localStorage.setItem('cart', JSON.stringify(itemsArray));
+                //Write to DB
                 window.Cart.Delete();
                 window.Cart.obj = items;
                 window.Cart.Save();
