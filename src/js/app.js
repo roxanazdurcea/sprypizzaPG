@@ -687,24 +687,10 @@ new Vue({
             }
         ],
     },
-    methods: {
-
-    },
     mounted() {
-        // Authenticate();
-    }
-});
+        window.Authenticate();
 
-
-function Authenticate() {
-    Cart.Read();
-    console.log(Cart.obj);
-    setTimeout(() => {
-        Spry.key = "remember_token";
-        Spry.Read();
-
-        // var obj = window.Spry.obj[0];
-        console.log(_.clone(Spry));
+        console.log(window.Spry.obj);
         return;
 
         axios.post('https://sprypizza.com/api/login/remember', {
@@ -725,5 +711,5 @@ function Authenticate() {
                 // window.Spry.Remove();
             }
         });
-    }, 3000);
-}
+    }
+});

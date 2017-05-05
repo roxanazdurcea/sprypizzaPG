@@ -1,7 +1,62 @@
 window._ = require('underscore');
-
-//Axios Ajax Lib
 window.axios = require('axios');
+
+//Definition of Databases
+var DataStore = require('nedb');
+var cartDB = new DataStore({filename: "cart.db"});
+var spryDB = new DataStore({filename: "spry.db"});
+cartDB.loadDatabase();
+spryDB.loadDatabase();
+
+window.Cart = {
+    obj: [],
+    Save() {
+        cartDB.insert(this.obj);
+    },
+    Read() {
+        cartDB.find({}, (err, doc) => {
+            this.obj = doc;
+        });
+    },
+    Delete() {
+        cartDB.remove({}, {multi: true});
+        this.obj = [];
+    }
+};
+
+window.Spry = {
+    obj: [],
+    key: '',
+    Save() {
+        spryDB.insert(this.obj);
+    },
+    Read() {
+
+        var query = {};
+        if (this.key) {
+            query[this.key] = {$exists: true};
+        }
+        spryDB.find(query, (err, doc) => {
+            this.obj = doc;
+        });
+    },
+    Delete() {
+        spryDB.remove({}, {multi: true});
+        this.obj = [];
+    },
+    Remove() {
+        var query = {};
+        if (this.key) {
+            query[this.key] = {$exists: true};
+        }
+        spryDB.remove(query, {multi: true});
+    }
+};
+
+window.Authenticate = function () {
+    Spry.key = "remember_token";
+    Spry.Read();
+}
 
 //Vue
 window.Vue = require('vue');
@@ -18,14 +73,6 @@ window.Vue.use(VueRouter)
 
 //Events
 window.Events = new Vue();
-
-//Definition of Databases
-var DataStore = require('nedb');
-var cartDB = new DataStore({filename: "cart.db"});
-var spryDB = new DataStore({filename: "spry.db"});
-cartDB.loadDatabase();
-spryDB.loadDatabase();
-window.Cart = {}, window.Spry = {};
 
 window.Store = new Vuex.Store({
     state: {
@@ -101,48 +148,3 @@ function onError(error) {
         'message: ' + error.message + '\n');
 }
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-Cart = {
-    obj: [],
-    Save() {
-        cartDB.insert(this.obj);
-    },
-    Read() {
-        cartDB.find({}, (err, doc) => {
-            this.obj = doc;
-        });
-    },
-    Delete() {
-        cartDB.remove({}, { multi: true });
-        this.obj = [];
-    }
-};
-
-Spry = {
-    obj: [],
-    key: '',
-    Save() {
-        spryDB.insert(this.obj);
-    },
-    Read() {
-
-        var query = {};
-        if (this.key) {
-            query[this.key] = {$exists: true};
-        }
-        spryDB.find(query, (err, doc) => {
-            this.obj = doc;
-        });
-    },
-    Delete() {
-        spryDB.remove({}, { multi: true });
-        this.obj = [];
-    },
-    Remove() {
-        var query = {};
-        if (this.key) {
-            query[this.key] = {$exists: true};
-        }
-        spryDB.remove(query, { multi: true });
-    }
-};
