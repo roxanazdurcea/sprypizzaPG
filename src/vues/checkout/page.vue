@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Checkout</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <!--<f7-navbar title="Checkout" back-link="Back" sliding></f7-navbar>-->
@@ -42,6 +39,7 @@
     import addressesListing from "./addresses.vue";
     import addressTemplate from "../register/address.vue";
     import Gmap from "../generic/map/map.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageCheckout',
         data() {
@@ -136,7 +134,8 @@
             checkoutCart,
             addressesListing,
             addressTemplate,
-            Gmap
+            Gmap,
+            loginIcon
         }
     }
 </script>

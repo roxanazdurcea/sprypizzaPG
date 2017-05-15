@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Track Order</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <f7-block inner>
@@ -30,10 +27,12 @@
 
 <script>
     import orderTracking from "./footer.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageTrackOrder',
         components: {
-            orderTracking
+            orderTracking,
+            loginIcon
         }
     }
 </script>

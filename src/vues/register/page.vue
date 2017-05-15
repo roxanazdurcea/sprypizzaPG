@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Register</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <!--<f7-navbar title="Register" back-link="Back" sliding></f7-navbar>-->
@@ -27,10 +24,12 @@
 
 <script>
     import registerForm from "./form.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageRegister',
         components: {
-            registerForm
+            registerForm,
+            loginIcon
         }
     }
 </script>

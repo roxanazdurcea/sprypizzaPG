@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">My Rewards</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <f7-block inner>
@@ -37,6 +34,7 @@
     import rewardsRows from "./datatable/rows.vue";
     import rewardsPagination from "./datatable/pagination.vue";
     import rewardsColumns from "./datatable/columns.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageRewards',
         data() {
@@ -177,7 +175,8 @@
         components: {
             rewardsPagination,
             rewardsRows,
-            rewardsColumns
+            rewardsColumns,
+            loginIcon
         }
     }
 </script>

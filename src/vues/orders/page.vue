@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">My Orders</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <!--<f7-navbar title="My Orders" back-link="Back" sliding></f7-navbar>-->
@@ -31,6 +28,7 @@
 <script>
     import tableRows from "./rows.vue";
     import tablePagination from "./pagination.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageOrders',
         data() {
@@ -110,7 +108,8 @@
         },
         components: {
             tablePagination,
-            tableRows
+            tableRows,
+            loginIcon
         }
     }
 </script>

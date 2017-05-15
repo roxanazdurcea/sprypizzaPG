@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Track your order</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <f7-block inner>
@@ -43,6 +40,7 @@
     import statusBar from "./status.vue";
     import driverDetails from "./driver.vue";
     import Gmap from "../generic/map/map.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageTrack',
         data() {
@@ -120,7 +118,8 @@
         components: {
             statusBar,
             Gmap,
-            driverDetails
+            driverDetails,
+            loginIcon
         },
         mounted: function() {
             this.Get();

@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Login</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <f7-block inner>
@@ -115,6 +112,7 @@
 <script>
     import loginErrors from "./errors.vue";
     import countriesListing from "./countries.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageLogin',
         data() {
@@ -183,7 +181,8 @@
         },
         components: {
             loginErrors,
-            countriesListing
+            countriesListing,
+            loginIcon
         }
     }
 </script>

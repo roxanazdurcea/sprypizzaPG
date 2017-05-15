@@ -10,10 +10,7 @@
                     </a>
                 </div>
                 <div class="center">Menu</div>
-                <div class="right">
-                    <a href="#" class="open-panel" data-panel="left"><i class="f7-icons size-22">info</i></a>
-                    <a href="/login/"><i class="f7-icons size-22">person</i></a>
-                </div>
+                <login-icon></login-icon>
             </div>
         </div>
         <f7-block inner>
@@ -28,6 +25,7 @@
 <script>
     import groupscontainer from "./groups.vue";
     import itemscontainer from "./items.vue";
+    import loginIcon from "../login/pageIcon.vue";
     export default {
         name: 'pageMenu',
         computed: {
@@ -37,7 +35,8 @@
         },
         components: {
             groupscontainer,
-            itemscontainer
+            itemscontainer,
+            loginIcon
         }
     }
 </script>
