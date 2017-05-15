@@ -153,7 +153,7 @@
             },
             clearCart() {
                 //Delete from DB
-                window.Cart.Delete();
+                window.db.cartDB.remove({}, {multi: true});
 
                 Store.commit('clearItems');
             },
@@ -170,9 +170,8 @@
 
                 var items = _.clone(this.items);
                 //Write to DB
-                window.Cart.Delete();
-                window.Cart.obj = items;
-                window.Cart.Save();
+                window.db.cartDB.remove({}, {multi: true});
+                window.db.cartDB.insert(items);
 
                 if (this.isLoggedIn) {
                     window.f7.views[1].loadPage('/checkout/');
@@ -227,9 +226,11 @@
 
         },
         mounted() {
+            var items;
             //Read from DB
-            window.Cart.Read();
-            var items = window.Cart.obj;
+            window.db.cartDB.find({}, (err, doc) => {
+                items = doc;
+            });
 
             if (items) {
                 Store.commit('setItems', items);
@@ -239,9 +240,8 @@
 
             var items = _.clone(this.items);
             //Write to DB
-            window.Cart.Delete();
-            window.Cart.obj = items;
-            window.Cart.Save();
+            window.db.cartDB.remove({}, {multi: true});
+            window.db.cartDB.insert(items);
             //Update Store
             var count = this.items.length;
             Store.commit('setItemCount', count);

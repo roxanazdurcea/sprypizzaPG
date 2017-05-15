@@ -2,61 +2,12 @@ window._ = require('underscore');
 window.axios = require('axios');
 
 //Definition of Databases
+window.db = {};
 var DataStore = require('nedb');
-var cartDB = new DataStore({filename: "cart.db", autoload: true});
-var spryDB = new DataStore({filename: "spry.db", autoload: true});
-cartDB.loadDatabase();
-spryDB.loadDatabase();
-
-window.Cart = {
-    obj: [],
-    Save() {
-        cartDB.insert(this.obj);
-    },
-    Read() {
-        cartDB.find({}, (err, doc) => {
-            this.obj = doc;
-        });
-    },
-    Delete() {
-        cartDB.remove({}, {multi: true});
-        this.obj = [];
-    }
-};
-
-window.Spry = {
-    obj: [],
-    key: '',
-    Save() {
-        spryDB.insert(this.obj);
-    },
-    Read() {
-
-        var query = {};
-        if (this.key) {
-            query[this.key] = {$exists: true};
-        }
-        spryDB.find(query, (err, doc) => {
-            this.obj = doc;
-        });
-    },
-    Delete() {
-        spryDB.remove({}, {multi: true});
-        this.obj = [];
-    },
-    Remove() {
-        var query = {};
-        if (this.key) {
-            query[this.key] = {$exists: true};
-        }
-        spryDB.remove(query, {multi: true});
-    }
-};
-
-window.Authenticate = function () {
-    Spry.key = "remember_token";
-    Spry.Read();
-}
+db.cartDB = new DataStore({filename: "cart.db", autoload: true});
+db.spryDB = new DataStore({filename: "spry.db", autoload: true});
+db.cartDB.loadDatabase();
+db.spryDB.loadDatabase();
 
 //Vue
 window.Vue = require('vue');

@@ -79,9 +79,8 @@
                     });
 
                     //Write to DB
-                    window.Cart.Delete();
-                    window.Cart.obj = items;
-                    window.Cart.Save();
+                    window.db.cartDB.remove({}, {multi: true});
+                    window.db.cartDB.insert(items);
                     //route
                     window.f7.views[1].loadPage('/checkout/');
                 });
@@ -101,11 +100,11 @@
 
                 var order_id = this.rows[idx].id;
                 //Delete DB entries with order_id
-                window.Spry.key = 'order_id';
-                window.Spry.Remove();
+                var query = {};
+                query['order_id'] = {$exists: true};
+                window.db.spryDB.remove(query, {multi: true});
                 //Save DB
-                window.Spry.obj = {order_id: order_id};
-                window.Spry.Save();
+                window.db.spryDB.insert({order_id: order_id});
 
                 window.f7.views[1].loadPage('/track/');
             },

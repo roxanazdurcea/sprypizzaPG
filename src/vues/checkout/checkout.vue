@@ -151,9 +151,11 @@
             }
         },
         mounted: function () {
+            var items;
             //Read from DB
-            window.Cart.Read();
-            var items = window.Cart.obj;
+            window.db.cartDB.find({}, (err, doc) => {
+                items = doc;
+            });
             //Update Store
             if (items) {
                 Store.commit('setItems', items);

@@ -33,7 +33,7 @@ import itemscontainer from "../vues/menu/items.vue";
 Vue.component('page-menu', {
     template: '#page-menu',
     computed: {
-        cartActive: function () {
+        cartActive: function() {
             return Store.state.cartActive;
         }
     },
@@ -96,7 +96,7 @@ Vue.component('page-login', {
             axios.post('https://sprypizza.com/api/sms/send', {
                 mobile: this.mobile_number,
                 country_id: this.country_id
-            }).then(function (data) {
+            }).then(function(data) {
 
                 this.error = this.pin = '';
 
@@ -110,6 +110,7 @@ Vue.component('page-login', {
             }.bind(this));
         },
         Login() {
+
             axios.post("https://sprypizza.com/api/login", {
                 mobile_number: this.mobile_number,
                 country_id: this.country_id,
@@ -122,24 +123,25 @@ Vue.component('page-login', {
                     Store.commit('setContactId', data.user_id);
                     Store.commit('setCompanyId', data.company_id);
                     //Remove remember_token
-                    Spry.key = "remember_token";
-                    Spry.Remove();
+                    var query = {};
+                    query['remember_token'] = {$exists: true};
+                    window.db.spryDB.remove(query, {multi: true});
                     //Save remember_token to DB
-                    Spry.obj = {remember_token: data.remember_token};
-                    Spry.Save();
+                    window.db.spryDB.insert({remember_token: data.remember_token});
                     //Route to home
                     window.f7.views[1].loadPage('/');
                 } else {
                     Store.commit('setIsLoggedIn', false);
                     //Clear existing token
-                    Spry.key = "remember_token";
-                    Spry.Remove();
+                    var query = {};
+                    query['remember_token'] = {$exists: true};
+                    window.db.spryDB.remove(query, {multi: true});
                 }
             });
         }
     },
     mounted() {
-        Events.$on('setCountry-ev', function (country_id) {
+        Events.$on('setCountry-ev', function(country_id) {
             this.country_id = country_id;
         }.bind(this));
     },
@@ -162,7 +164,7 @@ Vue.component('page-account', {
             return Store.state.longitude;
         }
     },
-    mounted: function () {
+    mounted: function() {
         var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
     },
@@ -205,7 +207,7 @@ Vue.component('page-orders', {
 
             var response = this.rawData;
 
-            response = _.map(response, function (obj, index) {
+            response = _.map(response, function(obj, index) {
                 obj['lock'] = (index === this.lockIndex) ? this.lockValue : true;
                 return obj;
             }.bind(this));
@@ -217,48 +219,48 @@ Vue.component('page-orders', {
         }
     },
     methods: {
-        List: function () {
+        List: function() {
             axios.post('https://sprypizza.com/api/orders/get', {
                 contact_id: this.contact_id,
                 draw: this.draw,
                 page: this.page,
                 sortBy: this.sortBy,
                 sort: this.sort
-            }).then(function (json) {
+            }).then(function(json) {
                 var response = json.data.response;
                 this.total = response.total;
                 this.filtered = response.filtered;
-                this.rawData = _.map(response.orders, function (obj, index) {
+                this.rawData = _.map(response.orders, function(obj, index) {
                     obj['showItems'] = false;
                     return obj;
                 });
             }.bind(this));
         },
-        StrAdj: function (str) {
-            var string = str.replace(/\w\S*/g, function (txt) {
+        StrAdj: function(str) {
+            var string = str.replace(/\w\S*/g, function(txt) {
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
             });
             return string.replace('_', ' ');
         }
     },
-    mounted: function () {
+    mounted: function() {
 
         this.List();
 
-        Events.$on('showItems-ev', function (idx) {
+        Events.$on('showItems-ev', function(idx) {
             this.tableData[idx]['showItems'] = (this.tableData[idx]['showItems'] === true) ? false : true;
         }.bind(this));
 
-        Events.$on('sort-ev', function (idx) {
+        Events.$on('sort-ev', function(idx) {
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function (draw) {
+        Events.$on('setPage-ev', function(draw) {
             this.draw = draw;
             this.List();
         }.bind(this));
 
-        Events.$on('tableRefresh-ev', function () {
+        Events.$on('tableRefresh-ev', function() {
             this.List();
         }.bind(this));
     },
@@ -290,7 +292,7 @@ Vue.component('page-rewards', {
         }
     },
     computed: {
-        tableColumns: function () {
+        tableColumns: function() {
             var response = this.rawData;
             //Table columns
             var returnedKeys = [], idx = 0;
@@ -298,7 +300,7 @@ Vue.component('page-rewards', {
             var keys = _.keys(_.first(response));
             //excluded keys
             var excludeColumns = this.excludeColumns;
-            keys.forEach(function (ele) {
+            keys.forEach(function(ele) {
                 if (excludeColumns.indexOf(ele) < 0) {
                     var key = this.StrAdj(ele);
                     returnedKeys[idx] = {
@@ -321,18 +323,18 @@ Vue.component('page-rewards', {
 
             return returnedKeys;
         },
-        tableData: function () {
+        tableData: function() {
             return this.rawData;
         },
-        totalPoints: function () {
+        totalPoints: function() {
             var total = 0;
-            this.rawData.forEach(function (obj) {
+            this.rawData.forEach(function(obj) {
                 total += parseFloat(obj.points);
             });
 
             return total;
         },
-        pointsExpiry: function () {
+        pointsExpiry: function() {
             return this.settings.expiry;
         },
         contact_id() {
@@ -343,14 +345,14 @@ Vue.component('page-rewards', {
         }
     },
     methods: {
-        List: function () {
+        List: function() {
             axios.post('https://sprypizza.com/api/rewards/list', {
                 contact_id: this.contact_id,
                 draw: this.draw,
                 page: this.page,
                 sortBy: this.sortBy,
                 sort: this.sort
-            }).then(function (json) {
+            }).then(function(json) {
 
                 var response = json.data.response;
                 this.total = response.total;
@@ -358,14 +360,14 @@ Vue.component('page-rewards', {
                 this.rawData = response.rewards;
             }.bind(this));
         },
-        Settings: function () {
+        Settings: function() {
             axios.post('https://sprypizza.com/api/rewards/settings', {
                 company_id: this.company_id
-            }).then(function (json) {
+            }).then(function(json) {
                 this.settings = json.data.response
             }.bind(this));
         },
-        Sort: function (idx) {
+        Sort: function(idx) {
 
             var columns = this.tableColumns;
             var sort = columns[idx]['sort'];
@@ -389,23 +391,23 @@ Vue.component('page-rewards', {
             //Refresh data
             this.List();
         },
-        StrAdj: function (str) {
-            var string = str.replace(/\w\S*/g, function (txt) {
+        StrAdj: function(str) {
+            var string = str.replace(/\w\S*/g, function(txt) {
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
             });
             return string.replace('_', ' ');
         }
     },
-    mounted: function () {
+    mounted: function() {
 
         this.List();
         this.Settings();
 
-        Events.$on('sort-ev', function (idx) {
+        Events.$on('sort-ev', function(idx) {
             this.Sort(idx);
         }.bind(this));
 
-        Events.$on('setPage-ev', function (draw) {
+        Events.$on('setPage-ev', function(draw) {
             this.draw = draw;
             this.List();
         }.bind(this));
@@ -474,7 +476,7 @@ Vue.component('page-checkout', {
         }
     },
 
-    mounted: function () {
+    mounted: function() {
         //Addresses
         this.GetAddresses();
         this.GetClosestBranch();
@@ -482,7 +484,7 @@ Vue.component('page-checkout', {
         let data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
         Events.$emit('mapInfo-ev', data);
         //Set Order Address
-        Events.$on('setOrderAddress-ev', function (address) {
+        Events.$on('setOrderAddress-ev', function(address) {
             this.latitude = address.latitude;
             this.longitude = address.longitude;
             this.address = address.street + ', ' + address.city;
@@ -490,7 +492,7 @@ Vue.component('page-checkout', {
             Events.$emit('mapInfo-ev', data);
         }.bind(this));
 
-        Events.$on('saveAddress-ev', function (address) {
+        Events.$on('saveAddress-ev', function(address) {
 
             var len = this.addresses.length;
 
@@ -554,53 +556,60 @@ Vue.component('page-track', {
         }
     },
     methods: {
-        Get: function () {
+        Get() {
 
-            Spry.key = 'order_id';
-            Spry.Read();
-
-            axios.post('https://sprypizza.com/api/orders/track', {
-                order_id: Spry.obj.order_id
-            }).then(function (response) {
-
-                var order = response.data.response.order;
-                var branch = response.data.response.branch;
-                var employee = response.data.response.employee;
-
-                //Order
-                Events.$emit('status-ev', order.status);
-                this.order.address = order.full_address;
-                this.order.order_id = order.id;
-                //Branch
-                this.branch.name = branch.name;
-                //Init Map
-                var markers = [
-                    {
-                        lati: order.latitude,
-                        longi: order.longitude,
-                        icon: "img/pins/map_marker.png",
-                        title: 'Delivery Address'
-                    },
-                    {
-                        lati: branch.latitude,
-                        longi: branch.longitude,
-                        icon: "img/pins/branch_icon.png",
-                        title: 'Branch Location'
+            window.db.spryDB.find({}, (err, doc) => {
+                _.map(doc, (obj, idx) => {
+                    if (_.has(obj, 'order_id')) {
+                        this.order.order_id = obj.order_id;
                     }
-                ];
-                if (employee) {
-                    markers.push({
-                        lati: employee.latitude_c,
-                        longi: employee.longitude_c,
-                        icon: "img/pins/driver_marker.png",
-                        title: 'Driver Location'
-                    });
-                }
-                Events.$emit('mapMarkers-ev', markers);
-                //Employee
-                this.employee.name = employee.title + ' ' + employee.first_name + ' ' + employee.last_name;
-                this.employee.mobile = employee.mobile;
-            }.bind(this));
+                });
+            });
+
+            setTimeout(() => {
+                axios.post('https://sprypizza.com/api/orders/track', {
+                    order_id: this.order.order_id
+                }).then(function(response) {
+
+                    var order = response.data.response.order;
+                    var branch = response.data.response.branch;
+                    var employee = response.data.response.employee;
+
+                    //Order
+                    Events.$emit('status-ev', order.status);
+                    this.order.address = order.full_address;
+                    this.order.order_id = order.id;
+                    //Branch
+                    this.branch.name = branch.name;
+                    //Init Map
+                    var markers = [
+                        {
+                            lati: order.latitude,
+                            longi: order.longitude,
+                            icon: "img/pins/map_marker.png",
+                            title: 'Delivery Address'
+                        },
+                        {
+                            lati: branch.latitude,
+                            longi: branch.longitude,
+                            icon: "img/pins/branch_icon.png",
+                            title: 'Branch Location'
+                        }
+                    ];
+                    if (employee) {
+                        markers.push({
+                            lati: employee.latitude_c,
+                            longi: employee.longitude_c,
+                            icon: "img/pins/driver_marker.png",
+                            title: 'Driver Location'
+                        });
+                    }
+                    Events.$emit('mapMarkers-ev', markers);
+                    //Employee
+                    this.employee.name = employee.title + ' ' + employee.first_name + ' ' + employee.last_name;
+                    this.employee.mobile = employee.mobile;
+                }.bind(this));
+            }, 500);
         }
     },
     components: {
@@ -608,7 +617,7 @@ Vue.component('page-track', {
         Gmap,
         driverDetails
     },
-    mounted: function () {
+    mounted: function() {
         this.Get();
     }
 });
@@ -687,29 +696,50 @@ new Vue({
             }
         ],
     },
+    methods: {
+        Cart() {
+            //Verify cart status
+            //Read from DB
+            window.db.cartDB.find({}, (err, doc) => {
+                var len = doc.length;
+                Store.commit('setItems', doc);
+                Store.commit('setItemCount', len);
+            });
+        },
+        RememberMe() {
+            //Verify remember_token
+            window.db.spryDB.find({}, (err, doc) => {
+                _.map(doc, (obj, idx) => {
+                    if (_.has(obj, 'remember_token')) {
+
+                        axios.post('https://sprypizza.com/api/login/remember', {
+                            remember_token: obj.remember_token
+                        }).then((response) => {
+
+                            var data = response.data.response;
+
+                            if (data.user_id) {
+                                Store.commit('setIsLoggedIn', true);
+                                Store.commit('setContactId', data.user_id);
+                                Store.commit('setCompanyId', data.company_id);
+
+                            } else {
+                                Store.commit('setIsLoggedIn', false);
+                                Store.commit('setContactId', '');
+                                Store.commit('setCompanyId', '');
+                                //Clear existing token
+                                var query = {};
+                                query['remember_token'] = {$exists: true};
+                                window.db.spryDB.remove(query, {multi: true});
+                            }
+                        });
+                    }
+                });
+            });
+        }
+    },
     mounted() {
-        window.Authenticate();
-
-        console.log(window.Spry.obj);
-        return;
-
-        axios.post('https://sprypizza.com/api/login/remember', {
-            remember_token: obj.remember_token
-        }).then((response) => {
-
-            var data = response.data;
-
-            if (data.user_id) {
-                Store.commit('setIsLoggedIn', true);
-                Store.commit('setContactId', data.user_id);
-                Store.commit('setCompanyId', data.company_id);
-
-            } else {
-                // Store.commit('setIsLoggedIn', false);
-                // //Clear existing token
-                // window.Spry.key = "remember_token";
-                // window.Spry.Remove();
-            }
-        });
+        this.RememberMe();
+        this.Cart();
     }
 });

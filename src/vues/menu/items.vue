@@ -112,9 +112,8 @@
                 var count = items.length;
                 Store.commit('setItemCount', count);
                 //Write to DB
-                window.Cart.Delete();
-                window.Cart.obj = items;
-                window.Cart.Save();
+                window.db.cartDB.remove({}, {multi: true});
+                window.db.cartDB.insert(items);
             },
             Increase: function (idx) {
                 this.items[idx]['qty']++;

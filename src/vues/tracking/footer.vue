@@ -72,11 +72,11 @@
                 if (!this.orderError) {
 
                     //Delete DB entries with order_id
-                    window.Spry.key = 'order_id';
-                    window.Spry.Remove();
+                    var query = {};
+                    query['order_id'] = {$exists: true};
+                    window.db.spryDB.remove(query, {multi: true});
                     //Save DB
-                    window.Spry.obj = {order_id: this.order_id};
-                    window.Spry.Save();
+                    window.db.spryDB.insert({order_id: this.order_id});
 
                     window.f7.views[1].loadPage('/track/');
                 }
