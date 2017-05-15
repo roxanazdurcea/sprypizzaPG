@@ -1,11 +1,8 @@
 <template>
-    <span>{{ itemcount }}</span>
+    <span class="badge color-red">{{ itemcount }}</span>
 </template>
 
 <script>
-
-    import {mapState} from 'vuex';
-
     export default {
         name: 'itemCount',
         computed: {
