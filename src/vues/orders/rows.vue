@@ -79,8 +79,8 @@
                     });
 
                     //Write to DB
-                    window.db.cartDB.remove({}, {multi: true});
-                    window.db.cartDB.insert(items);
+                    window.db.itemsDB.remove({}, {multi: true});
+                    window.db.itemsDB.insert(items);
                     //route
                     window.f7.views[1].loadPage('/checkout/');
                 });

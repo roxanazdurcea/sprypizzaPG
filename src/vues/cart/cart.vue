@@ -153,7 +153,7 @@
             },
             clearCart() {
                 //Delete from DB
-                window.db.cartDB.remove({}, {multi: true});
+                window.db.itemsDB.remove({}, {multi: true});
 
                 Store.commit('clearItems');
             },
@@ -170,8 +170,8 @@
 
                 var items = _.clone(this.items);
                 //Write to DB
-                window.db.cartDB.remove({}, {multi: true});
-                window.db.cartDB.insert(items);
+                window.db.itemsDB.remove({}, {multi: true});
+                window.db.itemsDB.insert(items);
 
                 if (this.isLoggedIn) {
                     window.f7.views[1].loadPage('/checkout/');
@@ -228,7 +228,7 @@
         mounted() {
             var items;
             //Read from DB
-            window.db.cartDB.find({}, (err, doc) => {
+            window.db.itemsDB.find({}, (err, doc) => {
                 items = doc;
             });
 
@@ -240,8 +240,8 @@
 
             var items = _.clone(this.items);
             //Write to DB
-            window.db.cartDB.remove({}, {multi: true});
-            window.db.cartDB.insert(items);
+            window.db.itemsDB.remove({}, {multi: true});
+            window.db.itemsDB.insert(items);
             //Update Store
             var count = this.items.length;
             Store.commit('setItemCount', count);

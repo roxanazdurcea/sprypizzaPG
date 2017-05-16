@@ -153,7 +153,7 @@
         mounted: function () {
             var items;
             //Read from DB
-            window.db.cartDB.find({}, (err, doc) => {
+            window.db.itemsDB.find({}, (err, doc) => {
                 items = doc;
             });
             //Update Store

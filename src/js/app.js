@@ -89,7 +89,7 @@ new Vue({
         Cart() {
             //Verify cart status
             //Read from DB
-            window.db.cartDB.find({}, (err, doc) => {
+            window.db.itemsDB.find({}, (err, doc) => {
                 var len = doc.length;
                 Store.commit('setItems', doc);
                 Store.commit('setItemCount', len);

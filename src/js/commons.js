@@ -4,9 +4,9 @@ window.axios = require('axios');
 //Definition of Databases
 window.db = {};
 var DataStore = require('nedb');
-db.cartDB = new DataStore({filename: "cart.db", autoload: true});
+db.itemsDB = new DataStore({filename: "items.db", autoload: true});
 db.spryDB = new DataStore({filename: "spry.db", autoload: true});
-db.cartDB.loadDatabase();
+db.itemsDB.loadDatabase();
 db.spryDB.loadDatabase();
 
 //Vue
