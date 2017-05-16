@@ -18,7 +18,7 @@
 
                 <input class="form-control input-sm" placeholder="State" type="text" v-model="template.state">
 
-                <select class="form-control" v-model="template.country_id">
+                <select name="country" class="form-control" v-model="template.country_id">
                     <option v-for="country in countries" v-bind:value="country.phonecode">
                         {{ country.nicename }}
                     </option>
@@ -46,6 +46,7 @@
                     city: '',
                     state: '',
                     postalcode: '',
+                    country: 'Romania',
                     country_id: '40',
                     'latitude': '',
                     'longitude': '',
@@ -76,9 +77,13 @@
                 this.showTemplate = true;
             },
             SaveAddress: function() {
+                //Read Country value
+                var selector = document.getElementsByName('country')[0];
+                this.template.country = selector.options[selector.selectedIndex].text;
+
                 Events.$emit('saveAddress-ev', this.template);
                 this.showTemplate = false;
-                this.template = {'label': 'home', street: '', city: '', state: '', postalcode: '', country: 'Romania', country_id: '40', 'latitude': '', 'longitude': '', 'default': '0'};
+                this.template = {'label': 'home', street: '', city: '', state: '', postalcode: '', country: 'Romania', country_id: '40', country: 'Romania', 'latitude': '', 'longitude': '', 'default': '0'};
             }
         },
         mounted: function() {

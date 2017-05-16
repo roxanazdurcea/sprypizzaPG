@@ -3,110 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5b0021ca-a956-4c3f-976c-15c95b592b04" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/History.md" afterPath="$PROJECT_DIR$/node_modules/clean-css/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/LICENSE" afterPath="$PROJECT_DIR$/node_modules/clean-css/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/README.md" afterPath="$PROJECT_DIR$/node_modules/clean-css/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/index.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/clean.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/clean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/hack.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/hack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-0/optimize.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-0/optimize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/optimize.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/optimize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-hex.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-hex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-hsl.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-hsl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-rgb.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/shorten-rgb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/sort-selectors.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/sort-selectors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-at-rule.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-at-rule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-block.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-block.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-rules.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-1/tidy-rules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/break-up.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/break-up.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/can-override.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/can-override.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/clone.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/clone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/compactable.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/compactable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/extract-properties.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/extract-properties.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/invalid-property-error.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/invalid-property-error.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/is-mergeable.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/is-mergeable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-adjacent.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-adjacent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-media-queries.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-media-queries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-non-adjacent-by-body.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-non-adjacent-by-body.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-non-adjacent-by-selector.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/merge-non-adjacent-by-selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/optimize.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/optimize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/every-values-pair.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/every-values-pair.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/find-component-in.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/find-component-in.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/has-inherit.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/has-inherit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/is-component-of.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/is-component-of.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/merge-into-shorthands.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/merge-into-shorthands.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/optimize.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/optimize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/override-properties.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/override-properties.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/overrides-non-component-shorthand.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/overrides-non-component-shorthand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/populate-components.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/populate-components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/understandable.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/understandable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/vendor-prefixes.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/properties/vendor-prefixes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/reduce-non-adjacent.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/reduce-non-adjacent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicate-font-at-rules.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicate-font-at-rules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicate-media-queries.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicate-media-queries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicates.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/remove-duplicates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/reorderable.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/reorderable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restore-with-components.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restore-with-components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restore.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restructure.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/restructure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/rules-overlap.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/rules-overlap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/specificities-overlap.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/specificities-overlap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/specificity.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/specificity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/tidy-rule-duplicates.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/level-2/tidy-rule-duplicates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/remove-unused.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/remove-unused.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/restore-from-optimizing.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/restore-from-optimizing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/validator.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/wrap-for-optimizing.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/optimizer/wrap-for-optimizing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/compatibility.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/compatibility.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/format.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/format.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline-request.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline-request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline-timeout.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline-timeout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/inline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/optimization-level.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/optimization-level.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rebase-to.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rebase-to.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rebase.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rebase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rounding-precision.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/options/rounding-precision.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/apply-source-maps.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/apply-source-maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/extract-import-url-and-media.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/extract-import-url-and-media.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/input-source-map-tracker.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/input-source-map-tracker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/is-allowed-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/is-allowed-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/load-original-sources.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/load-original-sources.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/load-remote-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/load-remote-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/match-data-uri.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/match-data-uri.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/normalize-path.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/normalize-path.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/read-sources.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/read-sources.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase-local-map.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase-local-map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase-remote-map.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase-remote-map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rebase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/restore-import.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/restore-import.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rewrite-url.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/reader/rewrite-url.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/marker.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/marker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/token.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/token.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/tokenize.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/tokenizer/tokenize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/clone-array.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/clone-array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/format-position.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/format-position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/has-protocol.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/has-protocol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-data-uri-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-data-uri-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-http-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-http-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-https-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-https-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-import.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-import.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-remote-resource.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/is-remote-resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/natural-compare.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/natural-compare.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/override.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/override.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/split.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/split.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/helpers.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/one-time.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/one-time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/simple.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/simple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/source-maps.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/writer/source-maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/package.json" afterPath="$PROJECT_DIR$/node_modules/clean-css/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-clean-css/index.js" afterPath="$PROJECT_DIR$/node_modules/gulp-clean-css/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-clean-css/package.json" afterPath="$PROJECT_DIR$/node_modules/gulp-clean-css/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/commons.js" afterPath="$PROJECT_DIR$/src/js/commons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/cart/cart.vue" afterPath="$PROJECT_DIR$/src/vues/cart/cart.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/checkout/checkout.vue" afterPath="$PROJECT_DIR$/src/vues/checkout/checkout.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/menu/items.vue" afterPath="$PROJECT_DIR$/src/vues/menu/items.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/orders/rows.vue" afterPath="$PROJECT_DIR$/src/vues/orders/rows.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/register/address.vue" afterPath="$PROJECT_DIR$/src/vues/register/address.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/register/form.vue" afterPath="$PROJECT_DIR$/src/vues/register/form.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.js" afterPath="$PROJECT_DIR$/www/js/app.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/commons.min.js" afterPath="$PROJECT_DIR$/www/js/commons.min.js" />
     </list>
@@ -127,108 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/app.js">
+      <file leaf-file-name="form.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vues/register/form.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+            <state relative-caret-position="-2069">
+              <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
               <folding>
-                <element signature="e#88#135#0" expanded="true" />
+                <element signature="e#5070#5098#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="page.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/login/page.vue">
+        <entry file="file://$PROJECT_DIR$/src/vues/account/page.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2594">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/commons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/checkout/checkout.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="items.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rows.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vues/orders/rows.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-              <folding>
-                <marker date="1494915693064" expanded="true" signature="2842:3385" ph="{...}" />
-                <marker date="1494915693064" expanded="true" signature="2963:3078" ph="{&quot;contact_id&quot;: Store.state.contact_id...}" />
-                <marker date="1494915693064" expanded="true" signature="3097:3385" ph="{...}" />
-                <marker date="1494915693064" expanded="true" signature="3253:3320" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="17712" column="22" selection-start-line="17712" selection-start-column="22" selection-end-line="17712" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commons.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/commons.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="15827" column="3" selection-start-line="15827" selection-start-column="3" selection-end-line="15827" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="627">
+              <caret line="34" column="13" selection-start-line="29" selection-start-column="12" selection-end-line="34" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -282,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/js/register.js" />
         <option value="$PROJECT_DIR$/src/js/account.js" />
         <option value="$PROJECT_DIR$/src/vues/register/addresses.vue" />
         <option value="$PROJECT_DIR$/src/vues/notifications/notifications.vue" />
@@ -293,7 +105,6 @@
         <option value="$PROJECT_DIR$/src/vues/branches/branch.vue" />
         <option value="$PROJECT_DIR$/src/vues/branches/closet-branch.vue" />
         <option value="$PROJECT_DIR$/src/vues/checkout/addresses.vue" />
-        <option value="$PROJECT_DIR$/src/vues/register/form.vue" />
         <option value="$PROJECT_DIR$/src/vues/notifications/notification-box.vue" />
         <option value="$PROJECT_DIR$/src/js/track.js" />
         <option value="$PROJECT_DIR$/src/vues/tracking/status.vue" />
@@ -333,6 +144,8 @@
         <option value="$PROJECT_DIR$/www/js/app.min.js" />
         <option value="$PROJECT_DIR$/www/js/commons.min.js" />
         <option value="$PROJECT_DIR$/src/js/commons.js" />
+        <option value="$PROJECT_DIR$/src/vues/register/address.vue" />
+        <option value="$PROJECT_DIR$/src/vues/register/form.vue" />
       </list>
     </option>
   </component>
@@ -405,6 +218,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprypizzaPG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -466,73 +308,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="orders">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sprypizzaPG">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="vues">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="login">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sprypizzaPG">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="vues">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="home">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sprypizzaPG">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="vues">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="generic">
+            <PATH_ELEMENT USER_OBJECT="register">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -571,40 +347,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprypizzaPG" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.3.1" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -746,11 +493,13 @@
       <workItem from="1493963119753" duration="24183000" />
       <workItem from="1494827050921" duration="23500000" />
       <workItem from="1494914666031" duration="1041000" />
+      <workItem from="1494920987899" duration="427000" />
+      <workItem from="1494921429456" duration="78000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261708000" />
+    <option name="totallyTimeSpent" value="262213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -761,11 +510,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854405" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5507663" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" x="21" y="863" width="1876" height="249" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.36345777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.43678162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="40" y="538" width="1748" height="574" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.26149425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="40" y="538" width="1748" height="574" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1337953" sideWeight="0.5042463" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -775,6 +523,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5507663" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" x="21" y="863" width="1876" height="249" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -829,20 +578,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/checkout.js" />
-    <entry file="file://$PROJECT_DIR$/src/vues/register/address.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/register/form.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="186" column="53" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/checkout/addresses.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1577">
@@ -978,24 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/generic/map/map.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/branches/page.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vues/account/page.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1059,9 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#1755#1792#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,9 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1047#1082#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,78 +801,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/login/page.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2594">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/cart/cart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="2945">
           <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/checkout/checkout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="2926">
           <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/menu/items.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="2147">
           <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vues/orders/rows.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="1539">
           <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <marker date="1494915693064" expanded="true" signature="2842:3385" ph="{...}" />
-            <marker date="1494915693064" expanded="true" signature="2963:3078" ph="{&quot;contact_id&quot;: Store.state.contact_id...}" />
-            <marker date="1494915693064" expanded="true" signature="3097:3385" ph="{...}" />
-            <marker date="1494915693064" expanded="true" signature="3253:3320" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/app.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="336528">
           <caret line="17712" column="22" selection-start-line="17712" selection-start-column="22" selection-end-line="17712" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/commons.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="300713">
           <caret line="15827" column="3" selection-start-line="15827" selection-start-column="3" selection-end-line="15827" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="1729">
           <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
-          <folding>
-            <element signature="e#88#135#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,7 +864,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/register/address.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/generic/map/map.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="159" column="24" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/account/page.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="34" column="13" selection-start-line="29" selection-start-column="12" selection-end-line="34" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vues/register/form.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2069">
+          <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
+          <folding>
+            <element signature="e#5070#5098#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

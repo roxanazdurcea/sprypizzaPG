@@ -71,7 +71,7 @@
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group">
-                            <button type="submit" class="button button-big color-blue" style="width: 100%;"  v-on:click.once="Submit" v-bind:disabled="isDisabled">
+                            <button type="button" class="button button-big color-blue" style="width: 100%;"  v-on:click.once="Submit" v-bind:disabled="isDisabled">
                                 Create Account
                             </button>
                         </div>
@@ -162,6 +162,12 @@
                 } else {
                     return false;
                 }
+            },
+            current_latitude() {
+                return Store.state.latitude;
+            },
+            current_longitude() {
+                return Store.state.longitude;
             }
         },
         filters: {
@@ -296,6 +302,9 @@
             Events.$on('deleteAddress-ev', (idx) => {
                 this.contact.addresses.splice(idx, 1);
             });
+
+            var data = {'latitude': this.current_latitude, 'longitude': this.current_longitude, 'info': 'Current location'};
+            Events.$emit('mapInfo-ev', data);
         },
         components: {
             Gmap,
