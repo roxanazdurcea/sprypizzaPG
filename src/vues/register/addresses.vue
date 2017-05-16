@@ -8,7 +8,7 @@
         </div>
         <div v-if=" addresses.length == 0 " style="padding-bottom: 5px !important; margin-bottom: 0!important;">
             <div class="addressAlert">
-                <span><i class="f7-icons size-15" style="color: #FAFAFA;">info_fill</i></span>&nbsp;&nbsp;
+                <span><i class="f7-icons size-15" style="color: #FAFAFA; !important;">info_fill</i></span>&nbsp;&nbsp;
                 <span style="text-align:center; font-size: 12px;">No addresses are defined</span>
             </div>
         </div>
@@ -109,7 +109,6 @@
 
     .addressAlert {
         height: 39px;
-        width: 100%;
         margin: 0 auto;
         padding: 0 10px 0 10px;
         color: #FAFAFA;

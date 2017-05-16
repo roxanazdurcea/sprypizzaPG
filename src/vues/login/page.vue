@@ -46,11 +46,12 @@
                                             <button type="button" name="sendSMS" class="button button-big color-orange" autocomplete="off" @click="Send()" v-bind:disabled="isDisabled" style="width:100%;">
                                                 Get pin
                                             </button>
-                                            <login-errors :error="error" :pin="pin"></login-errors>
+
                                         </div>
                                     </div>
                                 </div>
                             </li>
+                            <login-errors :error="error" :pin="pin"></login-errors>
 
                             <li>
                                 <div class="item-content">
@@ -99,10 +100,10 @@
 
                         </ul>
                     </form>
-                    <hr>
+
 
                     <a href="/register/" class="item-link" style="color: #6e6e6e; margin-bottom:3%;">
-                        <p style="text-align: center;">New here? Register an account</p></a>
+                        <p style="text-align: center;">New here? <span style="color: #ff9500;">Register an account</span></p></a>
                 </div>
             </section>
         </f7-block>

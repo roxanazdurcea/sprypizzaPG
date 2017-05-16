@@ -1,28 +1,31 @@
 <template>
     <div>
-        <br />
         <div v-show="showTemplate">
-            <p style="color: #FAFAFA; font-size: 12px; padding:5px; background-color: #d12027;">Pick your location on the map</p>
 
-                <select class="form-control" v-model="template.label">
-                    <option v-for="label in labels" v-bind:value="label">
-                        {{ label | capitalize }}
-                    </option>
-                </select>
+            <div class="addressAlert">
+                <p style="color: #FAFAFA; font-size: 12px;">Pick your location
+                    on the map</p>
+            </div>
 
-                <input class="form-control input-sm" placeholder="Street" type="text" v-model="template.street">
+            <select class="form-control" v-model="template.label">
+                <option v-for="label in labels" v-bind:value="label">
+                    {{ label | capitalize }}
+                </option>
+            </select>
 
-                <input class="form-control input-sm" placeholder="City" type="text" v-model="template.city">
+            <input class="form-control input-sm" placeholder="Street" type="text" v-model="template.street">
 
-                <input class="form-control input-sm" placeholder="Postalcode" type="text" v-model="template.postalcode">
+            <input class="form-control input-sm" placeholder="City" type="text" v-model="template.city">
 
-                <input class="form-control input-sm" placeholder="State" type="text" v-model="template.state">
+            <input class="form-control input-sm" placeholder="Postalcode" type="text" v-model="template.postalcode">
 
-                <select name="country" class="form-control" v-model="template.country_id">
-                    <option v-for="country in countries" v-bind:value="country.phonecode">
-                        {{ country.nicename }}
-                    </option>
-                </select>
+            <input class="form-control input-sm" placeholder="State" type="text" v-model="template.state">
+
+            <select name="country" class="form-control" v-model="template.country_id">
+                <option v-for="country in countries" v-bind:value="country.phonecode">
+                    {{ country.nicename }}
+                </option>
+            </select>
 
             <p class="col-50" v-on:click="SaveAddress()">
                 <a href="#" class="button button-big color-orange">Save address</a>
@@ -36,7 +39,7 @@
 
     export default {
         name: 'addressTemplate',
-        data: function() {
+        data: function () {
             return {
                 showTemplate: false,
                 labels: ['home', 'work', 'other'],
@@ -63,37 +66,49 @@
             }
         },
         methods: {
-            Countries: function() {
+            Countries: function () {
                 axios({
                     method: 'POST',
-                    url:'https://sprypizza.com/api/countries',
+                    url: 'https://sprypizza.com/api/countries',
                     data: {},
                     responseType: 'json'
                 }).then(data => {
                     this.countries = data.data.response;
                 });
             },
-            AddAddress: function() {
+            AddAddress: function () {
                 this.showTemplate = true;
             },
-            SaveAddress: function() {
+            SaveAddress: function () {
                 //Read Country value
                 var selector = document.getElementsByName('country')[0];
                 this.template.country = selector.options[selector.selectedIndex].text;
 
                 Events.$emit('saveAddress-ev', this.template);
                 this.showTemplate = false;
-                this.template = {'label': 'home', street: '', city: '', state: '', postalcode: '', country: 'Romania', country_id: '40', country: 'Romania', 'latitude': '', 'longitude': '', 'default': '0'};
+                this.template = {
+                    'label': 'home',
+                    street: '',
+                    city: '',
+                    state: '',
+                    postalcode: '',
+                    country: 'Romania',
+                    country_id: '40',
+                    country: 'Romania',
+                    'latitude': '',
+                    'longitude': '',
+                    'default': '0'
+                };
             }
         },
-        mounted: function() {
+        mounted: function () {
             this.Countries();
 
-            Events.$on('showAddressTemplate-ev', function() {
+            Events.$on('showAddressTemplate-ev', function () {
                 this.showTemplate = true;
             }.bind(this));
 
-            Events.$on('setAddress-ev', function(data) {
+            Events.$on('setAddress-ev', function (data) {
 
                 var template = {
                     label: 'other',
@@ -111,7 +126,7 @@
 
                 axios.post('https://sprypizza.com/api/countries/id', {
                     country: country
-                }).then(function(data) {
+                }).then(function (data) {
                     template.country_id = data.data.response;
                     this.template = template;
                     this.showTemplate = true;
@@ -121,4 +136,21 @@
         }
     }
 </script>
+<style scoped>
+
+    .addressAlert {
+        height: 39px;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+        color: #FAFAFA;
+        background-color: #D12027;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+</style>
 

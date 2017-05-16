@@ -172,7 +172,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     #map-id {
         width: 100%;
         height: 250px;

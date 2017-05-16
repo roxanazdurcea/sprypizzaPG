@@ -11,13 +11,13 @@
         <!--</f7-nav-right>-->
         <!--</f7-navbar>-->
         <f7-block>
-            <div style="position: relative; height: 85vh;">
-                <img style="position: absolute; top: 0px; right: 0; width: 100%;" src="img/top-back.png">
-                <img style="position: absolute; bottom: 0px; left: 0; width: 100%;" src="img/bottom-back.png">
+            <div style="position: relative; height: 90vh;">
+                <img style="position: absolute; top: 0px; right: 0; height: auto; display: block; max-width: 100%; margin-right: auto; margin-left: auto;" src="img/top-back.png">
+                <img style="position: absolute; bottom: 0px; left: 0; height: auto; display: block; max-width: 100%; margin-right: auto; margin-left: auto;" src="img/bottom-back.png">
                 <div style="position: absolute; top: 15%; width:50%; margin-left:25%;">
                     <div style="overflow: hidden;">
-                        <a href="/menu/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-new-order.png"></a>
-                        <a href="/track-order/" class="item-link"><img style="width: 100%; height:auto; display: block;" src="img/sprypizzaPG-track-order.png"></a>
+                        <a href="/menu/" class="item-link"><img style="height: auto; display: block; max-width: 100%; margin-right: auto; margin-left: auto;" src="img/sprypizzaPG-new-order.png"></a>
+                        <a href="/track-order/" class="item-link"><img style="height: auto; display: block; max-width: 100%; margin-right: auto; margin-left: auto;" src="img/sprypizzaPG-track-order.png"></a>
                     </div>
                 </div>
             </div>

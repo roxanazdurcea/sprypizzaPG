@@ -41,8 +41,7 @@
                     <div class="item-inner">
                         <div class="item-input form-group " v-for="email in contact.emails" v-bind:class="{ 'has-error' : contact.email }">
                             <input class="form-control" type="text" name="email" placeholder="Email" v-model="email.email_address" v-on:blur="ValidateEmails"/>
-                            <div class="divError" v-show="email.emailError"><p>The Email is required or already
-                                exist</p></div>
+                            <div class="divError" v-show="email.emailError"><p>The Email is required or already exist</p></div>
                         </div>
                     </div>
                 </li>
@@ -66,17 +65,19 @@
                     </div>
                 </li>
 
-                <address-template></address-template>
-
                 <li class="item-content">
                     <div class="item-inner">
                         <div class="item-input form-group">
-                            <button type="button" class="button button-big color-blue" style="width: 100%;"  v-on:click.once="Submit" v-bind:disabled="isDisabled">
+                            <button type="button" class="button button-big color-orange" style="width: 100%;"  v-on:click.once="Submit" v-bind:disabled="isDisabled">
                                 Create Account
                             </button>
                         </div>
                     </div>
                 </li>
+
+                <address-template></address-template>
+
+
 
                 <li class="item-content">
                     <div class="item-inner">
@@ -320,7 +321,8 @@
         width: 100%;
     }
 
-    p {
-        font-size: 0.6rem;
+    .divError p{
+        color: darkred;
+        font-size: 10px !important;
     }
 </style>
