@@ -16,7 +16,7 @@
         <f7-block inner>
             <section style="padding: 10px;">
                 <div id="rewards-container">
-                    <h1 style="margin-bottom: 0px; color: #1a1a1a;">Your Total Rewards</h1>
+                    <h1 style="margin-bottom: 0px;">Your Total Rewards</h1>
                     <p style="margin-top: 0px;">You earned  {{ totalPoints }} points</p>
                     <!-- Nav tabs -->
                     <div>
