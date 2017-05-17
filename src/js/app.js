@@ -26,7 +26,7 @@ new Vue({
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
-        swipePanel: 'both',
+        swipePanel: 'left',
         reveal: true,
         /* Uncomment to enable Material theme: */
         // material: true,

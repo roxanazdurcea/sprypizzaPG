@@ -84,7 +84,7 @@
                         <div class="item-input form-group" v-show="showPIN">
                             <div>
                                 <input placeholder="PIN" type="text" class="form-control" name="pin" v-model="pin"/>
-                                <span><button class="btn btn-lg" type="button" v-on:click="ActivateContact">Activate</button></span>
+                                <span><button class="button button-big color-orange" type="button" v-on:click="ActivateContact">Activate</button></span>
                             </div>
                             <div class="divError">
                                 <p>{{ validationMessage }}</p>

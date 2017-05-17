@@ -327,7 +327,6 @@
 
     .cart-product-row {
         width: 100%;
-        /*height: 40px;*/
         clear: both;
     }
 

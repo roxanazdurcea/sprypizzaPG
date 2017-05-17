@@ -70,16 +70,11 @@
 
 <style scoped>
 
-    /*.addressContainer {*/
-    /*background-color: white;*/
-    /*padding: 5px 10px 5px 10px;*/
-    /*border: 1px solid #ccc;*/
-    /*}*/
+
 
     .addressHead {
         display: flex;
         flex-direction: row;
-        /*height: 40px;*/
         padding:5px;
         background-color: #e5e5e5;
         margin: 5px 0 5px 0;
@@ -120,50 +115,37 @@
 
     .addressBox {
         background-color: #f1f1f1 !important;
-        /*width: 100%;*/
-        /*padding: 10px;*/
         min-height: 35px;
-        padding:5px;
+        padding: 5px;
     }
 
-    /*.addressBox:hover {*/
-    /*background-color: #cccccc !important;*/
-    /*!*width: 100%;*!*/
-    /*padding: 10px;*/
-    /*!*cursor: pointer;*!*/
-    /*}*/
+    .addressBox:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
 
     .addressLabel {
         float: left;
         background-color: #F9A153 !important;
-        /*width: 60px;*/
         text-align: center;
         font-size: 0.7rem !important;
         color: #FAFAFA;
+        width: 20% !important;
     }
 
     .addressDetails {
         float: left;
         margin-left: 2%;
         font-size: 0.70rem !important;
-        width: 70%;
+        width: 68%;
     }
 
     .addressDefault {
         float: right;
         font-size: 0.70rem !important;
+        width: 10%;
     }
 
-    /*.addressDefault i:nth-child(1) {*/
-    /*color: #F9A153;*/
-    /*cursor: pointer;*/
-    /*width:5%;*/
 
-    /*}*/
-
-    /*.addressDefault i:nth-child(2) {*/
-    /*margin-left: 5px;*/
-    /*color: #2e3436;*/
-    /*cursor: pointer;*/
-    /*}*/
 </style>

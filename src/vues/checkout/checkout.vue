@@ -181,7 +181,6 @@
 
     #checkout-cart .cart-product-row {
         width: 100%;
-        /*height: 40px;*/
         clear: both;
     }
 
@@ -196,7 +195,6 @@
     }
 
     #checkout-cart .totals-div {
-        /*height: 100px;*/
         padding: 10px;
         border-bottom: 1px solid #ccc;
         background-color: snow;
@@ -221,7 +219,7 @@
         }
 
         #checkout-cart a, #checkout-cart p, .button-yellow a {
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-bottom: 0px;
             margin-top: 0px;
         }

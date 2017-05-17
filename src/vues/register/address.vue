@@ -136,7 +136,7 @@
         }
     }
 </script>
-<style scoped>
+<style>
 
     .addressAlert {
         height: 39px;
@@ -151,6 +151,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
 
 </style>
 

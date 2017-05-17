@@ -3,11 +3,11 @@
         <input autocomplete="off" class="form-control" type="text" name="order_id" placeholder="Enter your order number" v-model="order_id" v-on:keyup="ValidateOrder()">
         <p style="font-size: 11px; text-align: left;" v-if="orderError">
             <i class="f7-icons size-15" style="color: red;">info_fill</i>
-            <span style="color: darkred; margin-left: 10px;">{{ errorMsg }}</span>
+            <span style="color: darkred; margin-left: 5px;">{{ errorMsg }}</span>
         </p>
         <p style="font-size: 11px; text-align: left;" v-if="status">
             <i class="f7-icons size-15" style="color: green;">check_round_fill</i>
-            <span style="color: darkred; margin-left: 10px;" v-show="status">Order {{ order_id }} status is {{ status }}.</span>
+            <span style="color: darkred; margin-left: 5px;" v-show="status">Order {{ order_id }} status is {{ status }}.</span>
         </p>
         <div style="margin-top: 2%;">
             <p v-on:click="Track()" :disabled="isDisabled" style="width: 100%; background-color: #D12027;">
