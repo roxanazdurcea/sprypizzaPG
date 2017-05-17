@@ -1,18 +1,10 @@
 <template>
     <f7-page>
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left">
-                    <a href="#" class="back link">
-                        <i class="f7-icons size-22 left-side-icon">left</i>
-                        <!-- Back link text rendered only for iOS theme -->
-                        <span>Back</span>
-                    </a>
-                </div>
-                <div class="center">Track Order</div>
-                <login-icon></login-icon>
-            </div>
-        </div>
+        <!-- Material Theme Navbar -->
+        <f7-navbar>
+            <f7-nav-center sliding>Track Order</f7-nav-center>
+            <login-icon></login-icon>
+        </f7-navbar>
         <f7-block inner>
             <section style="padding: 10px;">
                 <h1 class="text-center">Order Tracking</h1>
@@ -22,17 +14,30 @@
                 <order-tracking></order-tracking>
             </section>
         </f7-block>
+
+        <!-- Bottom Tabbar-->
+        <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+            <div class="toolbar-inner bottom-padding">
+                <a href="/" class="item-link"><i class="f7-icons">home</i><span class="tabbar-label">Home</span></a>
+                <a href="/menu/" class="item-link"><i class="f7-icons">favorites</i><span class="tabbar-label">Menu</span></a>
+                <a href="/cart/" class="item-link"><i class="f7-icons">bag</i><span class="tabbar-label">Cart</span><item-count></item-count></a>
+                <a href="/track-order/" class="item-link"><i class="f7-icons">navigation_fill</i><span class="tabbar-label">Track</span></a>
+            </div>
+        </div>
+
     </f7-page>
 </template>
 
 <script>
     import orderTracking from "./footer.vue";
     import loginIcon from "../login/pageIcon.vue";
+    import itemCount from "../cart/item-count.vue";
     export default {
         name: 'pageTrackOrder',
         components: {
             orderTracking,
-            loginIcon
+            loginIcon,
+            itemCount
         }
     }
 </script>

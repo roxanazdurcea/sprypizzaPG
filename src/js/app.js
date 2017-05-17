@@ -29,7 +29,7 @@ new Vue({
         swipePanel: 'left',
         reveal: true,
         /* Uncomment to enable Material theme: */
-        // material: true,
+        material: true,
         routes: [
             {
                 path: '/',

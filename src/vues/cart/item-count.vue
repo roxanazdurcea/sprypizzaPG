@@ -9,6 +9,6 @@
             itemcount: function () {
                 return Store.state.itemCount;
             }
-        },
+        }
     }
 </script>
