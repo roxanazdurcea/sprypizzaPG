@@ -27,6 +27,7 @@ new Vue({
     framework7: {
         root: '#app',
         swipePanel: 'left',
+        pushState: true,
         reveal: true,
         /* Uncomment to enable Material theme: */
         material: true,
